@@ -1,11 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Map from './Components/Map'
+import Navigation from './Components/Navigation';
+import About from './Components/About'
+import Check from './Components/Check'
+import Resources from './Components/Resources'
 
 function App() {
   return (
     <>
       <div>
-        <h1>Hello!</h1>
+        <Navigation/>
+        <Map/>
+        <About/>
+        <Check/>
       </div>
       <div className="App">
         <header className="App-header">
