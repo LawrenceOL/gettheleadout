@@ -31,4 +31,4 @@ class MapInfo(models.Model):
 
 
   def __str__(self):
-    return f"{self.latitude}, {self.longitude}"
+    return f"{self.latitude}, {self.longitude}, {self.property_address}"
