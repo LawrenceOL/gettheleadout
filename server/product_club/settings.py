@@ -81,8 +81,7 @@ WSGI_APPLICATION = 'product_club.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
-        #'NAME': 'product_club_api',
+        'NAME': 'product_club_api',
     }
 }
 
@@ -129,3 +128,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL ='/media/'
