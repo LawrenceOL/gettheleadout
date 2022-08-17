@@ -81,7 +81,8 @@ WSGI_APPLICATION = 'product_club.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'product_club_api',
+        'NAME': 'test',
+        #'NAME': 'product_club_api',
     }
 }
 
