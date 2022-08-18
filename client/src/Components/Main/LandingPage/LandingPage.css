@@ -1,0 +1,25 @@
+#landingpage {
+    margin-top: 60px;
+}
+
+#landingoverlay {
+    position: absolute;
+    height: 100vh;
+    background-color: rgba(227, 227, 227, .7);
+    /* z-index: 1; */
+}
+/* .leadmap {
+    z-index: -1
+} */
+.mapinfo {
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+.searchform {
+    position: absolute;
+    top: 200px;
+    left: 10px
+}
