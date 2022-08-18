@@ -1,5 +1,4 @@
 from django.urls import path
-from .views.test import TestView
 from .views.mapinfo import MapsList, MapDetail
 from.views.user_input import UserInfoList
 
