@@ -6,9 +6,10 @@ name = "pypi"
 [packages]
 django = "*"
 djangorestframework = "*"
-psycopg2 = "*"
 pytz = "*"
 python-dotenv = "*"
+psycopg2-binary = "*"
+pillow = "*"
 
 [dev-packages]
 
