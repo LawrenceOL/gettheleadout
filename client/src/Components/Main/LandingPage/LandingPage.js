@@ -7,7 +7,6 @@ import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const LandingPage = () => {
   const [showOverlay, setShowOverlay] = useState(true)
-  console.log(showOverlay)
   const [showInfo, setShowInfo] = useState(false)
 
   return (

@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, ZoomControl } from "react-leaflet";
-import "./Map.css"
+import MarkerClusterGroup from 'react-leaflet-cluster';
+import "./Map.css";
 const axios = require('axios').default;
-
 const Map = () => {
     const [leadData, setLeadData] = useState([])
     
@@ -10,12 +11,17 @@ const Map = () => {
         axios.get('http://127.0.0.1:8000/map/')
         .then(function(res) {
             setLeadData(res.data)
-            console.log(res.data);
         })
         .catch(function (err) {
             console.log(err);
         });
     }, [])
+
+    //Custom Icons for cluster icons
+    const customIcon = new L.Icon({
+        iconUrl: require("./location.svg").default,
+        iconSize: new L.Point(40, 47)
+      });
 
     return (
         <>
@@ -26,8 +32,8 @@ const Map = () => {
           </button> */}
           
             <MapContainer
-              center={[41.5833827612176, -87.6711596591997]}
-              zoom={17}
+              center={[41.571701, -87.69449150000003]}
+              zoom={15}
               zoomControl={true}
               scrollWheelZoom={true}
             >
@@ -35,17 +41,17 @@ const Map = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
-                 <ZoomControl position="bottomleft" />
-                <Marker position={[41.5833827612176, -87.6711596591997]}></Marker>
-                {
-                leadData.map((data) => (
-                    <Marker position = {[data.latitude, data.longitude]}></Marker>
-                ))}
+                 <MarkerClusterGroup chunkedLoading>
+                    {leadData.map((data) => (
+                        <Marker 
+                            icon={customIcon}
+                            key={data.id}
+                            position={[data.latitude, data.longitude]}
+                            title={data.est_year}
+                        ></Marker>
+                    ))}
+                 </MarkerClusterGroup>
             </MapContainer>
-
-            {/* <a href="www.lawrenceol.dev">www.gettheleadout.com</a> */}
-          {/* </div>
-        </div> */}
       </div>
       </>
     );
