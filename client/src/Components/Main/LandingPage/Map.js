@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import L from 'leaflet';
-import { MapContainer, TileLayer, Marker, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer, Marker} from "react-leaflet";
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import "./Map.css";
 const axios = require('axios').default;
@@ -34,7 +34,6 @@ const Map = () => {
             <MapContainer
               center={[41.571701, -87.69449150000003]}
               zoom={15}
-              zoomControl={true}
               scrollWheelZoom={true}
             >
                 <TileLayer
