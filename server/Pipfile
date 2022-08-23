@@ -10,6 +10,7 @@ pytz = "*"
 python-dotenv = "*"
 psycopg2-binary = "*"
 pillow = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
