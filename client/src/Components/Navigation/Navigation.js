@@ -9,7 +9,7 @@ import { faMap } from "@fortawesome/free-regular-svg-icons";
 
 const NavBar = () => {
   return (
-    <div id="navbar">
+   <div id="navbar">
       <Navbar expand="md" className="mb-3" fixed="top" bg="light">
         <Container fluid>
           <Navbar.Brand className="navtitles" href="#">
