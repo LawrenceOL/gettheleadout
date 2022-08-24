@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import L, { MarkerCluster } from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import MarkerClusterGroup from 'react-leaflet-cluster';
@@ -7,16 +7,6 @@ const axios = require('axios').default;
 const Map = () => {
     const [leadData, setLeadData] = useState([])
     const [isLoading, setLoading] = useState(true)
-    // useEffect(() => {
-    //     axios.get('https://leadpipe-api.azurewebsites.net/map/')
-    //     .then(function(res) {
-    //         setLeadData(res.data)
-    //     })
-    //     .catch(function (err) {
-    //         console.log(err);
-    //     });
-    // }, [])
-    
     useEffect(() => {
       const fetchData = async() => {
         const res = await axios.get('https://leadpipe-api.azurewebsites.net/map/')
@@ -29,7 +19,6 @@ const Map = () => {
           setLoading(false)
         });
     }, [])
-    
     
     //Custom Icons for cluster icons
     const customIcon = new L.Icon({
@@ -89,7 +78,9 @@ const Map = () => {
                             position={[data.latitude, data.longitude]}
                             title={data.est_year}
                         >
-                          <Popup>Year Built: {data.est_year}</Popup>
+                          <Popup closeButton={false}>
+                            Year Built: {data.est_year}
+                          </Popup>
                         </Marker>
                     ))}
                  </MarkerClusterGroup>
