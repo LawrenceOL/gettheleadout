@@ -63,7 +63,7 @@ const NavBar = () => {
                   </Nav.Link>
                 </div>
                 <div>
-                  <Nav.Link className="nav-links link-dark text-decoration-none" href="/about">
+                  <Nav.Link className="nav-links link-dark text-decoration-none" href="/#/about">
                     About
                   </Nav.Link>
                 </div>

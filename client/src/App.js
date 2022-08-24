@@ -35,7 +35,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/about" element={<About/>} />
           <Route exact path="/howtocheckpipes" element={<Check/>} />
           <Route exact path="/submitleaddata" element={<SubmitLeadData />} />
           <Route exact path="/faq" element={<Faq/>}/>

@@ -14,7 +14,7 @@ const Contribute = () => {
         </div>
         <br/>
         <div>
-          <h3 text-decoration='bold'> <b>Need help finding them?</b></h3>
+          <h3 textDecoration='bold'> <b>Need help finding them?</b></h3>
           <Link to='/howtocheckpipes'>How to check my pipes</Link>
         </div>
         <br/>
