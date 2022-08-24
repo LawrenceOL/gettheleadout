@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import L, { MarkerCluster } from 'leaflet';
-import { MapContainer, TileLayer, Marker } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import "./Map.css";
 const axios = require('axios').default;
@@ -44,6 +44,10 @@ const Map = () => {
       //     iconSize: L.point(33, 33, true)
       //   });
       // };
+
+    const showData = (est_year) => {
+      alert(est_year)
+    }
     return (
         <>
       <div className="mapholder">
@@ -78,14 +82,15 @@ const Map = () => {
                     // }}
                     // showCoverageOnHover={true}
                   >
-                  
                     {leadData.map((data) => (
                         <Marker 
                             icon={customIcon}
                             key={data.id}
                             position={[data.latitude, data.longitude]}
                             title={data.est_year}
-                        ></Marker>
+                        >
+                          <Popup>Year Built: {data.est_year}</Popup>
+                        </Marker>
                     ))}
                  </MarkerClusterGroup>
                  )}
