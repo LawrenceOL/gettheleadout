@@ -2,7 +2,7 @@
 // import './App.css';
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./Components/LandingPage/LandingPage"
-import Navigation from './Components/Navigation/Navigation';
+import Navigation from './Components/Navigation';
 import About from './Components/About'
 import Check from './Components/HowToCheckPipes'
 import GetInvolved from './Components/GetInvolved'
@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/about" element={<About />} />
-          <Route exact path="/howtocheckpipes" element={<Check />} />
+          <Route exact path="/howtocheckpipes" element={<Check/>} />
           <Route exact path="/submitleaddata" element={<SubmitLeadData />} />
           <Route exact path="/faq" element={<Faq/>} />
           <Route exact path="/contribute" element={<Contribute/>} />
