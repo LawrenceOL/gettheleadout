@@ -11,7 +11,7 @@ const Check = () => {
         <div className='topmargin overlay'>
             <div className='page-template'>
                 <div topmargin='20px'>
-                    <h1 className='title' > How to check for lead pipes </h1>
+                    <h1 className='title'><b> How to check for lead pipes </b> </h1>
                 </div>
                 <div align='center' className='pictures-row' topmargin='20px'>
                     <div> 

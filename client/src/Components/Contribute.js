@@ -7,7 +7,7 @@ const Contribute = () => {
     <div className='topmargin overlay'>
       <div className='page-template'>
         <div topmargin='20px'>
-          <h1 className='title' >Add your pipes to our map</h1>
+          <h1 className='title' > <b>Add your pipes to our map </b></h1>
         </div>
         <div>
           <h4>Add pictures of your water pipes to keep our system up to date.</h4>
