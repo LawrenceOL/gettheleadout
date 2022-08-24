@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 
 const Contribute = () => {
+  const URL = "https://form.jotform.com/222348879637169"; //embed URL
+
   return (
     <div className="topmargin ">
       <div className="page-template">
@@ -54,8 +56,15 @@ const Contribute = () => {
             government to better apply for federal funding.
           </p>
         </div>
+
         <div>
-          <Form>
+          <iframe
+            className="jotform-iframe"
+            title="jotform-iframe"
+            src={URL}
+          ></iframe>
+
+          {/* <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Full Name</Form.Label>
               <Form.Control type="name" placeholder="Full name" />
@@ -111,7 +120,7 @@ const Contribute = () => {
             >
               Submit
             </Button>
-          </Form>
+          </Form> */}
         </div>
       </div>
     </div>

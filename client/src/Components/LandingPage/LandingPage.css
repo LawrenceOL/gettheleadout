@@ -23,3 +23,9 @@
   top: 200px;
   left: 10px;
 }
+
+.jotform-iframe {
+  width: 80vw;
+  height: 50rem;
+  margin-left: -10px;
+}
