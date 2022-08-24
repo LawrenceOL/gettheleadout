@@ -1,16 +1,16 @@
 // import logo from './logo.svg';
 // import './App.css';
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./Components/Main/LandingPage/LandingPage"
-import Navigation from './Components/Navigation/Navigation';
+import LandingPage from "./Components/LandingPage/LandingPage"
+import Navigation from './Components/Navigation';
 import About from './Components/About'
-import Check from './Components/Main/Residents/HowToCheckPipes'
-import Resources from './Components/Resources'
+import Check from './Components/HowToCheckPipes'
+import GetInvolved from './Components/GetInvolved'
 import Contact from './Components/Contact'
-import SubmitLeadData from './Components/Main/Residents/SubmitLeadData';
-import ApplicationResources from './Components/Main/Officials/ApplictionResources';
-import LinksToGrants from './Components/Main/Officials/LinksToGrants';
-import RequestOrVerifyData from './Components/Main/Officials/RequestOrVerifyData';
+import SubmitLeadData from './Components/SubmitLeadData';
+import Faq from './Components/Faq';
+import Contribute from './Components/Contribute';
+
 
 
 // function App() {
@@ -35,13 +35,12 @@ function App() {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/howtocheckpipes" element={<Check />} />
+          <Route exact path="/about" element={<About/>} />
+          <Route exact path="/howtocheckpipes" element={<Check/>} />
           <Route exact path="/submitleaddata" element={<SubmitLeadData />} />
-          <Route exact path="/ApplicationResources" element={<ApplicationResources />} />
-          <Route exact path="/LinksToGrants" element={<LinksToGrants />} />
-          <Route exact path="/requestorverifydata" element={<RequestOrVerifyData />} />
-          <Route exact path="/resources" element={<Resources />} />
+          <Route exact path="/faq" element={<Faq/>}/>
+          <Route exact path="/contribute" element={<Contribute/>} />
+          <Route exact path="/getinvolved" element={<GetInvolved/>} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
         {/* <Map/>
