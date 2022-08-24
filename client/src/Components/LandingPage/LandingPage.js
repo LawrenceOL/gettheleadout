@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Map from "./Map"
 import SearchAddress from "./SearchAddress";
+import PageChangeButtons from "./PageChangeButtons";
 import "./LandingPage.css"
 import { StickyShareButtons } from "sharethis-reactjs";
 import { InlineShareButtons } from "sharethis-reactjs";
@@ -15,6 +16,22 @@ const LandingPage = () => {
   const [secondOverlay, setSecondOverlay] = useState(false)
   const [thirdOverlay, setThirdOverlay] = useState(false)
 
+  const showFirstOverlay = () => {
+    setFirstOverlay(true);
+    setSecondOverlay(false);
+    setThirdOverlay(false);
+  }
+  const showSecondOverlay = () => {
+    setFirstOverlay(false);
+    setSecondOverlay(true);
+    setThirdOverlay(false);
+  };
+  const showThirdOverlay = () => {
+    setFirstOverlay(false);
+    setSecondOverlay(false);
+    setThirdOverlay(true);
+  };
+
   return (
     <div id="landingpage">
       {/* if showoverlay is true show overlay */}
@@ -26,81 +43,116 @@ const LandingPage = () => {
             className="overlay1"
             style={{ display: firstOverlay ? "block" : "none" }}
           >
-            <img
-              className="overlayimg"
-              src="https://res.cloudinary.com/adelaney923/image/upload/v1661372204/map_1_kz6tpw.png"
-              alt="mapimage"
-            />
-            <h1 className="overlayheader">Are there leadpipes in your home?</h1>
-            <h2 className="overlaytext">
-              Use our interactive map to search any residence and get-up-to-date
-              with lead pipes in your community.
-            </h2>
-            <button
-              className="bluebutton"
-              onClick={() => {
-                setFirstOverlay(false);
-                setSecondOverlay(true);
-              }}
-            >
-              Next
-            </button>
-            <button
-              className="whitebutton"
-              onClick={() => setShowOverlay(false)}
-            >
-              Skip
-            </button>
+            <div className="overlayelements">
+              <img
+                className="overlayimg"
+                src="https://res.cloudinary.com/adelaney923/image/upload/v1661372204/map_1_kz6tpw.png"
+                alt="mapimage"
+              />
+              <h1 className="overlayheader">
+                Are there leadpipes in your home?
+              </h1>
+              <h2 className="overlaytext">
+                Use our interactive map to search any residence and
+                get-up-to-date with lead pipes in your community.
+              </h2>
+              <PageChangeButtons
+                showFirstOverlay={showFirstOverlay}
+                showSecondOverlay={showSecondOverlay}
+                showThirdOverlay={showThirdOverlay}
+                setFirstOverlay={setFirstOverlay}
+                firstOverlay={firstOverlay}
+                secondOverlay={secondOverlay}
+                thirdOverlay={thirdOverlay}
+              />
+              <button
+                className="bluebutton"
+                onClick={() => {
+                  setFirstOverlay(false);
+                  setSecondOverlay(true);
+                }}
+              >
+                Next
+              </button>
+              <button
+                className="whitebutton"
+                onClick={() => setShowOverlay(false)}
+              >
+                Skip
+              </button>
+            </div>
           </div>
 
           <div
             className="overlay2"
             style={{ display: secondOverlay ? "block" : "none" }}
           >
-            <img
-              src="https://res.cloudinary.com/adelaney923/image/upload/v1661372255/Online_consultation_jpaa4s.png"
-              alt="persononcomputer"
-            />
-            <h1 className="overlayheader">Help your local government.</h1>
-            <h2 className="overlaytext">
-              Record the number of lead pipes in your community in order to
-              apply for funding.
-            </h2>
-            <button
-              className="bluebutton"
-              onClick={() => {
-                setSecondOverlay(false);
-                setThirdOverlay(true);
-              }}
-            >
-              Next
-            </button>
-            <button
-              className="whitebutton"
-              onClick={() => setShowOverlay(false)}
-            >
-              Skip
-            </button>
+            <div className="overlayelements">
+              <img
+                src="https://res.cloudinary.com/adelaney923/image/upload/v1661372255/Online_consultation_jpaa4s.png"
+                alt="persononcomputer"
+              />
+              <h1 className="overlayheader">Help your local government.</h1>
+              <h2 className="overlaytext">
+                Record the number of lead pipes in your community in order to
+                apply for funding.
+              </h2>
+              <PageChangeButtons
+                showFirstOverlay={showFirstOverlay}
+                showSecondOverlay={showSecondOverlay}
+                showThirdOverlay={showThirdOverlay}
+                setFirstOverlay={setFirstOverlay}
+                firstOverlay={firstOverlay}
+                secondOverlay={secondOverlay}
+                thirdOverlay={thirdOverlay}
+              />
+              <button
+                className="bluebutton"
+                onClick={() => {
+                  setSecondOverlay(false);
+                  setThirdOverlay(true);
+                }}
+              >
+                Next
+              </button>
+              <button
+                className="whitebutton"
+                onClick={() => setShowOverlay(false)}
+              >
+                Skip
+              </button>
+            </div>
           </div>
 
           <div
             className="overlay3"
             style={{ display: thirdOverlay ? "block" : "none" }}
           >
-            <img
-              src="https://res.cloudinary.com/adelaney923/image/upload/v1661372310/African_Mothers_with_kids_together_s4ydrd.png"
-              alt="familygathering"
-            />
-            <h1 className="overlayheader">Increase community awareness.</h1>
-            <h2 className="overlaytext">
-              By finding out who may be affected and spreading the word.
-            </h2>
-            <button
-              className="bluebutton"
-              onClick={() => setShowOverlay(false)}
-            >
-              Explore Map
-            </button>
+            <div className="overlayelements">
+              <img
+                src="https://res.cloudinary.com/adelaney923/image/upload/v1661372310/African_Mothers_with_kids_together_s4ydrd.png"
+                alt="familygathering"
+              />
+              <h1 className="overlayheader">Increase community awareness.</h1>
+              <h2 className="overlaytext">
+                By finding out who may be affected and spreading the word.
+              </h2>
+              <PageChangeButtons
+                showFirstOverlay={showFirstOverlay}
+                showSecondOverlay={showSecondOverlay}
+                showThirdOverlay={showThirdOverlay}
+                setFirstOverlay={setFirstOverlay}
+                firstOverlay={firstOverlay}
+                secondOverlay={secondOverlay}
+                thirdOverlay={thirdOverlay}
+              />
+              <button
+                className="bluebutton"
+                onClick={() => setShowOverlay(false)}
+              >
+                Explore Map
+              </button>
+            </div>
           </div>
         </div>
       ) : null}
