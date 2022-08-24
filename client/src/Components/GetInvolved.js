@@ -49,8 +49,12 @@ const GetInvolved = () => {
                     <p>We can only have a farther reach and impact with your help.</p>
                     <img alt='girl with megaphone' src={require('./Images/girlWithMegaphone_cartoon.png').default} height={50} width={100}/>
                 </div>
+
+                <br/> 
+
+
             
-    
+
             </div>
         </div>
     )

@@ -38,7 +38,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/howtocheckpipes" element={<Check/>} />
           <Route exact path="/submitleaddata" element={<SubmitLeadData />} />
-          <Route exact path="/faq" element={<Faq/>} />
+          <Route exact path="/faq" element={<Faq/>}/>
           <Route exact path="/contribute" element={<Contribute/>} />
           <Route exact path="/getinvolved" element={<GetInvolved/>} />
           <Route exact path="/contact" element={<Contact />} />
