@@ -7,7 +7,7 @@ const Check = () => {
   let navigate = useNavigate();
 
   return (
-    <div className="topmargin ">
+    <div className="topmargin">
       <div className="page-template">
         <div topmargin="20px">
           <h1 className="title">
