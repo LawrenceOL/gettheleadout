@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': os.environ['DBNAME'],
         'HOST': os.environ['DBHOST'],
         'USER': os.environ['DBUSER'],
-        'PASSWORD': os.environ['DBPASS'] 
+        'PASSWORD': os.environ['DBPASS']
     }
 }
 
@@ -139,4 +139,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL ='/media/'
+MEDIA_URL = '/media/'
