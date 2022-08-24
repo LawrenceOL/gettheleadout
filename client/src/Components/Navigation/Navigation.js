@@ -22,34 +22,32 @@ const NavBar = () => {
             aria-labelledby={`offcanvasNavbarLabel-expand-md`}
             placement="end"
           >
-            <Offcanvas.Header closeButton>
+            {/* <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
                 <Link className="nav-links" to="/">
                   LeadOut.
                 </Link>
               </Offcanvas.Title>
-            </Offcanvas.Header>
+            </Offcanvas.Header> */}
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
                 <Link className="nav-links" to="/">
                   Map
                 </Link>
+                <Link className="nav-links" to="/howtocheckpipes">
+                  How to check your pipes
+                </Link>
+                <Link className="nav-links" to="/getinvolved">
+                  How to get involved
+                </Link>
+                <Link className="nav-links" to="/contribute">
+                  Put yourself on the map
+                </Link>
+                <Link className="nav-links" to="/faq">
+                  FAQ
+                </Link>
                 <Link className="nav-links" to="/about">
                   About
-                </Link>
-                <p>For Residents</p>
-                <Link className="nav-links" to="/howtocheckpipes">
-                  How to Check Your Pipes
-                </Link>
-                <p>For Officials</p>
-                <Link className="nav-links" to="/linkstogrants">
-                  Links to Apply for Grants
-                </Link>
-                <Link className="nav-links" to="/applicationresources">
-                  Application Resources
-                </Link>
-                <Link className="nav-links" to="/requestorverifydata">
-                  Request or Verify Data
                 </Link>
               </Nav>
             </Offcanvas.Body>
