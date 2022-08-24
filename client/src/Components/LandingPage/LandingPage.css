@@ -11,11 +11,11 @@
 }
 .overlay1, .overlay2, .overlay3 {
     position: absolute;
-     top: 50%;
+     top: 45%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    height: 60%;
+    height: 70%;
     width: 90%;
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -23,7 +23,6 @@
     font-family: 'Inter', sans-serif;
 }
 .overlayelements {
-    width: 300px;
     position: absolute;
      top: 50%;
     left: 50%;
@@ -39,14 +38,19 @@
     font-size: 18px;
     font-weight: bold;
     line-height: 28px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .overlaytext {
     font-size: 14px;
     line-height: 20px;
+    margin: 0px 20px;
 }
 .dotbuttonscontainer {
     display: flex;
     justify-content: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
 }
 .changeoverlaybutton {
     width: 8px;
@@ -63,7 +67,7 @@
     color: #FFFFFF;
     border-width: 1px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin: 2px 12px;
 }
 .whitebutton {
     width: 297px;
@@ -74,6 +78,7 @@
     border-color: #D0D5DD;
     border-width: 1px;
     font-size: 12px;
+    margin: 12px;
 }
 .leadmap {
   position: absolute;

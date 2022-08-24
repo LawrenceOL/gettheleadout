@@ -43,6 +43,12 @@ const LandingPage = () => {
             className="overlay1"
             style={{ display: firstOverlay ? "block" : "none" }}
           >
+            <img
+              style={{ float: "right", margin: "5px" }}
+              src="https://res.cloudinary.com/adelaney923/image/upload/v1661378258/X_moskof.png"
+              alt="closeoverlaybutton"
+              onClick={() => setShowOverlay(false)}
+            />
             <div className="overlayelements">
               <img
                 className="overlayimg"
@@ -87,6 +93,12 @@ const LandingPage = () => {
             className="overlay2"
             style={{ display: secondOverlay ? "block" : "none" }}
           >
+            <img
+              style={{ float: "right", margin: "5px" }}
+              src="https://res.cloudinary.com/adelaney923/image/upload/v1661378258/X_moskof.png"
+              alt="closeoverlaybutton"
+              onClick={() => setShowOverlay(false)}
+            />
             <div className="overlayelements">
               <img
                 src="https://res.cloudinary.com/adelaney923/image/upload/v1661372255/Online_consultation_jpaa4s.png"
@@ -128,6 +140,12 @@ const LandingPage = () => {
             className="overlay3"
             style={{ display: thirdOverlay ? "block" : "none" }}
           >
+            <img
+              style={{ float: "right", margin: "5px" }}
+              src="https://res.cloudinary.com/adelaney923/image/upload/v1661378258/X_moskof.png"
+              alt="closeoverlaybutton"
+              onClick={() => setShowOverlay(false)}
+            />
             <div className="overlayelements">
               <img
                 src="https://res.cloudinary.com/adelaney923/image/upload/v1661372310/African_Mothers_with_kids_together_s4ydrd.png"
@@ -219,7 +237,6 @@ const LandingPage = () => {
                 "linkedin",
                 "facebook",
                 "twitter",
-                "email",
               ],
               padding: 12, // padding within buttons (INTEGER)
               radius: 4, // the corner radius on each button (INTEGER)
