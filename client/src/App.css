@@ -13,6 +13,15 @@
   }
 }
 
+div.sidebar {
+  line-height: 2.5em;
+  float: left;
+}
+
+div.topmargin {
+  margin-top: 100px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
