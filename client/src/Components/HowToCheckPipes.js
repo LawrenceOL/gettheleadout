@@ -56,7 +56,7 @@ const Check = () => {
                 <div>
                     <h2 className='smaller-title'>Add a photo, make a big impact in your community.</h2>
                     <h3>By adding data, you help your community locate and remove lead pipes.</h3>
-                        <Button variant="primary" onClick={()=>navigate('/#/contribute') }>Upload picture</Button> 
+                        <Button variant="primary" onClick={()=>navigate('/contribute') }>Upload picture</Button> 
                  </div>
             </div>
         </div>
