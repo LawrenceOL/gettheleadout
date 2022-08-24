@@ -6,10 +6,12 @@
   position: absolute;
   height: 100vh;
   background-color: rgba(227, 227, 227, 0.7);
-  z-index: 1;
+  /* z-index: 1; */
 }
 .leadmap {
-  z-index: -1;
+  position: absolute;
+  top: 150px;
+  width: 100%;
 }
 .mapinfo {
   text-align: center;
@@ -20,7 +22,7 @@
 }
 .searchform {
   position: absolute;
-  top: 200px;
+  top: 100px;
   left: 10px;
 }
 

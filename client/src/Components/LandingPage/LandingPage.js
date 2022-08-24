@@ -20,10 +20,6 @@ const LandingPage = () => {
         </div>
       ) : null}
 
-      <div className="leadmap">
-        <Map />
-      </div>
-      
       {/* if showoverlay not true then show search form on map */}
       {!showOverlay ? (
         <>
@@ -34,7 +30,11 @@ const LandingPage = () => {
                 onClick={() => setShowInfo(true)}
               /> */}
           <div className="mapinfo">
-            {showInfo ? (
+            <p>legend will go here</p>
+            {/* <div className="leadmap">
+              <Map />
+            </div> */}
+            {/* {showInfo ? (
               // <div className="mapinfo">
               <>
                 <h5>
@@ -58,12 +58,18 @@ const LandingPage = () => {
                 />
               </>
               // </div>
-            )}
+            )} */}
           </div>
 
           <div className="searchform">
             <SearchAddress />
           </div>
+          <div className="leadmap">
+            <Map />
+          </div>
+          {/* <div className="searchform">
+            <SearchAddress />
+          </div> */}
         </>
       ) : null}
     </div>
