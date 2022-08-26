@@ -4,6 +4,7 @@ import SearchAddress from "./SearchAddress";
 import PageChangeButtons from "./PageChangeButtons";
 import "./LandingPage.css"
 import { StickyShareButtons } from "sharethis-reactjs";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { InlineShareButtons } from "sharethis-reactjs";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,11 +57,11 @@ const LandingPage = () => {
                 alt="mapimage"
               />
               <h1 className="overlayheader">
-                Are there leadpipes in your home?
+                Do you know if you have lead pipes in your home?
               </h1>
               <h2 className="overlaytext">
-                Use our interactive map to search any residence and
-                get-up-to-date with lead pipes in your community.
+                Our map predicts the chances of lead pipes, but we have step by
+                step instructions so you can find out for sure.
               </h2>
               <PageChangeButtons
                 showFirstOverlay={showFirstOverlay}
@@ -104,10 +105,11 @@ const LandingPage = () => {
                 src="https://res.cloudinary.com/adelaney923/image/upload/v1661372255/Online_consultation_jpaa4s.png"
                 alt="persononcomputer"
               />
-              <h1 className="overlayheader">Help your local government.</h1>
+              <h1 className="overlayheader">What if you do have lead pipes?</h1>
               <h2 className="overlaytext">
-                Record the number of lead pipes in your community in order to
-                apply for funding.
+                There is funding available specifically for lead pipe
+                replacement. In order for your local water system to secure this
+                funding, they need to know where lead pipes are.
               </h2>
               <PageChangeButtons
                 showFirstOverlay={showFirstOverlay}
@@ -151,9 +153,10 @@ const LandingPage = () => {
                 src="https://res.cloudinary.com/adelaney923/image/upload/v1661372310/African_Mothers_with_kids_together_s4ydrd.png"
                 alt="familygathering"
               />
-              <h1 className="overlayheader">Increase community awareness.</h1>
+              <h1 className="overlayheader">What can you do right now?</h1>
               <h2 className="overlaytext">
-                By finding out who may be affected and spreading the word.
+                Share our map to spread awareness of this problem and the
+                solution!
               </h2>
               <PageChangeButtons
                 showFirstOverlay={showFirstOverlay}
@@ -185,40 +188,36 @@ const LandingPage = () => {
                 onClick={() => setShowInfo(true)}
               /> */}
           <div className="mapinfo">
-            <p>legend will go here</p>
-            {/* <div className="leadmap">
-              <Map />
-            </div> */}
-            {/* {showInfo ? (
-              // <div className="mapinfo">
-              <>
-                <h5>
-                  Search your address to get up to date information on the
-                  likelihood of lead pipes in your home.
-                </h5>
-                <h6>See more about our data and methods.</h6>
-                <FontAwesomeIcon
-                  icon={faAngleUp}
-                  onClick={() => setShowInfo(false)}
-                />
-              </>
-            ) : (
-              // </div>
-              // <div className="mapinfo">
-              <>
-                <p>Info</p>
-                <FontAwesomeIcon
-                  icon={faAngleDown}
-                  onClick={() => setShowInfo(true)}
-                />
-              </>
-              // </div>
-            )} */}
+            <p className="keytitle">Key:</p>
+            <div className="legendcontainer">
+              <div className="containerleft">
+                <div className="legenditem">
+                  <div className="darkbluedot"></div>
+                  <p>Confirmed non-lead</p>
+                </div>
+                <div className="legenditem">
+                  <div className="lightbluedot"></div>
+                  <p>Assumed non-lead</p>
+                </div>
+              </div>
+
+              <div className="containerright">
+                <div className="legenditem">
+                  <div className="reddot"></div>
+                  <p>Confirmed lead</p>
+                </div>
+
+                <div className="legenditem">
+                  <div className="orangedot"></div>
+                  <p>Assumed lead</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="searchform">
+          {/* <div className="searchform">
             <SearchAddress />
-          </div>
+          </div> */}
           <div className="leadmap">
             <Map />
           </div>
@@ -234,9 +233,9 @@ const LandingPage = () => {
               min_count: 100, // hide react counts less than min_count (INTEGER)
               networks: [
                 // which networks to include (see SHARING NETWORKS)
-                "linkedin",
-                "facebook",
                 "twitter",
+                "facebook",
+                "sms"
               ],
               padding: 12, // padding within buttons (INTEGER)
               radius: 4, // the corner radius on each button (INTEGER)
@@ -256,35 +255,7 @@ const LandingPage = () => {
               username: "custom twitter handle", // (only for twitter sharing)
             }}
           />
-          {/* <InlineShareButtons
-            config={{
-              alignment: "center", // alignment of buttons (left, center, right)
-              color: "social", // set the color of buttons (social, white)
-              enabled: true, // show/hide buttons (true, false)
-              font_size: 12, // font size for the buttons
-              labels: "cta", // button labels (cta, counts, null)
-              language: "en", // which language to use (see LANGUAGES)
-              networks: [
-                // which networks to include (see SHARING NETWORKS)
-                "linkedin",
-                "facebook",
-                "twitter",
-              ],
-              padding: 12, // padding within buttons (INTEGER)
-              radius: 4, // the corner radius on each button (INTEGER)
-              show_total: true,
-              size: 40, // the size of each button (INTEGER)
 
-              // OPTIONAL PARAMETERS
-              url: "https://github.com/LawrenceOL/productclubteam3", // (defaults to current url)
-              image: "https://bit.ly/2CMhCMC", // (defaults to og:image or twitter:image)
-              description: "custom text", // (defaults to og:description or twitter:description)
-              title: "custom title", // (defaults to og:title or twitter:title)
-              message: "custom email text", // (only for email sharing)
-              subject: "custom email subject", // (only for email sharing)
-              username: "custom twitter handle", // (only for twitter sharing)
-            }}
-          /> */}
           {/* <div className="leadmap">
             <Map />
           </div> */}

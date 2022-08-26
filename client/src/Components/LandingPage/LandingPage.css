@@ -40,11 +40,13 @@
     line-height: 28px;
     margin-top: 20px;
     margin-left: 20px;
+    width: 291px;
 }
 .overlaytext {
     font-size: 14px;
     line-height: 20px;
     margin: 0px 20px;
+    width: 291px;
 }
 .dotbuttonscontainer {
     display: flex;
@@ -90,17 +92,92 @@
   text-align: center;
   background-color: white;
   position: absolute;
-  top: 60px;
+  top: 56px;
   width: 100%;
 }
-.searchform {
-  position: absolute;
-  top: 100px;
-  left: 10px;
-}
+.keytitle {
+    width: 29px;
+height: 20px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+margin: 10px 0px 5px 18px;
+/* identical to box height, or 143% */
 
+
+/* Gray/700 */
+
+color: #344054;
+
+}
+.legendcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 334px;
+    height: 44px;
+}
+.legenditem {
+    display: flex;
+    align-items: center;
+}
+.legenditem p {
+    margin-left: 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.darkbluedot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #317279
+}
+.reddot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #D15A26
+}
+.lightbluedot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #98B8BC
+}
+.orangedot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #E8AC93
+}
+.searchform {
+    width: 297px;
+    margin-left: 16px;
+  /* position: absolute;
+  top: 155px;
+  left: 16px; */
+}
+.searchtext {
+    width: 297px;
+    height: 19px;
+    margin: 5px 0 10px 0;
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #667085;
+}
 .jotform-iframe {
   width: 80vw;
   height: 50rem;
   margin-left: -10px;
+}
+
+.form-control {
+    font-family: 'Inter', FontAwesome, sans-serif;
+    width: 297px;
+    height: 40px;
 }

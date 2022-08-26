@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
+import SearchAddress from './SearchAddress';
 import "./Map.css";
 const axios = require('axios').default;
 const Map = () => {
@@ -33,36 +34,60 @@ const Map = () => {
             });
     }, [])
     return (
-        <div className="mapholder">
-            <MapContainer
-              center={[41.571701, -87.69449150000003]}
-              zoom={15}
-              scrollWheelZoom={false}
-            >
-                <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                />
-                 {isLoading ? 
-                 (<div>Loading..</div>):
-                 (<MarkerClusterGroup 
-                    chunkedLoading >
-                    {leadData.map((data) => (
-                        <Marker 
-                            icon={customIcon}
-                            key={data.id}
-                            position={[data.latitude, data.longitude]}
-                            title={data.est_year}>
-                            <Popup closeButton={false}>
-                                <p>Probability Lead: {leadPrediction[data.our_pred]}</p>
-                                <p>Year Built: {data.est_year}</p>
-                            </Popup>
-                        </Marker>
-                    ))}
-                 </MarkerClusterGroup>
-                 )}
-            </MapContainer>
+
+      <>
+        <div className="searchform">
+          <SearchAddress leadData={leadData}/>
         </div>
+        <div className="mapholder">
+          {/* <div>
+          {/* <button onClick={handleClick} type="button">
+            Share
+          </button> */}
+
+          <MapContainer
+            center={[41.571701, -87.69449150000003]}
+            zoom={15}
+            scrollWheelZoom={false}
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            {isLoading ? (
+              <div>Loading..</div>
+            ) : (
+              <MarkerClusterGroup
+                chunkedLoading
+                // onClick={(e) => console.log("onClick", e)}
+                // iconCreateFunction={createClusterCustomIcon}
+                // maxClusterRadius={150}
+                // spiderfyOnMaxZoom={true}
+                // polygonOptions={{
+                //   fillColor: "#ffffff",
+                //   color: "#ffffff",
+                //   weight: 5,
+                //   opacity: 1,
+                //   fillOpacity: 0.8
+                // }}
+                // showCoverageOnHover={true}
+              >
+                {leadData.map((data) => (
+                  <Marker
+                    icon={customIcon}
+                    key={data.id}
+                    position={[data.latitude, data.longitude]}
+                    title={data.est_year}
+                  >
+                    <Popup>Year Built: {data.est_year}</Popup>
+                  </Marker>
+                ))}
+              </MarkerClusterGroup>
+            )}
+          </MapContainer>
+        </div>
+      </>
+
     );
 }
 
