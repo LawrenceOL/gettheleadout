@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { InlineShareButtons } from "sharethis-reactjs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./LandingPage.css"
 
 const SearchAddress = () => {
   const [address, setAddress] = useState("");
@@ -39,7 +42,7 @@ const SearchAddress = () => {
           type="text"
           className="form-control"
           name="address"
-          placeholder="Search your Address"
+          placeholder="&#xf002; Search your Address"
         />
     </div>
   );

@@ -106,3 +106,6 @@
   height: 50rem;
   margin-left: -10px;
 }
+.form-control {
+    font-family: 'Inter', FontAwesome, sans-serif;
+}
