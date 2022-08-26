@@ -9,24 +9,6 @@ const axios = require('axios').default;
 const Map = () => {
     const [leadData, setLeadData] = useState([])
     const [isLoading, setLoading] = useState(true)
-    
-    
-    function MyComponent() {
-        const map = useMap()
-        useEffect(() => {
-            const searchControl = new GeoSearchControl({
-                provider: new OpenStreetMapProvider(),
-                params: {
-                    'accept-language': 'us',
-                    countrycodes: 'us',
-                    addressdetails: 1, // include additional address detail parts
-                  },
-            })
-            map.addControl(searchControl)
-            return () => map.removeControl(searchControl)
-        }, [])
-       return null
-    }
 
     //Custom Icons for cluster icons
     const customIcon = new L.Icon({
@@ -56,7 +38,6 @@ const Map = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <MyComponent />
                  {isLoading ? 
                  (<div>Loading..</div>):
                  (<MarkerClusterGroup 
