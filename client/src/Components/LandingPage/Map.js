@@ -1,50 +1,52 @@
 import React, { useState, useEffect, useRef } from 'react';
-import L, { MarkerCluster } from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
+import L from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap} from 'react-leaflet';
+import { OpenStreetMapProvider, GeoSearchControl } from 'leaflet-geosearch';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import "./Map.css";
+import './Search.css';
 const axios = require('axios').default;
 const Map = () => {
     const [leadData, setLeadData] = useState([])
     const [isLoading, setLoading] = useState(true)
-    useEffect(() => {
-      const fetchData = async() => {
-        const res = await axios.get('https://leadpipe-api.azurewebsites.net/map/')
-  
-        setLeadData(res.data)
-      }
-      fetchData()
-        .catch(console.error)
-        .finally(() => {
-          setLoading(false)
-        });
-    }, [])
     
+    
+    function MyComponent() {
+        const map = useMap()
+        useEffect(() => {
+            const searchControl = new GeoSearchControl({
+                provider: new OpenStreetMapProvider(),
+                params: {
+                    'accept-language': 'us',
+                    countrycodes: 'us',
+                    addressdetails: 1, // include additional address detail parts
+                  },
+            })
+            map.addControl(searchControl)
+            return () => map.removeControl(searchControl)
+        }, [])
+       return null
+    }
+
     //Custom Icons for cluster icons
     const customIcon = new L.Icon({
         iconUrl: require("./location.svg").default,
         iconSize: new L.Point(30, 35)
-      });
-    
-      // const createClusterCustomIcon = function (cluster: MarkerCluster) {
-      //   return L.divIcon({
-      //     html: `<span>${cluster.getChildCount()}</span>`,
-      //     className: "custom-marker-cluster",
-      //     iconSize: L.point(33, 33, true)
-      //   });
-      // };
+    });
 
-    const showData = (est_year) => {
-      alert(est_year)
-    }
+    useEffect(() => {
+        const fetchData = async() => {
+            const res = await axios.get('https://leadpipe-api.azurewebsites.net/map/')
+            setLeadData(res.data)
+        }
+        fetchData()
+            .catch(console.error)
+            .finally(() => {
+            setLoading(false)
+            });
+    }, [])
     return (
-        <>
-      <div className="mapholder">
-        {/* <div>
-          {/* <button onClick={handleClick} type="button">
-            Share
-          </button> */}
-          
+        <div className="mapholder">
             <MapContainer
               center={[41.571701, -87.69449150000003]}
               zoom={15}
@@ -54,40 +56,26 @@ const Map = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
+                <MyComponent />
                  {isLoading ? 
                  (<div>Loading..</div>):
                  (<MarkerClusterGroup 
-                    chunkedLoading
-                    // onClick={(e) => console.log("onClick", e)}
-                    // iconCreateFunction={createClusterCustomIcon}
-                    // maxClusterRadius={150}
-                    // spiderfyOnMaxZoom={true}
-                    // polygonOptions={{
-                    //   fillColor: "#ffffff",
-                    //   color: "#ffffff",
-                    //   weight: 5,
-                    //   opacity: 1,
-                    //   fillOpacity: 0.8
-                    // }}
-                    // showCoverageOnHover={true}
-                  >
+                    chunkedLoading >
                     {leadData.map((data) => (
                         <Marker 
                             icon={customIcon}
                             key={data.id}
                             position={[data.latitude, data.longitude]}
-                            title={data.est_year}
-                        >
-                          <Popup closeButton={false}>
-                            Year Built: {data.est_year}
-                          </Popup>
+                            title={data.est_year}>
+                            <Popup closeButton={false}>
+                                Year Built: {data.est_year}
+                            </Popup>
                         </Marker>
                     ))}
                  </MarkerClusterGroup>
                  )}
             </MapContainer>
-      </div>
-      </>
+        </div>
     );
 }
 
