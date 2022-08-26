@@ -37,7 +37,7 @@ const Map = () => {
             <MapContainer
               center={[41.571701, -87.69449150000003]}
               zoom={15}
-              scrollWheelZoom={true}
+              scrollWheelZoom={false}
             >
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
