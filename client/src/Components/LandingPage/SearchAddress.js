@@ -3,23 +3,24 @@ import { InlineShareButtons } from "sharethis-reactjs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./LandingPage.css"
 
-const SearchAddress = () => {
+const SearchAddress = (props) => {
   const [address, setAddress] = useState("");
-
+  const leadData = props.leadData
   const handleSubmit = (event) => {
     console.log("yay");
   };
 
-//   const makeApiCall = () => {
-//     // fetch(
-//     //   //need some api to search addresses
-//     //   //or will search through the addresses we already have on file
-//     // )
-//     //   .then((res) => res.json())
-//     //   .then((data) => {
-//     //     //do something with the address
-//     //   });
-//   };
+//   const searchedAddress = leadData.filter((house) => {
+//     if (/^{address}/.test(house.property_address)) {
+//       console.log("true");
+//     }
+//   }
+// )
+  const filterLeadData = () => {
+    leadData.filter((house) => {
+
+    })
+  };
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -29,12 +30,13 @@ const SearchAddress = () => {
     }
   };
 
-//   useEffect(() => {
-//     makeApiCall();
-//   }, [address]);
+  // useEffect(() => {
+  //   makeApiCall();
+  // }, [address]);
 
   return (
     <div id="searchaddress">
+      {searchedAddress}
         <input
           // onChange={handleEmailChange}
           onChange={handleChange}

@@ -215,9 +215,9 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="searchform">
+          {/* <div className="searchform">
             <SearchAddress />
-          </div>
+          </div> */}
           <div className="leadmap">
             <Map />
           </div>
@@ -233,9 +233,9 @@ const LandingPage = () => {
               min_count: 100, // hide react counts less than min_count (INTEGER)
               networks: [
                 // which networks to include (see SHARING NETWORKS)
-                "linkedin",
-                "facebook",
                 "twitter",
+                "facebook",
+                "sms"
               ],
               padding: 12, // padding within buttons (INTEGER)
               radius: 4, // the corner radius on each button (INTEGER)

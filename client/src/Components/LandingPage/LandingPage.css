@@ -84,7 +84,7 @@
 }
 .leadmap {
   position: absolute;
-  top: 240px;
+  top: 150px;
   width: 100%;
   height: 90vh;
 }
@@ -153,9 +153,11 @@ color: #344054;
     background-color: #E8AC93
 }
 .searchform {
-  position: absolute;
+    width: 297px;
+    margin-left: 16px;
+  /* position: absolute;
   top: 155px;
-  left: 16px;
+  left: 16px; */
 }
 .searchtext {
     width: 297px;
