@@ -1,14 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import L from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup, useMap} from 'react-leaflet';
-import { OpenStreetMapProvider, GeoSearchControl } from 'leaflet-geosearch';
+import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 import "./Map.css";
-import './Search.css';
 const axios = require('axios').default;
 const Map = () => {
     const [leadData, setLeadData] = useState([])
     const [isLoading, setLoading] = useState(true)
+    const leadPrediction = {
+        1:'Assumed Non-Lead',
+        2:'Unlikely Lead',
+        3:'Maybe Lead',
+        4:'Likely Lead',
+        5:'Assumed Lead'
+    }
 
     //Custom Icons for cluster icons
     const customIcon = new L.Icon({
@@ -49,7 +54,8 @@ const Map = () => {
                             position={[data.latitude, data.longitude]}
                             title={data.est_year}>
                             <Popup closeButton={false}>
-                                Year Built: {data.est_year}
+                                <p>Probability Lead: {leadPrediction[data.our_pred]}</p>
+                                <p>Year Built: {data.est_year}</p>
                             </Popup>
                         </Marker>
                     ))}
