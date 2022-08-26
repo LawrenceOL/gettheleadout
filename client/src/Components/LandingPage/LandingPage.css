@@ -40,11 +40,13 @@
     line-height: 28px;
     margin-top: 20px;
     margin-left: 20px;
+    width: 291px;
 }
 .overlaytext {
     font-size: 14px;
     line-height: 20px;
     margin: 0px 20px;
+    width: 291px;
 }
 .dotbuttonscontainer {
     display: flex;
