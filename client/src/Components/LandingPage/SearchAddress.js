@@ -44,6 +44,7 @@ const SearchAddress = () => {
           name="address"
           placeholder="&#xf002; Search your Address"
         />
+        <p className="searchtext">Discover the likelihood of lead pipes.</p>
     </div>
   );
 };
