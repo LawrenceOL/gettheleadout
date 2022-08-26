@@ -11,10 +11,12 @@ class MapInfo(models.Model):
   pct_hh_with_children = models.FloatField()
   hyd_year_stamped = models.SmallIntegerField()
   g_label = models.FloatField()
+  prob_g_lsl = models.CharField(max_length=30)
   property_class = models.SmallIntegerField()
   neighbor_code = models.SmallIntegerField()
   town_code = models.SmallIntegerField()
   type_of_residence = models.FloatField()
+  building_square_feet = models.SmallIntegerField()
   prior_tax_land = models.FloatField()
   prior_tax_building = models.FloatField()
   longitude = models.FloatField()
@@ -23,6 +25,14 @@ class MapInfo(models.Model):
   property_address = models.CharField(max_length=255)
   age = models.SmallIntegerField()
   neighborhood_code = models.SmallIntegerField()
+  cluster = models.SmallIntegerField()
+  color = models.CharField(max_length=30)
+  resident_type_one_story = models.SmallIntegerField()
+  resident_type_split = models.SmallIntegerField()
+  resident_type_two_story = models.SmallIntegerField()
+  prop_to_land_ratio = models.FloatField()
+  prop_g_lsl_num = models.SmallIntegerField()
+  our_pred = models.SmallIntegerField()
   
 
 
