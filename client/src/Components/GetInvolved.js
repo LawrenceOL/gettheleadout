@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
+import WorkingMan from './Images/workingman_cartoon.png'
 
 const GetInvolved = () => {
   let navigate = useNavigate();
@@ -33,12 +34,13 @@ const GetInvolved = () => {
             Read through this site and explore our interactive map to understand
             the effects of lead pipe continue to have.
           </h1>
-          <img
+          <img  alt="Working man" src={WorkingMan} height={200} width={200}/>
+          {/* <img
             alt="working man cartoon"
             src={require("./Images/workingman_cartoon.png").default}
             height={50}
             width={100}
-          />
+          /> */}
         </div>
         <div>
           <Button
