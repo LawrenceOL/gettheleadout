@@ -9,35 +9,30 @@ const GetInvolved = () => {
     <div className="topmargin">
       <div className="page-template">
         <div topmargin="20px">
-          <h1 className="title">
-            <b> How can you get involved? </b>
+          <h1 className="title" style={{fontWeight: 'bold'}}>
+            How can you get involved?
           </h1>
         </div>
+
         <div>
-          <h2 className="smaller-title"> Find out ways to get involved</h2>
-        </div>
-        <div>
-          <h2 className="baby-title">
-            <b> How can you get involved? </b>
-          </h2>
-          <p>
+          <h1 className="supporting-text">
             {" "}
             Get involved to help your community progress towards a lead-free
             future.
-          </p>
+          </h1>
         </div>
 
         <br />
 
         <div>
-          <h2 className="baby-title">
+          <h1 className="feature-text-top">
             {" "}
             Stay up-to-date on the impactlead pipes have in your community.
-          </h2>
-          <p>
+          </h1>
+          <h1 className="feature-text-bottom">
             Read through this site and explore our interactive map to understand
             the effects of lead pipe continue to have.
-          </p>
+          </h1>
           <img
             alt="working man cartoon"
             src={require("./Images/workingman_cartoon.png").default}
@@ -57,14 +52,14 @@ const GetInvolved = () => {
         <br />
 
         <div>
-          <h2 className="baby-title">
+          <h1 className="feature-text-top">
             {" "}
             Upload pictures of your water pipes to our platform.{" "}
-          </h2>
-          <p>
+          </h1>
+          <h1 className="feature-text-bottom">
             This allows us to update the map on the latest data, which in turn
             enables your local government to more easily receive funding.{" "}
-          </p>
+          </h1>
           <img
             alt="man with camera cartoon"
             src={require("./Images/manWithCamera_cartoon.png").default}
@@ -81,11 +76,13 @@ const GetInvolved = () => {
         <br />
 
         <div>
-          <h2 className="baby-title">
+          <h1 className="feature-text-top">
             {" "}
             Share our interactive map to people in your community!
-          </h2>
-          <p>We can only have a farther reach and impact with your help.</p>
+          </h1>
+          <h1 className="feature-text-bottom">
+            We can only have a farther reach and impact with your help.
+          </h1>
           <img
             alt="girl with megaphone"
             src={require("./Images/girlWithMegaphone_cartoon.png").default}

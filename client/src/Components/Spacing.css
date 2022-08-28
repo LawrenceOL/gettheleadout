@@ -3,9 +3,70 @@ div.topmargin {
   }
 
 h1.title {
-    margin-left: 2%;
-    font-size: 60px;
+    /* margin-left: 2%; */
+    /* position: absolute; */
+    width: 335px;
+    height: 83px;
+    left: 17px;
+    top: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #101828;
+    /* font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; */
 }
+
+.supporting-text {
+    /* position: absolute; */
+    width: 340px;
+    height: 57px;
+    left: 16px;
+    top: 245px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+h1.feature-text-top {
+    width: 279px;
+    height: 72px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* primary black */
+
+    color: #101828;
+}
+
+h1.feature-text-bottom{
+    width: 279px;
+        height: 78px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    /* or 26px */
+
+    /* secondary text */
+
+    color: #475467;
+}
+
 
 .page-template{
     display: flex;
@@ -23,10 +84,6 @@ div.pictures-row {
     margin-top: 10%;
 }
 
-h2.baby-title {
-    font-size: 40px;
-    margin-top: 10%;
-}
 
 h2.smaller-title {
     font-size: 50px;
@@ -41,3 +98,4 @@ h2.smaller-title {
     left:0px;
     /* z-index:1000; */
 }
+
