@@ -2,6 +2,8 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import WorkingMan from './Images/workingman_cartoon.png'
+import CameraMan from './Images/manWithCamera_cartoon.png'
+import TwoPeople from './Images/twopeople_cartoon.png'
 
 const GetInvolved = () => {
   let navigate = useNavigate();
@@ -34,20 +36,11 @@ const GetInvolved = () => {
             Read through this site and explore our interactive map to understand
             the effects of lead pipe continue to have.
           </h1>
-          <img  alt="Working man" src={WorkingMan} height={200} width={200}/>
-          {/* <img
-            alt="working man cartoon"
-            src={require("./Images/workingman_cartoon.png").default}
-            height={50}
-            width={100}
-          /> */}
+          <img  alt="Working man" src={WorkingMan} height={200} width={220}/>
         </div>
         <div>
-          <Button
-            variant="primary"
-            onClick={() => navigate("/howtocheckpipes")}
-          >
-            How to check my pipes
+          <Button variant="primary" size="lg" onClick={() => navigate("/howtocheckpipes")}>
+             How to check my pipes
           </Button>
         </div>
 
@@ -62,16 +55,17 @@ const GetInvolved = () => {
             This allows us to update the map on the latest data, which in turn
             enables your local government to more easily receive funding.{" "}
           </h1>
+          <br/>
           <img
             alt="man with camera cartoon"
-            src={require("./Images/manWithCamera_cartoon.png").default}
-            height={50}
-            width={100}
+            src={CameraMan}
+            height={250}
+            width={260}
           />
         </div>
         <div>
-          <Button variant="primary" onClick={() => navigate("/contribute")}>
-            Upload picture
+          <Button variant="primary" size="lg" onClick={() => navigate("/contribute")} block>
+            Put your pipes on the map
           </Button>
         </div>
 
@@ -86,10 +80,10 @@ const GetInvolved = () => {
             We can only have a farther reach and impact with your help.
           </h1>
           <img
-            alt="girl with megaphone"
-            src={require("./Images/girlWithMegaphone_cartoon.png").default}
-            height={50}
-            width={100}
+            alt="two people"
+            src={TwoPeople}
+            height={220}
+            width={240}
           />
         </div>
 
