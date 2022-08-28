@@ -2,6 +2,7 @@ import React from "react";
 import { FcTodoList, FcUpload } from "react-icons/fc";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
+import Camera from './Images/camera.png'
 
 const Check = () => {
   let navigate = useNavigate();
@@ -11,17 +12,29 @@ const Check = () => {
       <div className="page-template">
         <div topmargin="20px">
           <h1 className="title">
-            <b> How to check for lead pipes </b>{" "}
+          How to check for lead pipes {" "}
           </h1>
         </div>
-        <div align="center" className="pictures-row" topmargin="20px">
+        <img
+            alt="camera"
+            src={Camera}
+            height={220}
+            width={250}
+          />
+
+        {/* <div align="center" className="pictures-row" topmargin="20px">
+
           <div>
             <FcTodoList size={70} />
           </div>
+
           <div>
             <FcUpload size={70} />
           </div>
-        </div>
+
+        </div> */}
+
+
         <div>
           <h2 className="baby-title">
             {" "}
