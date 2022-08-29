@@ -2,10 +2,121 @@ div.topmargin {
     margin-top: 100px;
   }
 
-h1.title {
-    margin-left: 2%;
-    font-size: 60px;
+
+  /* .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+  } */
+
+.headers{
+    width: 340px;
+    height: 29px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
 }
+
+.image{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 332px;
+    height: 140px;
+}
+
+.numbered-sections{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.item-1 {
+    grid-column-start: 1;
+    grid-column-end: 2 ;
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+}
+
+.item-2 {
+    grid-column-start: 2;
+    grid-column-end: span col4-end;
+    grid-row-start: 1 ;
+    grid-row-end: span row3-end;
+}
+
+h1.title {
+    /* margin-left: 2%; */
+    /* position: absolute; */
+    width: 335px;
+    height: 83px;
+    left: 17px;
+    top: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #101828;
+    /* font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; */
+}
+
+.supporting-text {
+    /* position: absolute; */
+    width: 340px;
+    height: 57px;
+    left: 16px;
+    top: 245px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+h1.feature-text-top {
+    width: 279px;
+    height: 72px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    /* primary black */
+
+    color: #101828;
+}
+
+h1.feature-text-bottom{
+    width: 279px;
+    height: 78px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    /* or 26px */
+
+    /* secondary text */
+
+    color: #475467;
+}
+
 
 .page-template{
     display: flex;
@@ -23,10 +134,6 @@ div.pictures-row {
     margin-top: 10%;
 }
 
-h2.baby-title {
-    font-size: 40px;
-    margin-top: 10%;
-}
 
 h2.smaller-title {
     font-size: 50px;
@@ -41,3 +148,4 @@ h2.smaller-title {
     left:0px;
     /* z-index:1000; */
 }
+
