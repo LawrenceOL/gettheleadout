@@ -8,35 +8,12 @@ const axios = require("axios").default;
 const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [searchedData, setSearchedData] = useState([]);
+  const [searchedData, setSearchedData] = useState();
 
   const updateData = (childData) => {
     setSearchedData(childData);
+    console.log(searchedData)
   };
-
-  // useEffect(() => {
-  //     axios.get('https://leadpipe-api.azurewebsites.net/map/')
-  //     .then(function(res) {
-  //         setLeadData(res.data)
-  //     })
-  //     .catch(function (err) {
-  //         console.log(err);
-  //     });
-  // }, [])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await axios.get(
-        "https://leadpipe-api.azurewebsites.net/map/"
-      );
-      setLeadData(res.data);
-    };
-    fetchData()
-      .catch(console.error)
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
 
   const leadPrediction = {
     1: "Assumed Non-Lead",
@@ -52,23 +29,26 @@ const Map = () => {
     iconSize: new L.Point(30, 35),
   });
 
-  
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get(
+        "https://leadpipe-api.azurewebsites.net/map/"
+      );
+      setLeadData(res.data);
+    };
+    fetchData()
+      .catch(console.error)
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <>
       <div className="searchform">
-        <SearchAddress
-          leadData={leadData}
-          searchedData={searchedData}
-          updataData={updateData}
-          setSearchedData={setSearchedData}
-        />
+        <SearchAddress leadData={leadData} updateData={updateData} />
       </div>
       <div className="mapholder">
-        {/* <div>
-          {/* <button onClick={handleClick} type="button">
-            Share
-          </button> */}
-
         <MapContainer
           center={[41.571701, -87.69449150000003]}
           zoom={15}
@@ -81,21 +61,7 @@ const Map = () => {
           {isLoading ? (
             <div>Loading..</div>
           ) : (
-            <MarkerClusterGroup
-              chunkedLoading
-              // onClick={(e) => console.log("onClick", e)}
-              // iconCreateFunction={createClusterCustomIcon}
-              // maxClusterRadius={150}
-              // spiderfyOnMaxZoom={true}
-              // polygonOptions={{
-              //   fillColor: "#ffffff",
-              //   color: "#ffffff",
-              //   weight: 5,
-              //   opacity: 1,
-              //   fillOpacity: 0.8
-              // }}
-              // showCoverageOnHover={true}
-            >
+            <MarkerClusterGroup chunkedLoading>
               {leadData.map((data) => (
                 <Marker
                   icon={customIcon}

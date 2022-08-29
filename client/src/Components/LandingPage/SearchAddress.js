@@ -3,6 +3,7 @@ import { InlineShareButtons } from "sharethis-reactjs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./LandingPage.css";
 
+// const SearchAddress = ({leadData, searchedData, setSearchedData, updateData}) => {
 const SearchAddress = ({
   leadData,
   searchedData,
@@ -10,6 +11,7 @@ const SearchAddress = ({
   updateData,
 }) => {
   const [address, setAddress] = useState("");
+  const [submit, setSubmit] = useState(true);
   let apiData = leadData;
   // const [newData, setNewData] = useState([])
   const handleSubmit = (event) => {
@@ -21,14 +23,14 @@ const SearchAddress = ({
   //     }
   //   }
   // )
-
+  let newData
   const filterLeadData = () => {
-    let newData =
+    newData =
       apiData &&
       apiData.filter((house) =>
         house.property_address.startsWith(`${address}`)
       );
-    console.log(newData);
+    updateData(newData)
   };
 
   const handleChange = (event) => {
@@ -38,9 +40,16 @@ const SearchAddress = ({
     }
   };
 
+  const changeSubmit = () => {
+    setSubmit(!submit);
+  };
   useEffect(() => {
     filterLeadData();
   }, [address]);
+
+  // useEffect(() => {
+  //   updateData(newData);
+  // }, [submit]);
 
   return (
     <div id="searchaddress">
@@ -53,6 +62,9 @@ const SearchAddress = ({
         name="address"
         placeholder="&#xf002; Search your Address"
       />
+      <button onClick={changeSubmit}>Go</button>
+
+      {address.strLe}
       <p className="searchtext">Discover the likelihood of lead pipes.</p>
     </div>
   );
