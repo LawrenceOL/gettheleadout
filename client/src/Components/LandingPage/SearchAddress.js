@@ -1,52 +1,59 @@
 import React, { useState, useEffect } from "react";
 import { InlineShareButtons } from "sharethis-reactjs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./LandingPage.css"
+import "./LandingPage.css";
 
-const SearchAddress = (props) => {
+const SearchAddress = ({
+  leadData,
+  searchedData,
+  setSearchedData,
+  updateData,
+}) => {
   const [address, setAddress] = useState("");
-  const leadData = props.leadData
+  let apiData = leadData;
+  // const [newData, setNewData] = useState([])
   const handleSubmit = (event) => {
     console.log("yay");
   };
+  //   const searchedAddress = leadData.filter((house) => {
+  //     if (/^{address}/.test(house.property_address)) {
+  //       console.log("true");
+  //     }
+  //   }
+  // )
 
-//   const searchedAddress = leadData.filter((house) => {
-//     if (/^{address}/.test(house.property_address)) {
-//       console.log("true");
-//     }
-//   }
-// )
   const filterLeadData = () => {
-    leadData.filter((house) => {
-
-    })
+    let newData =
+      apiData &&
+      apiData.filter((house) =>
+        house.property_address.startsWith(`${address}`)
+      );
+    console.log(newData);
   };
 
   const handleChange = (event) => {
     event.preventDefault();
     if (event.target.type === "text") {
-      setAddress(event.target.value)
-      console.log(address);
+      setAddress(event.target.value);
     }
   };
 
-  // useEffect(() => {
-  //   makeApiCall();
-  // }, [address]);
+  useEffect(() => {
+    filterLeadData();
+  }, [address]);
 
   return (
     <div id="searchaddress">
-      {searchedAddress}
-        <input
-          // onChange={handleEmailChange}
-          onChange={handleChange}
-          value={address}
-          type="text"
-          className="form-control"
-          name="address"
-          placeholder="&#xf002; Search your Address"
-        />
-        <p className="searchtext">Discover the likelihood of lead pipes.</p>
+      <input
+        // onChange={handleEmailChange}
+        onChange={handleChange}
+        value={address}
+        type="text"
+        className="form-control"
+        name="address"
+        placeholder="&#xf002; Search your Address"
+      />
+      <p className="searchtext">Discover the likelihood of lead pipes.</p>
     </div>
   );
 };
