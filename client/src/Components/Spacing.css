@@ -3,6 +3,35 @@ div.topmargin {
   }
 
 
+  /* .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+  } */
+
+.headers{
+    width: 340px;
+    height: 29px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.image{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    width: 332px;
+    height: 140px;
+}
+
 .numbered-sections{
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -74,7 +103,7 @@ h1.feature-text-top {
 
 h1.feature-text-bottom{
     width: 279px;
-        height: 78px;
+    height: 78px;
 
     font-family: 'Inter';
     font-style: normal;
