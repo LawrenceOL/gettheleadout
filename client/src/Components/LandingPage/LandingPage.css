@@ -5,89 +5,80 @@
 #landingoverlay {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(
-      to right,
-      rgba(227, 227, 227, 0.5),
-      rgba(227, 227, 227, 0.5)
-    ),
-    url("https://res.cloudinary.com/adelaney923/image/upload/v1661372495/IMG_0033_1_jhmvfd.png");
+  background-image: linear-gradient(to right, rgba(227, 227, 227, 0.5), rgba(227, 227, 227, 0.5)), url("https://res.cloudinary.com/adelaney923/image/upload/v1661372495/IMG_0033_1_jhmvfd.png");
   /* background-color: rgba(227, 227, 227, 0.7); */
   /* z-index: 1; */
 }
-.overlay1,
-.overlay2,
-.overlay3 {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  height: 70%;
-  width: 90%;
-  background-color: #ffffff;
-  border-radius: 12px;
-  text-align: left;
-  font-family: "Inter", sans-serif;
+.overlay1, .overlay2, .overlay3 {
+    position: absolute;
+     top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
 }
 .overlayelements {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    position: absolute;
+     top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .overlayimg {
-  display: block;
+    display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .overlayheader {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 28px;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 291px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .overlaytext {
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0px 20px;
-  width: 291px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px 20px;
 }
 .dotbuttonscontainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 8%;
-  margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
 }
 .changeoverlaybutton {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin: 10px;
-  border-color: darkslategray;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 10px;
+    border-color: darkslategray;
 }
 .bluebutton {
-  width: 297px;
-  height: 44px;
-  background-color: #005ea2;
-  border-radius: 8px;
-  color: #ffffff;
-  border-width: 1px;
-  font-size: 12px;
-  margin: 2px 12px;
+    width: 297px;
+    height: 44px;
+    background-color: #005EA2;
+    border-radius: 8px;
+    color: #FFFFFF;
+    border-width: 1px;
+    font-size: 12px;
+    margin: 2px 12px;
 }
 .whitebutton {
-  width: 297px;
-  height: 44px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  color: #344054;
-  border-color: #d0d5dd;
-  border-width: 1px;
-  font-size: 12px;
-  margin: 12px;
+    width: 297px;
+    height: 44px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    color: #344054;
+    border-color: #D0D5DD;
+    border-width: 1px;
+    font-size: 12px;
+    margin: 12px;
 }
 .leadmap {
   position: absolute;

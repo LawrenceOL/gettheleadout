@@ -48,35 +48,34 @@ const Map = () => {
           <SearchAddress leadData={leadData} updateData={updateData}  />
         </div>
         <div className="mapholder">
-
-          <MapContainer
-            center={[41.571701, -87.69449150000003]}
-            zoom={15}
-            scrollWheelZoom={false}
-          >
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            {isLoading ? (
-              <div>Loading..</div>
-            ) : (
-              <MarkerClusterGroup
-                chunkedLoading
-              >
-                {leadData.map((data) => (
-                  <Marker
-                    icon={customIcon}
-                    key={data.id}
-                    position={[data.latitude, data.longitude]}
-                    title={data.est_year}
-                  >
-                    <Popup>Year Built: {data.est_year}</Popup>
-                  </Marker>
-                ))}
-              </MarkerClusterGroup>
-            )}
-          </MapContainer>
+            <MapContainer
+              center={[41.571701, -87.69449150000003]}
+              zoom={15}
+              scrollWheelZoom={false}
+            >
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+                 {isLoading ? 
+                 (<div>Loading..</div>):
+                 (<MarkerClusterGroup 
+                    chunkedLoading >
+                    {leadData.map((data) => (
+                        <Marker 
+                            icon={customIcon}
+                            key={data.id}
+                            position={[data.latitude, data.longitude]}
+                            title={data.est_year}>
+                            <Popup closeButton={false}>
+                                <p>Probability Lead: {leadPrediction[data.our_pred]}</p>
+                                <p>Year Built: {data.est_year}</p>
+                            </Popup>
+                        </Marker>
+                    ))}
+                 </MarkerClusterGroup>
+                 )}
+            </MapContainer>
         </div>
       </>
 
