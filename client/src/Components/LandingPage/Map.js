@@ -38,12 +38,16 @@ const Map = () => {
     4: "Likely Lead",
     5: "Assumed Lead",
   };
-
-  //Custom Icons for cluster icons
-  const customIcon = new L.Icon({
-    iconUrl: require("./location.svg").default,
+  
+  const customIcon = (leadInfo) => {
+    const colors = ['assumed-nonlead', 'unlikely-lead', 'maybe-lead', 'likely-lead','assumed-lead']
+    const cur_color = colors[leadInfo - 1]
+    return new L.Icon({
+    iconUrl: require("./map_marker.svg").default,
     iconSize: new L.Point(30, 35),
-  });
+    className: cur_color
+    });
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -85,12 +89,15 @@ const Map = () => {
             <MarkerClusterGroup chunkedLoading>
               {leadData.map((data) => (
                 <Marker
-                  icon={customIcon}
+                  icon={customIcon(data.our_pred)}
                   key={data.id}
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup>Year Built: {data.est_year}</Popup>
+                  <Popup>
+                    <p>Year Built: {data.est_year}</p>
+                    <p>Lead Info: {leadPrediction[data.our_pred]}</p>
+                  </Popup>
                 </Marker>
               ))}
             </MarkerClusterGroup>
@@ -102,23 +109,29 @@ const Map = () => {
             <MarkerClusterGroup chunkedLoading>
               {leadData.map((data) => (
                 <Marker
-                  icon={customIcon}
+                  icon={customIcon(data.our_pred)}
                   key={data.id}
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup>Year Built: {data.est_year}</Popup>
+                  <Popup>
+                    <p>Year Built: {data.est_year}</p>
+                    <p>Lead Info: {leadPrediction[data.our_pred]}</p>
+                  </Popup>
                 </Marker>
               ))}
             </MarkerClusterGroup>
           ) : (
             <Marker
-              icon={customIcon}
+              icon={customIcon(leadData[selectedAddress].our_pred)}
               key={leadData[selectedAddress].id}
               position={[leadData[selectedAddress].latitude, leadData[selectedAddress].longitude]}
               title={leadData[selectedAddress].est_year}
             >
-              <Popup>Year Built: {leadData[selectedAddress].est_year}</Popup>
+              <Popup>
+                <p>Year Built: {leadData[selectedAddress].est_year}</p>
+                <p>Lead Info: {leadData[selectedAddress].our_pred}</p>
+              </Popup>
             </Marker>
           )}
         </MapContainer>
