@@ -1,6 +1,7 @@
 import React from "react";
 import Factory from './Images/factory.png'
 import Phone from './Images/phone.png'
+import IncomeMap from './Images/IncomeMap.png'
 
 const About = () => {
   return (
@@ -76,35 +77,28 @@ const About = () => {
 
           <div>
             <img
-              alt="phone"
-              src={Phone}
-              height={300}
-              width={250}
+              alt="Income Map"
+              src={IncomeMap}
+              height={200}
+              width={350}
               />
             </div>
 
         </div>
 
-        <br />
+        <div>
+            <h1 className="headers">
+              What's next?
+              </h1>
+          </div>
 
         <div>
-        
-          <p>Description will be here</p>
-        </div>
+          <p>
+            We see opportunities to incorporate AI to help residents more accurately identify their lead pipes via submitted photos
+            </p>
+          </div>
 
         <br />
-
-        <div>
-          <h2 className="smaller-title">Our Purpose</h2>
-          <p>Description will be here</p>
-        </div>
-
-        <br />
-
-        <div>
-          <h2 className="smaller-title">Data case study</h2>
-          <p>Description will be here</p>
-        </div>
       </div>
     </div>
   );
