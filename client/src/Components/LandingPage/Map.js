@@ -109,23 +109,29 @@ const Map = () => {
             <MarkerClusterGroup chunkedLoading>
               {leadData.map((data) => (
                 <Marker
-                  icon={customIcon}
+                  icon={customIcon(data.our_pred)}
                   key={data.id}
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup>Year Built: {data.est_year}</Popup>
+                  <Popup>
+                    <p>Year Built: {data.est_year}</p>
+                    <p>Lead Info: {leadPrediction[data.our_pred]}</p>
+                  </Popup>
                 </Marker>
               ))}
             </MarkerClusterGroup>
           ) : (
             <Marker
-              icon={customIcon}
+              icon={customIcon(leadData[selectedAddress].our_pred)}
               key={leadData[selectedAddress].id}
               position={[leadData[selectedAddress].latitude, leadData[selectedAddress].longitude]}
               title={leadData[selectedAddress].est_year}
             >
-              <Popup>Year Built: {leadData[selectedAddress].est_year}</Popup>
+              <Popup>
+                <p>Year Built: {leadData[selectedAddress].est_year}</p>
+                <p>Lead Info: {leadData[selectedAddress].our_pred}</p>
+              </Popup>
             </Marker>
           )}
         </MapContainer>
