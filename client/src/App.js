@@ -2,7 +2,7 @@
 // import './App.css';
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./Components/LandingPage/LandingPage"
-import Navigation from './Components/Navigation';
+import Navigation from './Components/Navigation/Navigation';
 import About from './Components/About'
 import Check from './Components/HowToCheckPipes'
 import GetChecked from './Components/GetPipesChecked'
