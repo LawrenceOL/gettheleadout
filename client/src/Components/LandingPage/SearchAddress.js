@@ -8,9 +8,6 @@ const SearchAddress = ({leadData, updateData}) => {
   const [submit, setSubmit] = useState(true);
   let apiData = leadData
   // const [newData, setNewData] = useState([])
-  const handleSubmit = (event) => {
-    console.log("yay");
-  };
 //   const searchedAddress = leadData.filter((house) => {
 //     if (/^{address}/.test(house.property_address)) {
 //       console.log("true");
@@ -38,7 +35,7 @@ const SearchAddress = ({leadData, updateData}) => {
   }, [address]);
 
   useEffect(() => {
-    updateData('hello')
+    // updateData('hello')
   }, [submit])
 
   return (
