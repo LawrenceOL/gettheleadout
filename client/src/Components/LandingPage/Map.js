@@ -8,6 +8,7 @@ const axios = require("axios").default;
 const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [isSearched, setIsSearched] = useState(false)
   const [searchedData, setSearchedData] = useState();
   const [selectedAddress, setSelectedAddress] = useState([])
 
@@ -15,12 +16,15 @@ const Map = () => {
     setSearchedData(childData);
   };
 
-  console.log(searchedData);
   let displayedAddresses = searchedData && searchedData.slice(0,5)
 
    const onAddressClick = (id) => {
+     setIsSearched(true);
      setSelectedAddress(id)
+     console.log(isSearched)
    };
+
+   console.log(leadData[selectedAddress])
 
   const displayed = displayedAddresses && displayedAddresses.map((address) => (
             <p className="searchedaddress" key={address.id} onClick={() => onAddressClick(address.id)}>{address.property_address}</p>
@@ -61,11 +65,10 @@ const Map = () => {
         <SearchAddress leadData={leadData} updateData={updateData} />
       </div>
       {searchedData && searchedData.length >= 1 ? (
-        <div className="searchdropdown">
-          {displayed}
-        </div>
-      ) : ""
-      }
+        <div className="searchdropdown">{displayed}</div>
+      ) : (
+        ""
+      )}
       <div className="mapholder">
         <MapContainer
           center={[41.571701, -87.69449150000003]}
@@ -76,7 +79,7 @@ const Map = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          {isLoading ? (
+          {/* {isLoading ? (
             <div>Loading..</div>
           ) : (
             <MarkerClusterGroup chunkedLoading>
@@ -91,6 +94,32 @@ const Map = () => {
                 </Marker>
               ))}
             </MarkerClusterGroup>
+          )} */}
+          {isLoading ? (
+            <div>Loading...</div>
+            ) : 
+            !isSearched ? (
+            <MarkerClusterGroup chunkedLoading>
+              {leadData.map((data) => (
+                <Marker
+                  icon={customIcon}
+                  key={data.id}
+                  position={[data.latitude, data.longitude]}
+                  title={data.est_year}
+                >
+                  <Popup>Year Built: {data.est_year}</Popup>
+                </Marker>
+              ))}
+            </MarkerClusterGroup>
+          ) : (
+            <Marker
+              icon={customIcon}
+              key={leadData[selectedAddress].id}
+              position={[leadData[selectedAddress].latitude, leadData[selectedAddress].longitude]}
+              title={leadData[selectedAddress].est_year}
+            >
+              <Popup>Year Built: {leadData[selectedAddress].est_year}</Popup>
+            </Marker>
           )}
         </MapContainer>
       </div>
