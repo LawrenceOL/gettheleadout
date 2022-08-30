@@ -3,12 +3,256 @@ div.topmargin {
   }
 
 
-  /* .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-  } */
+.center{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+
+
+.frame{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 90px;
+
+    width: 374px;
+    height: 774px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+
+
+.cta-section{
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 21px 0px 16px;
+
+    width: 374px;
+    height: 332px;
+    background: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.contact-text1{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 24px 0px 16px;
+    gap: 2px;
+
+    width: 373px;
+    height: 352px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.contact-text2{
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 24px 0px 0px;
+
+    width: 337px;
+    height: 378px;
+
+    background: #FFFFFF;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content1{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0px 0px 55px;
+    gap: 16px;
+
+    width: 313px;
+    height: 189px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.alltext{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+
+    width: 287px;
+    height: 179px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.text{
+    width: 287px;
+    height: 56px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+
+
+    /* Gray/900 */
+
+    color: #101828;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.supportingtext{
+    width: 287px;
+    height: 104px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    /* or 26px */
+
+
+    /* Gray/500 */
+
+    color: #667085;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+
+.datapic{
+    /* Data analysis with monitor, graphs, and magnifier */
+
+
+    width: 282px;
+    height: 174px;
+
+    /* background: url(.png); */
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.featured-icon{
+    width: 39px;
+    height: 39px;
+
+    /* accent color 2 */
+
+    background: #E0F2FE;
+    /* accent color 1 */
+
+    border: 6px solid #EFF8FF;
+    border-radius: 28px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.number{
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 10px;
+}
+
+.number-detail{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+
+.youngpeople{
+    width: 239px;
+    height: 205px;
+
+    /* background: url(.png); */
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
 
 .headers{
     width: 340px;
@@ -19,6 +263,7 @@ div.topmargin {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
+    color: #101828;
 }
 
 .image{
@@ -33,9 +278,10 @@ div.topmargin {
 }
 
 .numbered-sections{
+    width: 320px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
 }
 
 .item-1 {
@@ -88,7 +334,7 @@ h1.title {
 
 h1.feature-text-top {
     width: 279px;
-    height: 72px;
+    height: 50px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -123,8 +369,8 @@ h1.feature-text-bottom{
     flex-direction: column;
     justify-content: space-around;
     margin-left: 5%;
-    padding-left: 10%;
-    margin-right: 10%; 
+    padding-left: 0;
+    margin-right: 5%; 
 }
 
 div.pictures-row {
