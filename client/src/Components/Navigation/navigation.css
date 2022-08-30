@@ -1,0 +1,17 @@
+.mb-3 {
+    background-color: #FFFFFF !important;
+    width: 100%
+}
+.navtitles {
+    color: #005ea2 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    line-height: 16px !important;
+    width: 198px;
+    height: 24px;
+}
+
+.offCanvasnav {
+    width: 60% !important
+}
