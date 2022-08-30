@@ -5,6 +5,7 @@ import LandingPage from "./Components/LandingPage/LandingPage"
 import Navigation from './Components/Navigation/Navigation';
 import About from './Components/About'
 import Check from './Components/HowToCheckPipes'
+import GetChecked from './Components/GetPipesChecked'
 import GetInvolved from './Components/GetInvolved'
 import Contact from './Components/Contact'
 import SubmitLeadData from './Components/SubmitLeadData';
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/about" element={<About/>} />
           <Route exact path="/howtocheckpipes" element={<Check/>} />
+          <Route exact path="/getpipeschecked" element={<GetChecked/>}/>
           <Route exact path="/submitleaddata" element={<SubmitLeadData />} />
           <Route exact path="/faq" element={<Faq/>}/>
           <Route exact path="/contribute" element={<Contribute/>} />
