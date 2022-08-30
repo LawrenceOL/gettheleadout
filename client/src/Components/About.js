@@ -99,25 +99,6 @@ const About = () => {
           </div>
 
         <br />
-
-        <div>
-        
-          <p>Description will be here</p>
-        </div>
-
-        <br />
-
-        <div>
-          <h2 className="smaller-title">Our Purpose</h2>
-          <p>Description will be here</p>
-        </div>
-
-        <br />
-
-        <div>
-          <h2 className="smaller-title">Data case study</h2>
-          <p>Description will be here</p>
-        </div>
       </div>
     </div>
   );
