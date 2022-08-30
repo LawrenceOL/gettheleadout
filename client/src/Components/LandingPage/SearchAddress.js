@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { InlineShareButtons } from "sharethis-reactjs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import Select from 'react-select'
 import "./LandingPage.css";
 
 // const SearchAddress = ({leadData, searchedData, setSearchedData, updateData}) => {
@@ -33,6 +32,7 @@ const SearchAddress = ({
     updateData(newData)
   };
 
+
   const handleChange = (event) => {
     event.preventDefault();
     if (event.target.type === "text") {
@@ -62,10 +62,13 @@ const SearchAddress = ({
         name="address"
         placeholder="&#xf002; Search your Address"
       />
-      <button onClick={changeSubmit}>Go</button>
+      {/* <button onClick={changeSubmit}>Go</button> */}
 
-      {address.strLe}
-      <p className="searchtext">Discover the likelihood of lead pipes.</p>
+      {address.length >= 1 ? (
+        ""
+      ) : (
+        <p className="searchtext">Discover the likelihood of lead pipes.</p>
+      )}
     </div>
   );
 };

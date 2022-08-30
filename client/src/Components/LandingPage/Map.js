@@ -9,11 +9,23 @@ const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [searchedData, setSearchedData] = useState();
+  const [selectedAddress, setSelectedAddress] = useState([])
 
   const updateData = (childData) => {
     setSearchedData(childData);
-    console.log(searchedData)
   };
+
+  console.log(searchedData);
+  let displayedAddresses = searchedData && searchedData.slice(0,5)
+
+   const onAddressClick = (id) => {
+     setSelectedAddress(id)
+   };
+
+  const displayed = displayedAddresses && displayedAddresses.map((address) => (
+            <p className="searchedaddress" key={address.id} onClick={() => onAddressClick(address.id)}>{address.property_address}</p>
+  ))
+
 
   const leadPrediction = {
     1: "Assumed Non-Lead",
@@ -48,6 +60,12 @@ const Map = () => {
       <div className="searchform">
         <SearchAddress leadData={leadData} updateData={updateData} />
       </div>
+      {searchedData && searchedData.length >= 1 ? (
+        <div className="searchdropdown">
+          {displayed}
+        </div>
+      ) : ""
+      }
       <div className="mapholder">
         <MapContainer
           center={[41.571701, -87.69449150000003]}

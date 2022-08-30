@@ -159,6 +159,20 @@ color: #344054;
   top: 155px;
   left: 16px; */
 }
+.searchdropdown {
+    width: 297px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.searchedaddress {
+    font-family: 'Public Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    margin-bottom: 5px;
+    border-bottom: #D0D5DD 1px solid;
+}
 .searchtext {
     width: 297px;
     height: 19px;
