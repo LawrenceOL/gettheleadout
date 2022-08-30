@@ -21,7 +21,7 @@ const Check = () => {
           </h1>
         </div>
 
-        <div>
+        <div className="center">
             <img
                 alt="camera"
                 src={Camera}
@@ -62,7 +62,7 @@ const Check = () => {
                 />
           </div>
             <div className="item-2">
-              <h1 className="feature-text-top">
+              <h1 className="feature-text-top" style={{paddingTop: 15}}>
                 Upload a photo of your pipe
               </h1>
               <h1 className="feature-text-bottom">
@@ -81,8 +81,8 @@ const Check = () => {
             <img
               alt="lead pipe"
               src={LeadPipe}
-              height={200}
-              width={350}
+              height={140}
+              width={332}
             />
           </div>
 
@@ -96,8 +96,8 @@ const Check = () => {
             <img
               alt="copper pipe"
               src={CopperPipe}
-              height={200}
-              width={350}
+              height={140}
+              width={332}
             />
           </div>
 

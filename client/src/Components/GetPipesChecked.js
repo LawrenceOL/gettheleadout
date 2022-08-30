@@ -34,7 +34,8 @@ const GetChecked = () => {
                     How to Check My Pipes >
                     </Link>
 
-                <br/>
+                {/* <br/> */}
+                {/* <div className="gpc-container">
                 <div className="frame251">
                     <div className="frame257">
                         <div className="cta-section">
@@ -109,6 +110,7 @@ const GetChecked = () => {
                             </div>
                         </div>
                     </div>
+                    </div> */}
 
                 {/* <div>
                     <h1 className="headers">
