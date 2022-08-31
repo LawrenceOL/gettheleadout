@@ -29,7 +29,7 @@ const Footer = () => {
           
            
                 <div className="d-grid gap-2" style={{marginTop:78, marginLeft:15, marginRight:15}}>
-                     <Button variant="light" size="lg">
+                     <Button variant="light" size="lg" className="addborder">
                         How to check your pipes
                         </Button>
                     <Button varient="primary" size="lg">

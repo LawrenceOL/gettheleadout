@@ -452,3 +452,8 @@ h2.smaller-title {
     display: flex;
     flex-direction: column;
 }
+
+.addborder{
+    border: 5px solid black;
+    
+}
