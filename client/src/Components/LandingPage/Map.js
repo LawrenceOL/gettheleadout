@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
@@ -14,6 +15,10 @@ const Map = () => {
   const [selectedAddress, setSelectedAddress] = useState([]);
   const mapRef = useRef(null)
 
+  /**
+   * Closes all popups open in the MapContainer component
+   * @returns {null} Null if no reference to map
+   */
   const closePopup = () => {
     if (!mapRef.current) return;
     mapRef.current.closePopup()
@@ -31,8 +36,6 @@ const Map = () => {
      console.log(isSearched)
    };
 
-   console.log(leadData[selectedAddress])
-
   const displayed = displayedAddresses && displayedAddresses.map((address) => (
             <p className="searchedaddress" key={address.id} onClick={() => onAddressClick(address.id)}>{address.property_address}</p>
   ))
@@ -45,12 +48,23 @@ const Map = () => {
     4: "Likely Lead",
     5: "Assumed Lead",
   };
-  
+
+  /**
+   * Gets selected lead data based off number
+   * @param {Number} leadInfo 
+   * @returns {String} cur_color
+   */
   const getColor = (leadInfo) => {
     const colors = ['assumed-nonlead', 'unlikely-lead', 'maybe-lead', 'likely-lead','assumed-lead'];
     const cur_color = colors[leadInfo - 1]
     return cur_color
   }
+
+  /**
+   * gets custom icons for map marker
+   * @param {Number} leadInfo lead prediction number
+   * @return {L.Icon}  customized icon
+   */
   const customIcon = (leadInfo) => {
     const color = getColor(leadInfo)
     return new L.Icon({
@@ -116,12 +130,16 @@ const Map = () => {
                     </p>
                     <p className="header">House Built: <br/>{data.est_year}</p>
                     <div className="popup-buttons">
-                      <button className="bluebutton-m">
-                        How to check your pipes
-                      </button>
-                      <button className="whitebutton-m">
-                        Lead pipe exist? Click here
-                      </button>
+                      <Link to="/howtocheckpipes">
+                        <button className="bluebutton-m">
+                          How to check your pipes
+                        </button>
+                      </Link>
+                      <Link to="/getinvolved">
+                        <button className="whitebutton-m">
+                          Lead pipe exist? Click here
+                        </button>
+                      </Link>
                     </div>
                     
                   </Popup>
