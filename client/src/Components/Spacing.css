@@ -183,6 +183,20 @@ div.topmargin {
     flex-grow: 0;
 }
 
+.supporting-text {
+    /* position: absolute; */
+    width: 340px;
+    height: 57px;
+    left: 16px;
+    top: 245px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
 
 
 .datapic{
@@ -350,19 +364,6 @@ h1.title {
     font-weight: 700; */
 }
 
-.supporting-text {
-    /* position: absolute; */
-    width: 340px;
-    height: 57px;
-    left: 16px;
-    top: 245px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-}
 
 h1.feature-text-top {
     width: 279px;
@@ -422,6 +423,7 @@ h1.feature-text-bottom-2{
     margin-right: 5%; 
 }
 
+
 div.pictures-row {
     display: flex;
     flex-direction: row;
@@ -444,3 +446,9 @@ h2.smaller-title {
     /* z-index:1000; */
 }
 
+
+.footerblue{
+    background-color: #EFF8FF;
+    display: flex;
+    flex-direction: column;
+}
