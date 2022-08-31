@@ -5,12 +5,13 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import SearchAddress from "./SearchAddress";
 import "./Map.css";
 const axios = require("axios").default;
+
 const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [isSearched, setIsSearched] = useState(false)
+  const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState();
-  const [selectedAddress, setSelectedAddress] = useState([])
+  const [selectedAddress, setSelectedAddress] = useState([]);
 
   const updateData = (childData) => {
     setSearchedData(childData);
@@ -39,13 +40,18 @@ const Map = () => {
     5: "Assumed Lead",
   };
   
-  const customIcon = (leadInfo) => {
-    const colors = ['assumed-nonlead', 'unlikely-lead', 'maybe-lead', 'likely-lead','assumed-lead']
+  const getColor = (leadInfo) => {
+    const colors = ['assumed-nonlead', 'unlikely-lead', 'maybe-lead', 'likely-lead','assumed-lead'];
     const cur_color = colors[leadInfo - 1]
+    return cur_color
+  }
+  const customIcon = (leadInfo) => {
+    const color = getColor(leadInfo)
+    // const cur_color = colors[leadInfo - 1]
     return new L.Icon({
     iconUrl: require("./map_marker.svg").default,
     iconSize: new L.Point(30, 35),
-    className: cur_color
+    className: color
     });
   }
 
@@ -114,9 +120,22 @@ const Map = () => {
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup>
-                    <p>Year Built: {data.est_year}</p>
-                    <p>Lead Info: {leadPrediction[data.our_pred]}</p>
+                  <Popup closeButton={false}>
+                    <p className="address">{data.property_address}</p>
+                    <p className="header">
+                      Probability of service line: <br/>
+                      <span className={getColor(data.our_pred)}><span id="square">■</span> {leadPrediction[data.our_pred]}</span>
+                    </p>
+                    <p className="header">House Built: <br/>{data.est_year}</p>
+                    <div className="popup-buttons">
+                      <button className="bluebutton-m">
+                        How to check your pipes
+                      </button>
+                      <button className="whitebutton-m">
+                        Lead pipe exist? Click here
+                      </button>
+                    </div>
+                    
                   </Popup>
                 </Marker>
               ))}
