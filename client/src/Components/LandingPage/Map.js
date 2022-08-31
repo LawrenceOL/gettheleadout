@@ -120,7 +120,7 @@ const Map = () => {
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup>
+                  <Popup closeButton={false}>
                     <p className="address">{data.property_address}</p>
                     <p className="header">
                       Probability of service line: <br/>
