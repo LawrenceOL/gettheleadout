@@ -11,7 +11,7 @@ const About = () => {
           <h1 className="title">
             About us
             </h1>
-          <h1 className="baby-title">Let's take you to where this all started.
+          <h1 className="supporting-text">Let's take you to where this all started.
             </h1>
           <br/>
           </div>

@@ -183,6 +183,20 @@ div.topmargin {
     flex-grow: 0;
 }
 
+.supporting-text {
+    /* position: absolute; */
+    width: 340px;
+    height: 57px;
+    left: 16px;
+    top: 245px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
 
 
 .datapic{
@@ -284,6 +298,22 @@ div.topmargin {
     grid-template-rows: 1fr 1fr 1fr 1fr; 
 }
 
+.numbered-sections-long{
+    width: 320px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+}
+
+
+
+.numbered-sections-small{
+    width: 320px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr; 
+}
+
 .item-1 {
     grid-column-start: 1;
     grid-column-end: 2 ;
@@ -297,6 +327,22 @@ div.topmargin {
     grid-row-start: 1 ;
     grid-row-end: span row3-end;
 }
+
+
+.item-3 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: span row7-end;
+}
+
+.item-2-pic {
+    grid-column-start: 2;
+    grid-column-end: span col4-end;
+    grid-row-start: 2 ;
+    grid-row-end: span row3-end;
+}
+
 
 h1.title {
     /* margin-left: 2%; */
@@ -318,19 +364,6 @@ h1.title {
     font-weight: 700; */
 }
 
-.supporting-text {
-    /* position: absolute; */
-    width: 340px;
-    height: 57px;
-    left: 16px;
-    top: 245px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-}
 
 h1.feature-text-top {
     width: 279px;
@@ -363,6 +396,23 @@ h1.feature-text-bottom{
     color: #475467;
 }
 
+h1.feature-text-bottom-2{
+    width: 348px;
+    height: 78px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    /* or 26px */
+
+    /* secondary text */
+
+    color: #475467;
+}
+
+
 
 .page-template{
     display: flex;
@@ -372,6 +422,7 @@ h1.feature-text-bottom{
     padding-left: 0;
     margin-right: 5%; 
 }
+
 
 div.pictures-row {
     display: flex;
@@ -395,3 +446,9 @@ h2.smaller-title {
     /* z-index:1000; */
 }
 
+
+.footerblue{
+    background-color: #EFF8FF;
+    display: flex;
+    flex-direction: column;
+}

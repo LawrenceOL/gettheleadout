@@ -11,6 +11,7 @@ import Contact from './Components/Contact'
 import SubmitLeadData from './Components/SubmitLeadData';
 import Faq from './Components/Faq';
 import Contribute from './Components/Contribute';
+import Footer from './Components/Footer'
 
 
 
@@ -48,6 +49,7 @@ function App() {
         {/* <Map/>
         <About/>
         <Check/> */}
+        <Footer/>
       </header>
     </div>
   );
