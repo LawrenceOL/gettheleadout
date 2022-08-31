@@ -7,6 +7,7 @@ import One from './Images/one.png'
 import Two from './Images/two.png'
 import LeadPipe from './Images/leadpipe.png'
 import CopperPipe from './Images/copperpipe2.png'
+import Checkboxes from './Images/checkboxes.png'
 
 const Check = () => {
   let navigate = useNavigate();
@@ -31,6 +32,7 @@ const Check = () => {
           </div>
 
         <div className="numbered-sections">
+
             <div className="item-1">
               <img
                 alt="Number one"
@@ -39,6 +41,7 @@ const Check = () => {
                 width={50}
                 />
             </div>
+            
             <div className="item-2">
               <h1 className="feature-text-top">
                 {" "}
@@ -48,6 +51,7 @@ const Check = () => {
                 A visual test is the most accurate way to know if your pipes are lead -- it only takes a few minutes and requires no special equipment!
               </h1>
             </div>
+
         </div>
 
         <br/>
@@ -87,10 +91,13 @@ const Check = () => {
           </div>
 
           <div>
-            <h1 className="feature-text-top">How a lead pipe could look</h1>
-            <h1 className="feature-text-bottom"> A shiny, silver scratch can mean the pipe is either lead or galvanized steel.
+            <h1 className="feature-text-top" >How a lead pipe could look</h1>
+              <h1 className="feature-text-bottom"> A shiny, silver scratch can mean the pipe is either lead or galvanized steel.
             </h1>
+            
           </div>
+
+          <br/>
 
           <div>
             <img
@@ -109,9 +116,22 @@ const Check = () => {
 
         </div>
 
-        <div>
+        <br/>
 
+        <div>
           <h2 className="headers"> Steps to complete a visual test</h2>
+          </div>
+
+        <br/>
+
+        <div>
+          <img
+          alt="Checkboxes"
+          src={Checkboxes}
+          // height={210}
+          // width={250}
+          />
+          </div>
 
           <br/>
         
@@ -150,7 +170,9 @@ const Check = () => {
                 <li>Wash your hands thoroughly with soap and water.</li>
               </ol>
           </div>
-        </div>
+
+          <br/>
+        
         <div>
           <h1 className="headers">
             Still need help?
