@@ -19,7 +19,7 @@ const NavBar = () => {
 
   return (
     <div id="navbar">
-      <Navbar expand="md" className="mb-3" fixed="top">
+      <Navbar collapseOnSelect expand="md" className="mb-3" fixed="top">
         <Container fluid>
           <Navbar.Brand className="navtitles" href="#">
             Get the Lead Out
@@ -36,57 +36,49 @@ const NavBar = () => {
                 <Offcanvas.Title></Offcanvas.Title>
               </Offcanvas.Header>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <div className="flex-column justify-content-between">
-                  <div>
-                    <Nav.Link
-                      className="nav-links link-dark text-decoration-none sidebar"
-                      href="/"
-                      onClick={showSidebar}
-                    >
-                      Map
-                    </Nav.Link>
-                  </div>
-                  <div>
-                    <Nav.Link
-                      className="nav-links link-dark text-decoration-none sidebar"
-                      href="/#/howtocheckpipes"
-                    >
-                      How to check your pipes
-                    </Nav.Link>
-                  </div>
-                  <div>
-                    <Nav.Link
-                      className="nav-links link-dark text-decoration-none"
-                      href="/#/getinvolved"
-                    >
-                      How to get involved
-                    </Nav.Link>
-                  </div>
-                  <div>
-                    <Nav.Link
-                      className="nav-links link-dark text-decoration-none"
-                      href="/#/contribute"
-                    >
-                      Put yourself on the map
-                    </Nav.Link>
-                  </div>
-                  <div>
-                    <Nav.Link
-                      className="nav-links link-dark text-decoration-none"
-                      href="/#/faq"
-                    >
-                      FAQ
-                    </Nav.Link>
-                  </div>
-                  <div>
-                    <Nav.Link
-                      className="nav-links link-dark text-decoration-none"
-                      href="/#/about"
-                    >
-                      About
-                    </Nav.Link>
-                  </div>
-                </div>
+                <Nav.Link
+                  className="nav-links text-decoration-none sidebar"
+                  href="/"
+                  collapseOnSelect
+                >
+                  Map
+                </Nav.Link>
+
+                <Nav.Link
+                  className="nav-links text-decoration-none sidebar"
+                  href="/#/howtocheckpipes"
+                  collapseOnSelect
+                >
+                  How to check your pipes
+                </Nav.Link>
+
+                <Nav.Link
+                  className="nav-links text-decoration-none"
+                  href="/#/getinvolved"
+                >
+                  How to get involved
+                </Nav.Link>
+
+                <Nav.Link
+                  className="nav-links text-decoration-none"
+                  href="/#/faq"
+                >
+                  FAQ
+                </Nav.Link>
+
+                <Nav.Link
+                  className="nav-links  text-decoration-none"
+                  href="/#/about"
+                >
+                  About
+                </Nav.Link>
+
+                <Nav.Link
+                  className="nav-links blue text-decoration-none"
+                  href="/#/getpipeschecked"
+                >
+                  Get your pipes checked
+                </Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

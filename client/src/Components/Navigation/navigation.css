@@ -11,7 +11,36 @@
     width: 198px;
     height: 24px;
 }
-
+.navbar-toggler {
+    border: none !important;
+    color: blue !important
+}
 .offCanvasnav {
-    width: 60% !important
+    width: 66% !important
+}
+
+.nav-links {
+    width: 188px;
+    height: 19px;
+
+    font-family: 'Inter';
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 19px;
+    text-align: left;
+    margin: 0px 20px 35px 10px;
+    color: #000000;
+}
+
+.blue {
+    width: 191px;
+    height: 40px;
+    background-color: #005EA2;
+    border-radius: 8px;
+    color: #FFFFFF !important;
+    border-width: 1px;
+    font-size: 14px !important;
+    text-align: center;
+    margin: 0 10px;
 }
