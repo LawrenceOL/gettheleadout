@@ -89,25 +89,6 @@ const Map = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          {/* {isLoading ? (
-            <div>Loading..</div>
-          ) : (
-            <MarkerClusterGroup chunkedLoading>
-              {leadData.map((data) => (
-                <Marker
-                  icon={customIcon(data.our_pred)}
-                  key={data.id}
-                  position={[data.latitude, data.longitude]}
-                  title={data.est_year}
-                >
-                  <Popup>
-                    <p>Year Built: {data.est_year}</p>
-                    <p>Lead Info: {leadPrediction[data.our_pred]}</p>
-                  </Popup>
-                </Marker>
-              ))}
-            </MarkerClusterGroup>
-          )} */}
           {isLoading ? (
             <div>Loading...</div>
             ) : 
@@ -120,7 +101,7 @@ const Map = () => {
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup closeButton={false}>
+                  <Popup>
                     <p className="address">{data.property_address}</p>
                     <p className="header">
                       Probability of service line: <br/>
