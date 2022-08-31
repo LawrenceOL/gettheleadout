@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
@@ -10,14 +10,20 @@ const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isSearched, setIsSearched] = useState(false);
-  const [searchedData, setSearchedData] = useState();
+  const [searchedData, setSearchedData] = useState([]);
   const [selectedAddress, setSelectedAddress] = useState([]);
+  const mapRef = useRef(null)
+
+  const closePopup = () => {
+    if (!mapRef.current) return;
+    mapRef.current.closePopup()
+  }
 
   const updateData = (childData) => {
-    setSearchedData(childData);
+    setSearchedData(childData)
   };
 
-  let displayedAddresses = searchedData && searchedData.slice(0,5)
+  let displayedAddresses = searchedData && searchedData.slice(0,5);
 
    const onAddressClick = (id) => {
      setIsSearched(true);
@@ -47,7 +53,6 @@ const Map = () => {
   }
   const customIcon = (leadInfo) => {
     const color = getColor(leadInfo)
-    // const cur_color = colors[leadInfo - 1]
     return new L.Icon({
     iconUrl: require("./map_marker.svg").default,
     iconSize: new L.Point(30, 35),
@@ -84,6 +89,7 @@ const Map = () => {
           center={[41.571701, -87.69449150000003]}
           zoom={15}
           scrollWheelZoom={false}
+          ref={mapRef}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -101,7 +107,8 @@ const Map = () => {
                   position={[data.latitude, data.longitude]}
                   title={data.est_year}
                 >
-                  <Popup>
+                  <Popup closeButton={false}>
+                    <button className="closebutton" onClick={closePopup}>×</button>
                     <p className="address">{data.property_address}</p>
                     <p className="header">
                       Probability of service line: <br/>

@@ -24,6 +24,15 @@
   row-gap: 5px;
   width: 220px;
 }
+.closebutton {
+  background-color: #ffffff;
+  font-size: 22px;
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 17px;
+}
+
 .bluebutton-m {
   width: 220px;
   height: 30px;
