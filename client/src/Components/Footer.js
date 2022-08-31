@@ -74,7 +74,9 @@ const Footer = () => {
                         </Link>
                     </div>
                 <p>
-                    Get our data set
+                    <Link to="/getourdataset">
+                        Get our data set
+                        </Link>
                     </p>
                 </div>
         
