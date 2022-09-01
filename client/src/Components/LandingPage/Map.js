@@ -4,6 +4,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import SearchAddress from "./SearchAddress";
 import "./Map.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
+
 const axios = require("axios").default;
 
 const Map = () => {
@@ -110,8 +113,7 @@ const Map = () => {
           )} */}
           {isLoading ? (
             <div>Loading...</div>
-            ) : 
-            !isSearched ? (
+          ) : !isSearched ? (
             <MarkerClusterGroup chunkedLoading>
               {leadData.map((data) => (
                 <Marker
@@ -123,10 +125,16 @@ const Map = () => {
                   <Popup closeButton={false}>
                     <p className="address">{data.property_address}</p>
                     <p className="header">
-                      Probability of service line: <br/>
-                      <span className={getColor(data.our_pred)}><span id="square">■</span> {leadPrediction[data.our_pred]}</span>
+                      Probability of service line: <br />
+                      <span className={getColor(data.our_pred)}>
+                        <span id="square">■</span>{" "}
+                        {leadPrediction[data.our_pred]}
+                      </span>
                     </p>
-                    <p className="header">House Built: <br/>{data.est_year}</p>
+                    <p className="header">
+                      House Built: <br />
+                      {data.est_year}
+                    </p>
                     <div className="popup-buttons">
                       <button className="bluebutton-m">
                         How to check your pipes
@@ -135,7 +143,6 @@ const Map = () => {
                         Lead pipe exist? Click here
                       </button>
                     </div>
-                    
                   </Popup>
                 </Marker>
               ))}
@@ -144,7 +151,10 @@ const Map = () => {
             <Marker
               icon={customIcon(leadData[selectedAddress].our_pred)}
               key={leadData[selectedAddress].id}
-              position={[leadData[selectedAddress].latitude, leadData[selectedAddress].longitude]}
+              position={[
+                leadData[selectedAddress].latitude,
+                leadData[selectedAddress].longitude,
+              ]}
               title={leadData[selectedAddress].est_year}
             >
               <Popup>
@@ -153,6 +163,10 @@ const Map = () => {
               </Popup>
             </Marker>
           )}
+
+          <button className="sharebutton" onClick={() => console.log("yay")}>
+            <FontAwesomeIcon className= "shareicon" icon={faShareFromSquare} />
+          </button>
         </MapContainer>
       </div>
     </>
