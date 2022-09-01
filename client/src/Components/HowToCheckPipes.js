@@ -8,6 +8,7 @@ import Two from './Images/two.png'
 import LeadPipe from './Images/leadpipe.png'
 import CopperPipe from './Images/copperpipe2.png'
 import Checkboxes from './Images/checkboxes.png'
+import { Link } from "react-router-dom";
 
 const Check = () => {
   let navigate = useNavigate();
@@ -41,7 +42,7 @@ const Check = () => {
                 width={50}
                 />
             </div>
-            
+
             <div className="item-2">
               <h1 className="feature-text-top">
                 {" "}
@@ -179,9 +180,9 @@ const Check = () => {
           </h1>
           <h1 className="feature-text-bottom">
           <ol>
-            <li>Check out NPR's step by step guide</li>
+            <li>Check out <a href="apps.npr.org"> NPR's step by step guide </a></li>
             <li>Contact your local water utility directly</li>
-            <li>Check out our FAQ page > for commonly asked questions and answers.</li>
+            <li>Check out our <Link to="/faq"> FAQ page > </Link> for commonly asked questions and answers.</li>
             </ol>
           </h1>
         </div>
