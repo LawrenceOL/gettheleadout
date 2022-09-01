@@ -99,6 +99,11 @@ const Map = () => {
     });
   };
 
+  /**
+   * changes cluster icon color
+   * @param {cluster} cluster 
+   * @returns {L.DivIcon} customized DivIcon
+   */
   const createClusterCustomIcon = (cluster) =>{
     let childCount = cluster.getChildCount()
     let c = ' marker-cluster-';
@@ -184,7 +189,7 @@ const Map = () => {
                           How to check your pipes
                         </button>
                       </Link>
-                      <Link to="/getinvolved">
+                      <Link to="/getpipeschecked">
                         <button className="whitebutton-m">
                           Lead pipe exist? Click here
                         </button>
