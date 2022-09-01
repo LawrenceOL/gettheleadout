@@ -4,6 +4,7 @@ import One from "./Images/one.png";
 import Two from "./Images/two.png";
 import YoungPeople from "./Images/youngpeople.png";
 import DataPic from "./Images/datapic.png";
+import ShareButton from "./LandingPage/ShareButton";
 
 const GetChecked = () => {
   const URL = "https://form.jotform.com/222348879637169"; //embed URL
@@ -104,6 +105,9 @@ const GetChecked = () => {
             title="jotform-iframe"
             src={URL}
           ></iframe>
+          <div className="form_share_button">
+            <ShareButton />
+          </div>
         </div>
 
         <div>
