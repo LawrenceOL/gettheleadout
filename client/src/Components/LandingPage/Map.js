@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup, useMapEvent } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import SearchAddress from "./SearchAddress";
 import ShareButton from "./ShareButton";
@@ -30,8 +30,17 @@ const Map = () => {
   const [displaySearch, setDisplaySearch] = useState("")
   const [selectedAddress, setSelectedAddress] = useState([]);
   const [mapCenter, setMapCenter] = useState([41.571701, -87.69449150000003]);
-
   const [sharingIsClicked, setSharingIsClicked] = useState(false);
+
+  const [searchedLatLon, setSearchedLatLon] = useState([]);
+  // function handleOnFlyTo() {
+  //   const { current = {} } = mapRef;
+  //   const { leafletElement: map } = current;
+
+  //   map.flyTo(searchedLatLon, 14, {
+  //     duration: 2,
+  //   });
+  // }
 
   const mapRef = useRef(null);
 
@@ -48,6 +57,7 @@ const Map = () => {
 
   const updateData = (childData) => {
     setSearchedData(childData);
+    console.log(searchedData)
   };
 
   const updateSharing = () => {
@@ -56,13 +66,37 @@ const Map = () => {
 
   let displayedAddresses = searchedData && searchedData.slice(0, 5);
 
+
+  const panToAddress = () => {
+    if (!mapRef.current) return;
+    mapRef.current.setView(new L.LatLng([leadData[selectedAddress].latitude,
+      leadData[selectedAddress].longitude]));
+  };
+
   const onAddressClick = (id) => {
     setIsSearched(true);
     setSelectedAddress(id);
     setAddress("")
     setSearchedData()
-    console.log(searchedData);
+    
   };
+
+//   if (selectedAddress) {
+//     console.log([
+//       leadData[selectedAddress].latitude,
+//       leadData[selectedAddress].longitude,
+//     ]);
+
+//     setSearchedLatLon([
+//     leadData[selectedAddress].latitude,
+//     leadData[selectedAddress].longitude,
+//   ])
+// };
+
+// const panToAddress = () => {
+//   if (!mapRef.current) return;
+//   mapRef.current.setView(new L.LatLng(searchedLatLon));
+// };
 
   const displayed =
     displayedAddresses &&
@@ -139,12 +173,12 @@ const Map = () => {
           updateData={updateData}
         />
       </div>
-      {searchedData && searchedData.length >= 1 && address.length >=1 ? (
+      {searchedData && searchedData.length >= 1 && address.length >= 1 ? (
         <div className="searchdropdown">{displayed}</div>
       ) : (
-          ""      
-        )}
-      
+        ""
+      )}
+
       <div className="mapholder">
         <MapContainer
           center={mapCenter}
@@ -230,6 +264,8 @@ const Map = () => {
             ""
           )}
         </MapContainer>
+
+      
       </div>
     </>
   );
