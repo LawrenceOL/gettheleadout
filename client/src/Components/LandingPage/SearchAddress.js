@@ -8,8 +8,10 @@ const SearchAddress = ({
   searchedData,
   setSearchedData,
   updateData,
+  address,
+  setAddress,
 }) => {
-  const [address, setAddress] = useState("");
+  // const [address, setAddress] = useState("");
   const [submit, setSubmit] = useState(true);
   let apiData = leadData;
   // const [newData, setNewData] = useState([])
@@ -24,12 +26,17 @@ const SearchAddress = ({
   // )
   let newData
   const filterLeadData = () => {
+    if (address === "") {
+      newData = null
+    }
+    else {
     newData =
       apiData &&
       apiData.filter((house) =>
         house.property_address.startsWith(`${address}`)
       );
     updateData(newData)
+    }
   };
 
 
@@ -60,14 +67,14 @@ const SearchAddress = ({
         type="text"
         className="form-control"
         name="address"
-        placeholder="&#xf002; Search your Address"
+        placeholder="&#xf002; Search Your Address"
       />
       {/* <button onClick={changeSubmit}>Go</button> */}
 
       {address.length >= 1 ? (
         ""
       ) : (
-        <p className="searchtext">Discover the likelihood of lead pipes.</p>
+        <p className="searchtext">Discover the Likelihood of Lead Pipes.</p>
       )}
     </div>
   );

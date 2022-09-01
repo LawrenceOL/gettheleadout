@@ -13,7 +13,9 @@
 }
 .navbar-toggler {
     border: none !important;
-    color: blue !important
+}
+.navbar-toggler:focus {
+  outline: none;
 }
 .offCanvasnav {
     width: 66% !important

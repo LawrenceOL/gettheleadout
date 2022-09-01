@@ -5,12 +5,10 @@
 #landingoverlay {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(
-      to right,
-      rgba(227, 227, 227, 0.5),
-      rgba(227, 227, 227, 0.5)
-    ),
-    url("https://res.cloudinary.com/adelaney923/image/upload/v1661372495/IMG_0033_1_jhmvfd.png");
+
+  background-image: linear-gradient(to right, rgba(227, 227, 227, 0.8), rgba(227, 227, 227, 0.8)), url("https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png");
+
+  
   /* background-color: rgba(227, 227, 227, 0.7); */
   /* z-index: 1; */
 }
@@ -147,11 +145,11 @@
   color: #344054;
 }
 .legendcontainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 334px;
-  height: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 334px;
+    height: 76px;
 }
 .legenditem {
   display: flex;
@@ -180,6 +178,12 @@
   border-radius: 50%;
   background-color: #98b8bc;
 }
+.yellowdot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #EDD365
+}
 .orangedot {
   width: 8px;
   height: 8px;
@@ -187,8 +191,11 @@
   background-color: #e8ac93;
 }
 .searchform {
-  width: 297px;
-  margin-left: 16px;
+
+    width: 297px;
+    margin-left: 16px;
+    margin-top: 10px;
+    
   /* position: absolute;
   top: 155px;
   left: 16px; */

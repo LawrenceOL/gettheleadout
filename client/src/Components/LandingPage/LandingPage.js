@@ -4,7 +4,6 @@ import SearchAddress from "./SearchAddress";
 import PageChangeButtons from "./PageChangeButtons";
 import ShareButton from "./ShareButton";
 import "./LandingPage.css";
-import overlaybg from "../Images/overlaybg.png";
 
 const LandingPage = () => {
   const [showOverlay, setShowOverlay] = useState(true);
@@ -34,7 +33,6 @@ const LandingPage = () => {
       {/* if showoverlay is true show overlay */}
       {showOverlay ? (
         <div id="landingoverlay">
-          <img src={overlaybg} alt="mapimage" />
           <div
             className="overlay1"
             style={{ display: firstOverlay ? "block" : "none" }}
@@ -186,23 +184,27 @@ const LandingPage = () => {
               <div className="containerleft">
                 <div className="legenditem">
                   <div className="darkbluedot"></div>
-                  <p>Confirmed non-lead</p>
+                  <p>Assumed non-lead</p>
                 </div>
                 <div className="legenditem">
                   <div className="lightbluedot"></div>
-                  <p>Assumed non-lead</p>
+                  <p>Likely non-lead</p>
+                </div>
+                <div className="legenditem">
+                  <div className="yellowdot"></div>
+                  <p>Unknown Lead Status</p>
                 </div>
               </div>
 
               <div className="containerright">
                 <div className="legenditem">
                   <div className="reddot"></div>
-                  <p>Confirmed lead</p>
+                  <p>Assumed lead</p>
                 </div>
 
                 <div className="legenditem">
                   <div className="orangedot"></div>
-                  <p>Assumed lead</p>
+                  <p>Likely lead</p>
                 </div>
               </div>
             </div>

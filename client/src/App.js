@@ -14,6 +14,7 @@ import Contribute from './Components/Contribute';
 import GetOurDataSet from "./Components/GetOurDataSet";
 import Footer from './Components/Footer'
 import Confirmation from './Components/Confirmation'
+import ScrollToTop from "./Components/ScrollToTop";
 
 
 
@@ -36,27 +37,28 @@ import Confirmation from './Components/Confirmation'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navigation />
+      {/* <header className="App-header"> */}
+      <Navigation />
+      <ScrollToTop>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/about" element={<About/>} />
-          <Route exact path="/howtocheckpipes" element={<Check/>} />
-          <Route exact path="/getpipeschecked" element={<GetChecked/>}/>
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/howtocheckpipes" element={<Check />} />
+          <Route exact path="/getpipeschecked" element={<GetChecked />} />
           <Route exact path="/submitleaddata" element={<SubmitLeadData />} />
-          <Route exact path="/faq" element={<Faq/>}/>
-          <Route exact path="/contribute" element={<Contribute/>} />
-          <Route exact path="/getinvolved" element={<GetInvolved/>} />
+          <Route exact path="/faq" element={<Faq />} />
+          <Route exact path="/contribute" element={<Contribute />} />
+          <Route exact path="/getinvolved" element={<GetInvolved />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/getourdataset" element={<GetOurDataSet />} />
-          <Route exact path="/confirm" element={<Confirmation/>}/>
-
+          <Route exact path="/confirm" element={<Confirmation />} />
         </Routes>
-        {/* <Map/>
+      </ScrollToTop>
+      {/* <Map/>
         <About/>
         <Check/> */}
-        <Footer/>
-      </header>
+      <Footer />
+      {/* </header> */}
     </div>
   );
 }

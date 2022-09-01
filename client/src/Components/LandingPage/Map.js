@@ -10,18 +10,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
 
 const axios = require("axios").default;
+// function SetViewOnClick({ animateRef }) {
+//   const map = useMapEvent("click", (e) => {
+//     map.setView(e.latlng, map.getZoom(), {
+//       animate: animateRef.current || false,
+//     });
+//   });
+
+//   return null;
+// }
+
 
 const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [address, setAddress] = useState("");
   const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
+  const [displaySearch, setDisplaySearch] = useState("")
   const [selectedAddress, setSelectedAddress] = useState([]);
   const [mapCenter, setMapCenter] = useState([41.571701, -87.69449150000003]);
-
   const [sharingIsClicked, setSharingIsClicked] = useState(false);
 
+  const [searchedLatLon, setSearchedLatLon] = useState([]);
+  // function handleOnFlyTo() {
+  //   const { current = {} } = mapRef;
+  //   const { leafletElement: map } = current;
+
+  //   map.flyTo(searchedLatLon, 14, {
+  //     duration: 2,
+  //   });
+  // }
+
   const mapRef = useRef(null);
+
+  // const animateRef = useRef(false)
 
   /**
    * Closes all popups open in the MapContainer component
@@ -34,6 +57,7 @@ const Map = () => {
 
   const updateData = (childData) => {
     setSearchedData(childData);
+    console.log(searchedData)
   };
 
   const updateSharing = () => {
@@ -42,11 +66,37 @@ const Map = () => {
 
   let displayedAddresses = searchedData && searchedData.slice(0, 5);
 
+
+  const panToAddress = () => {
+    if (!mapRef.current) return;
+    mapRef.current.setView(new L.LatLng([leadData[selectedAddress].latitude,
+      leadData[selectedAddress].longitude]));
+  };
+
   const onAddressClick = (id) => {
     setIsSearched(true);
     setSelectedAddress(id);
-    console.log(isSearched);
+    setAddress("")
+    setSearchedData()
+    
   };
+
+//   if (selectedAddress) {
+//     console.log([
+//       leadData[selectedAddress].latitude,
+//       leadData[selectedAddress].longitude,
+//     ]);
+
+//     setSearchedLatLon([
+//     leadData[selectedAddress].latitude,
+//     leadData[selectedAddress].longitude,
+//   ])
+// };
+
+// const panToAddress = () => {
+//   if (!mapRef.current) return;
+//   mapRef.current.setView(new L.LatLng(searchedLatLon));
+// };
 
   const displayed =
     displayedAddresses &&
@@ -116,13 +166,19 @@ const Map = () => {
   return (
     <>
       <div className="searchform">
-        <SearchAddress leadData={leadData} updateData={updateData} />
+        <SearchAddress
+          address={address}
+          setAddress={setAddress}
+          leadData={leadData}
+          updateData={updateData}
+        />
       </div>
-      {searchedData && searchedData.length >= 1 ? (
+      {searchedData && searchedData.length >= 1 && address.length >= 1 ? (
         <div className="searchdropdown">{displayed}</div>
       ) : (
         ""
       )}
+
       <div className="mapholder">
         <MapContainer
           center={mapCenter}
@@ -208,6 +264,8 @@ const Map = () => {
             ""
           )}
         </MapContainer>
+
+      
       </div>
     </>
   );
