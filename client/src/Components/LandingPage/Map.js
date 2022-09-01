@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvent } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import SearchAddress from "./SearchAddress";
 import ShareButton from "./ShareButton";
@@ -10,18 +10,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
 
 const axios = require("axios").default;
+// function SetViewOnClick({ animateRef }) {
+//   const map = useMapEvent("click", (e) => {
+//     map.setView(e.latlng, map.getZoom(), {
+//       animate: animateRef.current || false,
+//     });
+//   });
+
+//   return null;
+// }
+
 
 const Map = () => {
   const [leadData, setLeadData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [address, setAddress] = useState("");
   const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
+  const [displaySearch, setDisplaySearch] = useState("")
   const [selectedAddress, setSelectedAddress] = useState([]);
   const [mapCenter, setMapCenter] = useState([41.571701, -87.69449150000003]);
 
   const [sharingIsClicked, setSharingIsClicked] = useState(false);
 
   const mapRef = useRef(null);
+
+  // const animateRef = useRef(false)
 
   /**
    * Closes all popups open in the MapContainer component
@@ -45,7 +59,9 @@ const Map = () => {
   const onAddressClick = (id) => {
     setIsSearched(true);
     setSelectedAddress(id);
-    console.log(isSearched);
+    setAddress("")
+    setSearchedData()
+    console.log(searchedData);
   };
 
   const displayed =
@@ -116,13 +132,19 @@ const Map = () => {
   return (
     <>
       <div className="searchform">
-        <SearchAddress leadData={leadData} updateData={updateData} />
+        <SearchAddress
+          address={address}
+          setAddress={setAddress}
+          leadData={leadData}
+          updateData={updateData}
+        />
       </div>
-      {searchedData && searchedData.length >= 1 ? (
+      {searchedData && searchedData.length >= 1 && address.length >=1 ? (
         <div className="searchdropdown">{displayed}</div>
       ) : (
-        ""
-      )}
+          ""      
+        )}
+      
       <div className="mapholder">
         <MapContainer
           center={mapCenter}
