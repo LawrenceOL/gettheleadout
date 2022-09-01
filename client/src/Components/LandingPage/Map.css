@@ -56,26 +56,35 @@
 
 /* Visit https://codepen.io/sosuke/pen/Pjoqqp to generate filters */
 
+/* 
+✔️  Assumed non-lead #317279  
+✔️  unlikely-lead aka Likely non-lead #98B8BC
+✔️  Unknown Lead Status #EDD365
+✔️  Likely lead #E8AC93
+✔️  Assumed Lead #D15A26
+
+*/
+
 .assumed-nonlead {
-  filter: invert(36%) sepia(7%) saturate(2972%) hue-rotate(138deg)
-    brightness(103%) contrast(87%);
+  filter: invert(35%) sepia(48%) saturate(493%) hue-rotate(137deg)
+    brightness(97%) contrast(86%);
 }
 
 .unlikely-lead {
-  filter: invert(81%) sepia(27%) saturate(216%) hue-rotate(138deg)
-    brightness(84%) contrast(89%);
+  filter: invert(75%) sepia(6%) saturate(881%) hue-rotate(138deg)
+    brightness(94%) contrast(92%);
 }
 
 .maybe-lead {
-  filter: invert(43%) sepia(19%) saturate(4607%) hue-rotate(350deg)
-    brightness(88%) contrast(83%);
+  filter: invert(93%) sepia(62%) saturate(7491%) hue-rotate(314deg)
+    brightness(113%) contrast(86%);
 }
 
 .likely-lead {
-  filter: invert(100%) sepia(59%) saturate(5209%) hue-rotate(296deg)
-    brightness(101%) contrast(82%);
+  filter: invert(84%) sepia(19%) saturate(1142%) hue-rotate(314deg)
+    brightness(94%) contrast(94%);
 }
 .assumed-lead {
-  filter: invert(85%) sepia(92%) saturate(1668%) hue-rotate(356deg)
-    brightness(105%) contrast(103%);
+  filter: invert(38%) sepia(68%) saturate(741%) hue-rotate(337deg)
+    brightness(98%) contrast(96%);
 }
