@@ -54,6 +54,8 @@
   font-size: 12px;
 }
 
+/* Visit https://codepen.io/sosuke/pen/Pjoqqp to generate filters */
+
 .assumed-nonlead {
   filter: invert(36%) sepia(7%) saturate(2972%) hue-rotate(138deg)
     brightness(103%) contrast(87%);
