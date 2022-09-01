@@ -60,14 +60,14 @@ const SearchAddress = ({
         type="text"
         className="form-control"
         name="address"
-        placeholder="&#xf002; Search your Address"
+        placeholder="&#xf002; Search Your Address"
       />
       {/* <button onClick={changeSubmit}>Go</button> */}
 
       {address.length >= 1 ? (
         ""
       ) : (
-        <p className="searchtext">Discover the likelihood of lead pipes.</p>
+        <p className="searchtext">Discover the Likelihood of Lead Pipes.</p>
       )}
     </div>
   );
