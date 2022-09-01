@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 
 const Footer = () => {
 
@@ -73,12 +73,13 @@ const Footer = () => {
                         FAQ
                         </Link>
                     </div>
-                <p>
+            
                     <Link to="/getourdataset">
                         Get our data set
                         </Link>
-                    </p>
                 </div>
+                </div>
+               
         
         
         
@@ -88,7 +89,6 @@ const Footer = () => {
         
         
         
-        </div>
 
     )
 }

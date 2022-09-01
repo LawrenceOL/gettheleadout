@@ -4,12 +4,7 @@ import SearchAddress from "./SearchAddress";
 import PageChangeButtons from "./PageChangeButtons";
 import ShareButton from "./ShareButton";
 import "./LandingPage.css"
-import { StickyShareButtons } from "sharethis-reactjs";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { InlineShareButtons } from "sharethis-reactjs";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const LandingPage = () => {
   const [showOverlay, setShowOverlay] = useState(true)

@@ -88,6 +88,19 @@
   width: 100%;
   height: 90vh;
 }
+.sharebutton {
+    background: none;
+    border: none;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px;
+    z-index: 400;
+    padding: 0px;
+}
+.shareicon {
+    font-size:18px
+}
 .mapinfo {
   text-align: center;
   background-color: white;
