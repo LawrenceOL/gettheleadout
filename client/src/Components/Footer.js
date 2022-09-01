@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
 
-    <div style={{ marginTop:150}}>
+    <div style={{ marginTop:300}}>
         <div className="footerblue">
 
             <div style={{ marginTop:40, marginLeft:25, marginRight:25}}>
@@ -29,10 +29,10 @@ const Footer = () => {
           
            
                 <div className="d-grid gap-2" style={{marginTop:78, marginLeft:15, marginRight:15}}>
-                     <Button variant="light" size="lg">
+                     <Button variant="light" size="lg" className="addborder" onClick={() => navigate("/howtocheckpipes")}>
                         How to check your pipes
                         </Button>
-                    <Button varient="primary" size="lg">
+                    <Button varient="primary" size="lg" onClick={() => navigate("/getpipeschecked")}>
                         Get your pipes checked
                         </Button>
                     </div>
