@@ -22,6 +22,10 @@ const Map = () => {
     setSearchedData(childData);
   };
 
+  const updateSharing = () => {
+    setSharingIsClicked(false)
+  }
+
   let displayedAddresses = searchedData && searchedData.slice(0,5)
 
    const onAddressClick = (id) => {
@@ -171,7 +175,7 @@ const Map = () => {
           </button>
           {sharingIsClicked ? (
             <div className="sharebuttoncontainer">
-              <ShareButton />
+              <ShareButton updateSharing={updateSharing}/>
             </div>
           ) : ""}
           
