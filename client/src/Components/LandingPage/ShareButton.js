@@ -1,42 +1,39 @@
 import React from "react"
-import { StickyShareButtons } from "sharethis-reactjs";
+import { InlineShareButtons } from "sharethis-reactjs";
+import "./LandingPage.css"
 
-
-const ShareButton = () => {
+const ShareButton = ({updateSharing}) => {
     return (
-      <div className="sharingButtons">
-        <StickyShareButtons
+      <div className="sharingButtons" onClick={updateSharing}>
+        <div className="sharetext">
+          <p>Share our map to your communities.</p>
+        </div>
+        <InlineShareButtons
           config={{
-            alignment: "left", // alignment of buttons (left, right)
+            alignment: "center", // alignment of buttons (left, center, right)
             color: "social", // set the color of buttons (social, white)
             enabled: true, // show/hide buttons (true, false)
             font_size: 16, // font size for the buttons
-            hide_desktop: false, // hide buttons on desktop (true, false)
-            labels: "counts", // button labels (cta, counts, null)
+            // labels: "cta", // button labels (cta, counts, null)
             language: "en", // which language to use (see LANGUAGES)
-            min_count: 100, // hide react counts less than min_count (INTEGER)
             networks: [
               // which networks to include (see SHARING NETWORKS)
               "twitter",
               "facebook",
+              "linkedin",
               "sms",
             ],
             padding: 12, // padding within buttons (INTEGER)
             radius: 4, // the corner radius on each button (INTEGER)
-            show_total: true, // show/hide the total share count (true, false)
-            show_mobile: true, // show/hide the buttons on mobile (true, false)
-            show_toggle: true, // show/hide the toggle buttons (true, false)
-            size: 48, // the size of each button (INTEGER)
-            top: 160, // offset in pixels from the top of the page
+            // show_total: true,
+            size: 40, // the size of each button (INTEGER)
 
             // OPTIONAL PARAMETERS
-            url: "https://github.com/LawrenceOL/productclubteam3", // (defaults to current url)
-            image: "https://bit.ly/2CMhCMC", // (defaults to og:image or twitter:image)
-            description: "custom text", // (defaults to og:description or twitter:description)
-            title: "custom title", // (defaults to og:title or twitter:title)
-            message: "custom email text", // (only for email sharing)
-            subject: "custom email subject", // (only for email sharing)
-            username: "custom twitter handle", // (only for twitter sharing)
+            url: "https://gettheleadout.azurewebsites.net/", // (defaults to current url)
+            image:
+              "https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png", // (defaults to og:image or twitter:image)
+            description: "Learn how to get rid of lead in your community ", // (defaults to og:description or twitter:description)
+            title: "Do you know if you have lead pipes in your home?", // (defaults to og:title or twitter:title)
           }}
         />
       </div>

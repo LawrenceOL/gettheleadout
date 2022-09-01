@@ -4,7 +4,11 @@ import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import SearchAddress from "./SearchAddress";
+import ShareButton from "./ShareButton";
 import "./Map.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
+
 const axios = require("axios").default;
 
 const Map = () => {
@@ -13,6 +17,9 @@ const Map = () => {
   const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
   const [selectedAddress, setSelectedAddress] = useState([]);
+
+  const [sharingIsClicked, setSharingIsClicked] = useState(false)
+
   const mapRef = useRef(null)
 
   /**
@@ -24,11 +31,16 @@ const Map = () => {
     mapRef.current.closePopup()
   }
 
+
   const updateData = (childData) => {
     setSearchedData(childData)
   };
 
-  let displayedAddresses = searchedData && searchedData.slice(0,5);
+  const updateSharing = () => {
+    setSharingIsClicked(false)
+  }
+
+
 
    const onAddressClick = (id) => {
      setIsSearched(true);
@@ -111,8 +123,7 @@ const Map = () => {
           />
           {isLoading ? (
             <div>Loading...</div>
-            ) : 
-            !isSearched ? (
+          ) : !isSearched ? (
             <MarkerClusterGroup chunkedLoading>
               {leadData.map((data) => (
                 <Marker
@@ -125,10 +136,16 @@ const Map = () => {
                     <button className="closebutton" onClick={closePopup}>×</button>
                     <p className="address">{data.property_address}</p>
                     <p className="header">
-                      Probability of service line: <br/>
-                      <span className={getColor(data.our_pred)}><span id="square">■</span> {leadPrediction[data.our_pred]}</span>
+                      Probability of service line: <br />
+                      <span className={getColor(data.our_pred)}>
+                        <span id="square">■</span>{" "}
+                        {leadPrediction[data.our_pred]}
+                      </span>
                     </p>
-                    <p className="header">House Built: <br/>{data.est_year}</p>
+                    <p className="header">
+                      House Built: <br />
+                      {data.est_year}
+                    </p>
                     <div className="popup-buttons">
                       <Link to="/howtocheckpipes">
                         <button className="bluebutton-m">
@@ -141,7 +158,6 @@ const Map = () => {
                         </button>
                       </Link>
                     </div>
-                    
                   </Popup>
                 </Marker>
               ))}
@@ -150,7 +166,10 @@ const Map = () => {
             <Marker
               icon={customIcon(leadData[selectedAddress].our_pred)}
               key={leadData[selectedAddress].id}
-              position={[leadData[selectedAddress].latitude, leadData[selectedAddress].longitude]}
+              position={[
+                leadData[selectedAddress].latitude,
+                leadData[selectedAddress].longitude,
+              ]}
               title={leadData[selectedAddress].est_year}
             >
               <Popup>
@@ -159,6 +178,16 @@ const Map = () => {
               </Popup>
             </Marker>
           )}
+
+          <button className="sharebutton" onClick={() => setSharingIsClicked(true)}>
+            <FontAwesomeIcon className= "shareicon" icon={faShareFromSquare} />
+          </button>
+          {sharingIsClicked ? (
+            <div className="sharebuttoncontainer">
+              <ShareButton updateSharing={updateSharing}/>
+            </div>
+          ) : ""}
+          
         </MapContainer>
       </div>
     </>
