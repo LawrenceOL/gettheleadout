@@ -101,6 +101,20 @@
 .shareicon {
     font-size:18px
 }
+.sharingButtons {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin: 10px;
+
+}
+.sharebuttoncontainer {
+    background: white;
+    width: 60%;
+    position: absolute;
+    bottom:15px;
+    left: 15px;
+    z-index: 400;
+}
 .mapinfo {
   text-align: center;
   background-color: white;

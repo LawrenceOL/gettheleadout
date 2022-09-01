@@ -217,7 +217,7 @@ const LandingPage = () => {
           <div className="leadmap">
             <Map />
           </div>
-          <ShareButton />
+          {/* <ShareButton /> */}
 
           {/* <div className="leadmap">
             <Map />

@@ -1,9 +1,11 @@
 import React from "react"
 import { InlineShareButtons } from "sharethis-reactjs";
+import "./LandingPage.css"
 
 const ShareButton = () => {
     return (
       <div className="sharingButtons">
+        <p>Share our map to your communities.</p>
         <InlineShareButtons
           config={{
             alignment: "center", // alignment of buttons (left, center, right)
@@ -16,21 +18,20 @@ const ShareButton = () => {
               // which networks to include (see SHARING NETWORKS)
               "twitter",
               "facebook",
+              "linkedin",
               "sms",
             ],
             padding: 12, // padding within buttons (INTEGER)
             radius: 4, // the corner radius on each button (INTEGER)
-            show_total: true,
+            // show_total: true,
             size: 40, // the size of each button (INTEGER)
 
             // OPTIONAL PARAMETERS
-            url: "https://www.sharethis.com", // (defaults to current url)
-            image: "https://bit.ly/2CMhCMC", // (defaults to og:image or twitter:image)
-            description: "custom text", // (defaults to og:description or twitter:description)
-            title: "custom title", // (defaults to og:title or twitter:title)
-            message: "custom email text", // (only for email sharing)
-            subject: "custom email subject", // (only for email sharing)
-            username: "custom twitter handle", // (only for twitter sharing)
+            url: "https://gettheleadout.azurewebsites.net/", // (defaults to current url)
+            image:
+              "https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png", // (defaults to og:image or twitter:image)
+            description: "Learn how to get rid of lead in your community ", // (defaults to og:description or twitter:description)
+            title: "Do you know if you have lead pipes in your home?", // (defaults to og:title or twitter:title)
           }}
         />
       </div>

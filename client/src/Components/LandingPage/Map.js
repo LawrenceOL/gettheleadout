@@ -3,6 +3,7 @@ import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import SearchAddress from "./SearchAddress";
+import ShareButton from "./ShareButton";
 import "./Map.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
@@ -15,6 +16,7 @@ const Map = () => {
   const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState();
   const [selectedAddress, setSelectedAddress] = useState([]);
+  const [sharingIsClicked, setSharingIsClicked] = useState(false)
 
   const updateData = (childData) => {
     setSearchedData(childData);
@@ -164,9 +166,15 @@ const Map = () => {
             </Marker>
           )}
 
-          <button className="sharebutton" onClick={() => console.log("yay")}>
+          <button className="sharebutton" onClick={() => setSharingIsClicked(true)}>
             <FontAwesomeIcon className= "shareicon" icon={faShareFromSquare} />
           </button>
+          {sharingIsClicked ? (
+            <div className="sharebuttoncontainer">
+              <ShareButton />
+            </div>
+          ) : ""}
+          
         </MapContainer>
       </div>
     </>
