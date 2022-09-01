@@ -8,6 +8,7 @@ import Questionmark from './Images/questionmark.png'
 import Arrows from './Images/arrows.png'
 import UploadIcon from './Images/uploadicon.png'
 import PipeIcon from './Images/pipeicon.png'
+import EPA from './Images/epabrochure.png'
 
 const Faq = () => {
   return (
@@ -129,6 +130,17 @@ const Faq = () => {
               </div>
 
           </div>  
+
+
+        <div>
+          <img
+          alt="EPA Infographic"
+          src={EPA}
+          width={320}
+          height={700}
+          />
+
+          </div>
 
         {/* <div topmargin="20px">
           <h1 className="title">

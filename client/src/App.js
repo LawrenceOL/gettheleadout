@@ -12,6 +12,8 @@ import SubmitLeadData from './Components/SubmitLeadData';
 import Faq from './Components/Faq';
 import Contribute from './Components/Contribute';
 import Footer from './Components/Footer'
+import Confirmation from './Components/Confirmation'
+
 
 
 
@@ -45,6 +47,7 @@ function App() {
           <Route exact path="/contribute" element={<Contribute/>} />
           <Route exact path="/getinvolved" element={<GetInvolved/>} />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/confirm" element={<Confirmation/>}/>
         </Routes>
         {/* <Map/>
         <About/>
