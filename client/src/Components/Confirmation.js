@@ -52,7 +52,7 @@ const Confirmation = () => {
             <br/>
 
             <div>
-                <h1>
+                <h1 className="headers">
                     What you can do: 
                     </h1>
                 </div>
@@ -103,8 +103,6 @@ const Confirmation = () => {
 
             <br/>
             
-        
-
                 </div>
 
             </div>
