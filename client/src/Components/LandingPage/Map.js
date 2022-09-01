@@ -17,10 +17,11 @@ const Map = () => {
   const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
   const [selectedAddress, setSelectedAddress] = useState([]);
+  const [mapCenter, setMapCenter] = useState([41.571701, -87.69449150000003]);
 
-  const [sharingIsClicked, setSharingIsClicked] = useState(false)
+  const [sharingIsClicked, setSharingIsClicked] = useState(false);
 
-  const mapRef = useRef(null)
+  const mapRef = useRef(null);
 
   /**
    * Closes all popups open in the MapContainer component
@@ -28,30 +29,36 @@ const Map = () => {
    */
   const closePopup = () => {
     if (!mapRef.current) return;
-    mapRef.current.closePopup()
-  }
-
+    mapRef.current.closePopup();
+  };
 
   const updateData = (childData) => {
-    setSearchedData(childData)
+    setSearchedData(childData);
   };
 
   const updateSharing = () => {
-    setSharingIsClicked(false)
-  }
+    setSharingIsClicked(false);
+  };
 
+  let displayedAddresses = searchedData && searchedData.slice(0, 5);
 
+  const onAddressClick = (id) => {
+    setIsSearched(true);
+    setSelectedAddress(id);
+    console.log(isSearched);
+  };
 
-   const onAddressClick = (id) => {
-     setIsSearched(true);
-     setSelectedAddress(id)
-     console.log(isSearched)
-   };
-
-  const displayed = displayedAddresses && displayedAddresses.map((address) => (
-            <p className="searchedaddress" key={address.id} onClick={() => onAddressClick(address.id)}>{address.property_address}</p>
-  ))
-
+  const displayed =
+    displayedAddresses &&
+    displayedAddresses.map((address) => (
+      <p
+        className="searchedaddress"
+        key={address.id}
+        onClick={() => onAddressClick(address.id)}
+      >
+        {address.property_address}
+      </p>
+    ));
 
   const leadPrediction = {
     1: "Assumed Non-Lead",
@@ -63,14 +70,20 @@ const Map = () => {
 
   /**
    * Gets selected lead data based off number
-   * @param {Number} leadInfo 
+   * @param {Number} leadInfo
    * @returns {String} cur_color
    */
   const getColor = (leadInfo) => {
-    const colors = ['assumed-nonlead', 'unlikely-lead', 'maybe-lead', 'likely-lead','assumed-lead'];
-    const cur_color = colors[leadInfo - 1]
-    return cur_color
-  }
+    const colors = [
+      "assumed-nonlead",
+      "unlikely-lead",
+      "maybe-lead",
+      "likely-lead",
+      "assumed-lead",
+    ];
+    const cur_color = colors[leadInfo - 1];
+    return cur_color;
+  };
 
   /**
    * gets custom icons for map marker
@@ -78,13 +91,13 @@ const Map = () => {
    * @return {L.Icon}  customized icon
    */
   const customIcon = (leadInfo) => {
-    const color = getColor(leadInfo)
+    const color = getColor(leadInfo);
     return new L.Icon({
-    iconUrl: require("./map_marker.svg").default,
-    iconSize: new L.Point(30, 35),
-    className: color
+      iconUrl: require("./map_marker.svg").default,
+      iconSize: new L.Point(30, 35),
+      className: color,
     });
-  }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -112,7 +125,7 @@ const Map = () => {
       )}
       <div className="mapholder">
         <MapContainer
-          center={[41.571701, -87.69449150000003]}
+          center={mapCenter}
           zoom={15}
           scrollWheelZoom={false}
           ref={mapRef}
@@ -133,7 +146,9 @@ const Map = () => {
                   title={data.est_year}
                 >
                   <Popup closeButton={false}>
-                    <button className="closebutton" onClick={closePopup}>×</button>
+                    <button className="closebutton" onClick={closePopup}>
+                      ×
+                    </button>
                     <p className="address">{data.property_address}</p>
                     <p className="header">
                       Probability of service line: <br />
@@ -179,15 +194,19 @@ const Map = () => {
             </Marker>
           )}
 
-          <button className="sharebutton" onClick={() => setSharingIsClicked(true)}>
-            <FontAwesomeIcon className= "shareicon" icon={faShareFromSquare} />
+          <button
+            className="sharebutton"
+            onClick={() => setSharingIsClicked(true)}
+          >
+            <FontAwesomeIcon className="shareicon" icon={faShareFromSquare} />
           </button>
           {sharingIsClicked ? (
             <div className="sharebuttoncontainer">
-              <ShareButton updateSharing={updateSharing}/>
+              <ShareButton updateSharing={updateSharing} />
             </div>
-          ) : ""}
-          
+          ) : (
+            ""
+          )}
         </MapContainer>
       </div>
     </>
