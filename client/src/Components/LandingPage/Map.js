@@ -99,6 +99,21 @@ const Map = () => {
     });
   };
 
+  const createClusterCustomIcon = (cluster) =>{
+    let childCount = cluster.getChildCount()
+    let c = ' marker-cluster-';
+    if (childCount < 10) {
+      c += 'small';
+    } 
+    else if (childCount < 100) {
+      c += 'medium';
+    } 
+    else {
+      c += 'large';
+    }
+    return new L.DivIcon({ html: '<div><span>' +     childCount + '</span></div>', 
+    className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+  }
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
@@ -137,7 +152,9 @@ const Map = () => {
           {isLoading ? (
             <div>Loading...</div>
           ) : !isSearched ? (
-            <MarkerClusterGroup chunkedLoading>
+            <MarkerClusterGroup
+              chunkedLoading
+              iconCreateFunction={createClusterCustomIcon} >
               {leadData.map((data) => (
                 <Marker
                   icon={customIcon(data.our_pred)}
