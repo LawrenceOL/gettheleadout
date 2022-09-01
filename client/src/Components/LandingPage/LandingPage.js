@@ -1,23 +1,23 @@
-import React, {useState} from "react";
-import Map from "./Map"
+import React, { useState } from "react";
+import Map from "./Map";
 import SearchAddress from "./SearchAddress";
 import PageChangeButtons from "./PageChangeButtons";
 import ShareButton from "./ShareButton";
-import "./LandingPage.css"
-
+import "./LandingPage.css";
+import overlaybg from "../Images/overlaybg.png";
 
 const LandingPage = () => {
-  const [showOverlay, setShowOverlay] = useState(true)
-  const [showInfo, setShowInfo] = useState(false)
-  const [firstOverlay, setFirstOverlay] = useState(true)
-  const [secondOverlay, setSecondOverlay] = useState(false)
-  const [thirdOverlay, setThirdOverlay] = useState(false)
+  const [showOverlay, setShowOverlay] = useState(true);
+  const [showInfo, setShowInfo] = useState(false);
+  const [firstOverlay, setFirstOverlay] = useState(true);
+  const [secondOverlay, setSecondOverlay] = useState(false);
+  const [thirdOverlay, setThirdOverlay] = useState(false);
 
   const showFirstOverlay = () => {
     setFirstOverlay(true);
     setSecondOverlay(false);
     setThirdOverlay(false);
-  }
+  };
   const showSecondOverlay = () => {
     setFirstOverlay(false);
     setSecondOverlay(true);
@@ -34,8 +34,7 @@ const LandingPage = () => {
       {/* if showoverlay is true show overlay */}
       {showOverlay ? (
         <div id="landingoverlay">
-          {/* replace this image with actual image of our map
-          <img src="https://res.cloudinary.com/adelaney923/image/upload/v1661372495/IMG_0033_1_jhmvfd.png" alt="mapimage" /> */}
+          <img src={overlaybg} alt="mapimage" />
           <div
             className="overlay1"
             style={{ display: firstOverlay ? "block" : "none" }}
@@ -85,7 +84,6 @@ const LandingPage = () => {
               </button>
             </div>
           </div>
-
           <div
             className="overlay2"
             style={{ display: secondOverlay ? "block" : "none" }}
@@ -133,7 +131,6 @@ const LandingPage = () => {
               </button>
             </div>
           </div>
-
           <div
             className="overlay3"
             style={{ display: thirdOverlay ? "block" : "none" }}
