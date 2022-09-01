@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
 
-    <div style={{ marginTop:150}}>
+    <div style={{ marginTop:300}}>
         <div className="footerblue">
 
             <div style={{ marginTop:40, marginLeft:25, marginRight:25}}>
