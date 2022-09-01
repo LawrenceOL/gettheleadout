@@ -36,7 +36,7 @@ import Confirmation from './Components/Confirmation'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         <Navigation />
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
@@ -56,7 +56,7 @@ function App() {
         <About/>
         <Check/> */}
         <Footer/>
-      </header>
+      {/* </header> */}
     </div>
   );
 }
