@@ -37,7 +37,6 @@ const Footer = () => {
           >
             Check your pipes for lead
           </Button>
-
           <Button
             variant="outline-dark"
             size="lg"
@@ -51,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <h1 style={{ marginTop: 50, marginLeft: 20 }}>Get the Lead Out</h1>
+        <h1 className="headers" style={{ marginTop: 50, marginLeft: 20 }}>Get the Lead Out</h1>
       </div>
 
       <div
