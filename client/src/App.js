@@ -1,23 +1,20 @@
 // import logo from './logo.svg';
 // import './App.css';
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./Components/LandingPage/LandingPage"
-import Navigation from './Components/Navigation/Navigation';
-import About from './Components/About'
-import Check from './Components/HowToCheckPipes'
-import GetChecked from './Components/GetPipesChecked'
-import GetInvolved from './Components/GetInvolved'
-import Contact from './Components/Contact'
-import SubmitLeadData from './Components/SubmitLeadData';
-import Faq from './Components/Faq';
-import Contribute from './Components/Contribute';
+import LandingPage from "./Components/LandingPage/LandingPage";
+import Navigation from "./Components/Navigation/Navigation";
+import About from "./Components/About";
+import Check from "./Components/HowToCheckPipes";
+import GetChecked from "./Components/GetPipesChecked";
+import GetInvolved from "./Components/GetInvolved";
+import Contact from "./Components/Contact";
+import SubmitLeadData from "./Components/SubmitLeadData";
+import Faq from "./Components/Faq";
+import Contribute from "./Components/Contribute";
 import GetOurDataSet from "./Components/GetOurDataSet";
-import Footer from './Components/Footer'
-import Confirmation from './Components/Confirmation'
+import Footer from "./Components/Footer";
+import Confirmation from "./Components/Confirmation";
 import ScrollToTop from "./Components/ScrollToTop";
-
-
-
 
 // function App() {
 //   return (
@@ -35,15 +32,12 @@ import ScrollToTop from "./Components/ScrollToTop";
 //   );
 // }
 function App() {
-
   return (
     <div className="App">
       {/* <header className="App-header"> */}
 
-
       <Navigation />
       <ScrollToTop>
-
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/about" element={<About />} />
@@ -62,9 +56,8 @@ function App() {
         <About/>
         <Check/> */}
 
-      <Footer />
+      {/* <Footer /> */}
       {/* </header> */}
-
     </div>
   );
 }
