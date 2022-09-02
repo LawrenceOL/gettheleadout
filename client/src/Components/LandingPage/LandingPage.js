@@ -1,27 +1,22 @@
-import React, {useState} from "react";
-import Map from "./Map"
+import React, { useState } from "react";
+import Map from "./Map";
 import SearchAddress from "./SearchAddress";
 import PageChangeButtons from "./PageChangeButtons";
-import "./LandingPage.css"
-import { StickyShareButtons } from "sharethis-reactjs";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { InlineShareButtons } from "sharethis-reactjs";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import ShareButton from "./ShareButton";
+import "./LandingPage.css";
 
 const LandingPage = () => {
-  const [showOverlay, setShowOverlay] = useState(true)
-  const [showInfo, setShowInfo] = useState(false)
-  const [firstOverlay, setFirstOverlay] = useState(true)
-  const [secondOverlay, setSecondOverlay] = useState(false)
-  const [thirdOverlay, setThirdOverlay] = useState(false)
+  const [showOverlay, setShowOverlay] = useState(true);
+  const [showInfo, setShowInfo] = useState(false);
+  const [firstOverlay, setFirstOverlay] = useState(true);
+  const [secondOverlay, setSecondOverlay] = useState(false);
+  const [thirdOverlay, setThirdOverlay] = useState(false);
 
   const showFirstOverlay = () => {
     setFirstOverlay(true);
     setSecondOverlay(false);
     setThirdOverlay(false);
-  }
+  };
   const showSecondOverlay = () => {
     setFirstOverlay(false);
     setSecondOverlay(true);
@@ -38,8 +33,6 @@ const LandingPage = () => {
       {/* if showoverlay is true show overlay */}
       {showOverlay ? (
         <div id="landingoverlay">
-          {/* replace this image with actual image of our map
-          <img src="https://res.cloudinary.com/adelaney923/image/upload/v1661372495/IMG_0033_1_jhmvfd.png" alt="mapimage" /> */}
           <div
             className="overlay1"
             style={{ display: firstOverlay ? "block" : "none" }}
@@ -89,7 +82,6 @@ const LandingPage = () => {
               </button>
             </div>
           </div>
-
           <div
             className="overlay2"
             style={{ display: secondOverlay ? "block" : "none" }}
@@ -137,7 +129,6 @@ const LandingPage = () => {
               </button>
             </div>
           </div>
-
           <div
             className="overlay3"
             style={{ display: thirdOverlay ? "block" : "none" }}
@@ -193,23 +184,27 @@ const LandingPage = () => {
               <div className="containerleft">
                 <div className="legenditem">
                   <div className="darkbluedot"></div>
-                  <p>Confirmed non-lead</p>
+                  <p>Assumed non-lead</p>
                 </div>
                 <div className="legenditem">
                   <div className="lightbluedot"></div>
-                  <p>Assumed non-lead</p>
+                  <p>Likely non-lead</p>
+                </div>
+                <div className="legenditem">
+                  <div className="yellowdot"></div>
+                  <p>Unknown Lead Status</p>
                 </div>
               </div>
 
               <div className="containerright">
                 <div className="legenditem">
                   <div className="reddot"></div>
-                  <p>Confirmed lead</p>
+                  <p>Assumed lead</p>
                 </div>
 
                 <div className="legenditem">
                   <div className="orangedot"></div>
-                  <p>Assumed lead</p>
+                  <p>Likely lead</p>
                 </div>
               </div>
             </div>
@@ -221,40 +216,7 @@ const LandingPage = () => {
           <div className="leadmap">
             <Map />
           </div>
-          <StickyShareButtons
-            config={{
-              alignment: "left", // alignment of buttons (left, right)
-              color: "social", // set the color of buttons (social, white)
-              enabled: true, // show/hide buttons (true, false)
-              font_size: 16, // font size for the buttons
-              hide_desktop: false, // hide buttons on desktop (true, false)
-              labels: "counts", // button labels (cta, counts, null)
-              language: "en", // which language to use (see LANGUAGES)
-              min_count: 100, // hide react counts less than min_count (INTEGER)
-              networks: [
-                // which networks to include (see SHARING NETWORKS)
-                "twitter",
-                "facebook",
-                "sms"
-              ],
-              padding: 12, // padding within buttons (INTEGER)
-              radius: 4, // the corner radius on each button (INTEGER)
-              show_total: true, // show/hide the total share count (true, false)
-              show_mobile: true, // show/hide the buttons on mobile (true, false)
-              show_toggle: true, // show/hide the toggle buttons (true, false)
-              size: 48, // the size of each button (INTEGER)
-              top: 160, // offset in pixels from the top of the page
-
-              // OPTIONAL PARAMETERS
-              url: "https://github.com/LawrenceOL/productclubteam3", // (defaults to current url)
-              image: "https://bit.ly/2CMhCMC", // (defaults to og:image or twitter:image)
-              description: "custom text", // (defaults to og:description or twitter:description)
-              title: "custom title", // (defaults to og:title or twitter:title)
-              message: "custom email text", // (only for email sharing)
-              subject: "custom email subject", // (only for email sharing)
-              username: "custom twitter handle", // (only for twitter sharing)
-            }}
-          />
+          {/* <ShareButton /> */}
 
           {/* <div className="leadmap">
             <Map />

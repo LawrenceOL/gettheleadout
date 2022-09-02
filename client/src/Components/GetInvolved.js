@@ -103,7 +103,7 @@ const GetInvolved = () => {
               </div>
 
             <div className="center">
-              <Button variant="primary" size="lg" onClick={() => navigate("/contribute")} block>
+              <Button variant="primary" size="lg" onClick={() => navigate("/getpipeschecked")} block>
                 Put your pipes on the map
               </Button>
             </div>
