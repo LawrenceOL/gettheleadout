@@ -22,7 +22,7 @@ const GetInvolved = () => {
               </div>
 
 
-          <div style={{paddingTop: 20}}>
+          <div style={{paddingTop: 60}}>
             <h1 className="supporting-text" >
               {" "}
               Get involved to help your community progress towards a lead-free

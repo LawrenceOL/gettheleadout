@@ -23,7 +23,7 @@ const Check = () => {
           </h1>
         </div>
 
-        <div className="center">
+        <div className="center" style={{paddingTop: 50}}>
             <img
                 alt="camera"
                 src={Camera}
@@ -32,7 +32,7 @@ const Check = () => {
               />
           </div>
 
-        <div className="numbered-sections">
+        <div className="numbered-sections" style={{paddingTop: 40}} >
 
             <div className="item-1">
               <img
@@ -55,7 +55,6 @@ const Check = () => {
 
         </div>
 
-        <br/>
 
         <div className="numbered-sections">
           <div className="item-1">
@@ -82,7 +81,7 @@ const Check = () => {
             <h1 className="headers">Example Images</h1>
           </div>
 
-          <div classname="image">
+          <div classname="image" style={{paddingTop: 15}} >
             <img
               alt="lead pipe"
               src={LeadPipe}
@@ -92,8 +91,8 @@ const Check = () => {
           </div>
 
           <div>
-            <h1 className="feature-text-top" >How a lead pipe could look</h1>
-              <h1 className="feature-text-bottom"> A shiny, silver scratch can mean the pipe is either lead or galvanized steel.
+            <h1 className="feature-text-top" style={{lineHeight:"70px"}}>How a lead pipe could look</h1>
+              <h1 className="picture-caption" style={{lineHeight:"20px"}}> A shiny, silver scratch can mean the pipe is either lead or galvanized steel.
             </h1>
             
           </div>
@@ -110,8 +109,8 @@ const Check = () => {
           </div>
 
           <div>
-            <h1 className="feature-text-top">How a copper pipe could look</h1>
-            <h1 className="feature-text-bottom"> After scratching, a copper pipe will look copper. Note that copper pipes can have lead solder.
+            <h1 className="feature-text-top" style={{paddingTop: 15}}>How a copper pipe could look</h1>
+            <h1 className="picture-caption" style={{paddingTop: 15}}> After scratching, a copper pipe will look copper. Note that copper pipes can have lead solder.
             </h1>
           </div>
 
@@ -120,12 +119,12 @@ const Check = () => {
         <br/>
 
         <div>
-          <h2 className="headers"> Steps to complete a visual test</h2>
+          <h1 className="headers" style={{paddingTop: 50}}> Steps to complete a visual test</h1>
           </div>
 
         <br/>
 
-        <div>
+        <div style={{paddingTop: 20}}>
           <img
           alt="Checkboxes"
           src={Checkboxes}

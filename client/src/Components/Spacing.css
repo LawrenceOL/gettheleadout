@@ -2,6 +2,7 @@ div.topmargin {
   margin-top: 100px;
 }
 
+
 .center {
   text-align: center;
   display: block;
@@ -11,95 +12,8 @@ div.topmargin {
   width: 100%;
 }
 
-.frame {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 90px;
 
-  width: 374px;
-  height: 774px;
 
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.cta-section {
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 21px 0px 16px;
-
-  width: 374px;
-  height: 332px;
-  background: #ffffff;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.contact-text1 {
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px 24px 0px 16px;
-  gap: 2px;
-
-  width: 373px;
-  height: 352px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.contact-text2 {
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 24px 24px 0px 0px;
-
-  width: 337px;
-  height: 378px;
-
-  background: #ffffff;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.content1 {
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 10px 0px 0px 55px;
-  gap: 16px;
-
-  width: 313px;
-  height: 189px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
 
 .alltext {
   /* Auto layout */
@@ -140,29 +54,6 @@ div.topmargin {
 
   flex: none;
   order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-.supportingtext {
-  width: 287px;
-  height: 104px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 162%;
-  /* or 26px */
-
-  /* Gray/500 */
-
-  color: #667085;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
   align-self: stretch;
   flex-grow: 0;
 }
@@ -320,7 +211,7 @@ h1.title {
   /* margin-left: 2%; */
   /* position: absolute; */
   width: 335px;
-  height: 83px;
+  height: 40px;
   left: 17px;
   top: 0px;
 
@@ -342,7 +233,7 @@ h1.feature-text-top {
 
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 
@@ -382,6 +273,25 @@ h1.feature-text-bottom-2 {
 
   color: #475467;
 }
+
+
+.picture-caption{
+  width: 333px;
+  height: 46px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 162%;
+  /* or 23px */
+
+
+  /* Gray/500 */
+
+  color: #667085;
+}
+
 
 .page-template {
   display: flex;

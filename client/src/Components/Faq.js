@@ -9,6 +9,7 @@ import Arrows from "./Images/arrows.png";
 import UploadIcon from "./Images/uploadicon.png";
 import PipeIcon from "./Images/pipeicon.png";
 import EPA from "./Images/epabrochure.png";
+import './Spacing.css'
 
 const Faq = () => {
   return (
