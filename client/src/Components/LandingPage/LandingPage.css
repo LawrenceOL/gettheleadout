@@ -6,9 +6,13 @@
   position: relative;
   height: 100vh;
 
-  background-image: linear-gradient(to right, rgba(227, 227, 227, 0.8), rgba(227, 227, 227, 0.8)), url("https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png");
+  background-image: linear-gradient(
+      to right,
+      rgba(227, 227, 227, 0.8),
+      rgba(227, 227, 227, 0.8)
+    ),
+    url("https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png");
 
-  
   /* background-color: rgba(227, 227, 227, 0.7); */
   /* z-index: 1; */
 }
@@ -145,11 +149,11 @@
   color: #344054;
 }
 .legendcontainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 334px;
-    height: 76px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 334px;
+  height: 76px;
 }
 .legenditem {
   display: flex;
@@ -179,10 +183,10 @@
   background-color: #98b8bc;
 }
 .yellowdot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #EDD365
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #edd365;
 }
 .orangedot {
   width: 8px;
@@ -191,11 +195,10 @@
   background-color: #e8ac93;
 }
 .searchform {
+  width: 297px;
+  margin-left: 16px;
+  margin-top: 10px;
 
-    width: 297px;
-    margin-left: 16px;
-    margin-top: 10px;
-    
   /* position: absolute;
   top: 155px;
   left: 16px; */
@@ -241,4 +244,9 @@
   background-color: white;
   position: relative;
   bottom: 62px;
+}
+
+.landing-footer {
+  position: absolute;
+  top: 750px;
 }
