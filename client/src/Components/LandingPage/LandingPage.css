@@ -5,82 +5,91 @@
 #landingoverlay {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(to right, rgba(227, 227, 227, 0.8), rgba(227, 227, 227, 0.8)), url("https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png");
+
+  background-image: linear-gradient(
+      to right,
+      rgba(227, 227, 227, 0.8),
+      rgba(227, 227, 227, 0.8)
+    ),
+    url("https://res.cloudinary.com/adelaney923/image/upload/v1661992891/Screen_Shot_2022-08-31_at_5.41.00_PM_xnlo5r.png");
+
   /* background-color: rgba(227, 227, 227, 0.7); */
   /* z-index: 1; */
 }
-.overlay1, .overlay2, .overlay3 {
-    position: absolute;
-     top: 45%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 70%;
-    width: 90%;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    text-align: left;
-    font-family: 'Inter', sans-serif;
+.overlay1,
+.overlay2,
+.overlay3 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
 }
 .overlayelements {
-    position: absolute;
-     top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .overlayimg {
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .overlayheader {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 28px;
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 291px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 291px;
 }
 .overlaytext {
-    font-size: 14px;
-    line-height: 20px;
-    margin: 0px 20px;
-    width: 291px;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0px 20px;
+  width: 291px;
 }
 .dotbuttonscontainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 8%;
-    margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  margin-top: 8%;
+  margin-bottom: 5%;
 }
 .changeoverlaybutton {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 10px;
-    border-color: darkslategray;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 10px;
+  border-color: darkslategray;
 }
 .bluebutton {
-    width: 297px;
-    height: 44px;
-    background-color: #005EA2;
-    border-radius: 8px;
-    color: #FFFFFF;
-    border-width: 1px;
-    font-size: 12px;
-    margin: 2px 12px;
+  width: 297px;
+  height: 44px;
+  background-color: #005ea2;
+  border-radius: 8px;
+  color: #ffffff;
+  border-width: 1px;
+  font-size: 12px;
+  margin: 2px 12px;
 }
 .whitebutton {
-    width: 297px;
-    height: 44px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    color: #344054;
-    border-color: #D0D5DD;
-    border-width: 1px;
-    font-size: 12px;
-    margin: 12px;
+  width: 297px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #344054;
+  border-color: #d0d5dd;
+  border-width: 1px;
+  font-size: 12px;
+  margin: 12px;
 }
 .leadmap {
   position: absolute;
@@ -89,34 +98,33 @@
   height: 90vh;
 }
 .sharebutton {
-    background: none;
-    border: none;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    padding: 10px;
-    z-index: 400;
-    padding: 0px;
+  background: none;
+  border: none;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px;
+  z-index: 400;
+  padding: 0px;
 }
 .shareicon {
-    font-size:18px
+  font-size: 18px;
 }
 .sharingButtons {
-    text-align: center;
-    font-family: 'Inter', sans-serif;
-    margin: 10px;
-
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin: 10px;
 }
 .sharetext {
-    display: inline-block
+  display: inline-block;
 }
 .sharebuttoncontainer {
-    background: white;
-    width: 65%;
-    position: absolute;
-    bottom:15px;
-    left: 15px;
-    z-index: 400;
+  background: white;
+  width: 65%;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 400;
 }
 .mapinfo {
   text-align: center;
@@ -126,109 +134,119 @@
   width: 100%;
 }
 .keytitle {
-    width: 29px;
-height: 20px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-margin: 10px 0px 5px 18px;
-/* identical to box height, or 143% */
+  width: 29px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0px 5px 18px;
+  /* identical to box height, or 143% */
 
+  /* Gray/700 */
 
-/* Gray/700 */
-
-color: #344054;
-
+  color: #344054;
 }
 .legendcontainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 334px;
-    height: 76px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 334px;
+  height: 76px;
 }
 .legenditem {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .legenditem p {
-    margin-left: 8px;
-    margin-bottom: 0;
-    font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
 }
 .darkbluedot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #317279
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #317279;
 }
 .reddot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #D15A26
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d15a26;
 }
 .lightbluedot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #98B8BC
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #98b8bc;
 }
 .yellowdot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #EDD365
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #edd365;
 }
 .orangedot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #E8AC93
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e8ac93;
 }
 .searchform {
-    width: 297px;
-    margin-left: 16px;
-    margin-top: 10px;
+  width: 297px;
+  margin-left: 16px;
+  margin-top: 10px;
+
   /* position: absolute;
   top: 155px;
   left: 16px; */
 }
 .searchdropdown {
-    width: 297px;
-    margin-left: 20px;
-    margin-top: 5px;
+  width: 297px;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 .searchedaddress {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 19px;
-    margin-bottom: 5px;
-    border-bottom: #D0D5DD 1px solid;
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  margin-bottom: 5px;
+  border-bottom: #d0d5dd 1px solid;
 }
 .searchtext {
-    width: 297px;
-    height: 19px;
-    margin: 5px 0 10px 0;
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #667085;
+  width: 297px;
+  height: 19px;
+  margin: 5px 0 10px 0;
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #667085;
 }
 .jotform-iframe {
-  width: 80vw;
+  width: 100%;
   height: 50rem;
   margin-left: -10px;
 }
 
 .form-control {
-    font-family: 'Inter', FontAwesome, sans-serif;
-    width: 297px;
-    height: 40px;
+  font-family: "Inter", FontAwesome, sans-serif;
+  width: 297px;
+  height: 40px;
+}
+
+.form_share_button {
+  background-color: white;
+  position: relative;
+  bottom: 62px;
+}
+
+.landing-footer {
+  position: absolute;
+  top: 750px;
 }

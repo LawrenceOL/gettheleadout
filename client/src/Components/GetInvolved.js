@@ -22,7 +22,7 @@ const GetInvolved = () => {
               </div>
 
 
-          <div style={{paddingTop: 20}}>
+          <div style={{paddingTop: 60}}>
             <h1 className="supporting-text" >
               {" "}
               Get involved to help your community progress towards a lead-free
@@ -69,7 +69,7 @@ const GetInvolved = () => {
         <br />
 
         
-          <div className="numbered-sections" style={{paddingTop: 20}}> 
+          <div className="numbered-sections" style={{paddingTop: 30}}> 
 
               <div className="item-1">
                 <img
@@ -112,7 +112,7 @@ const GetInvolved = () => {
         <br />
 
         <div>
-          <div className="numbered-sections-small" style={{paddingTop: 20}} >
+          <div className="numbered-sections-small" style={{paddingTop: 30}} >
 
               <div className="item-1">
                 <img

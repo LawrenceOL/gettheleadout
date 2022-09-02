@@ -20,6 +20,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import Footer from "./Components/Footer";
 import { HashRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.min.css";
