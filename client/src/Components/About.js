@@ -2,6 +2,7 @@ import React from "react";
 import Factory from "./Images/factory.png";
 import Phone from "./Images/phone.png";
 import IncomeMap from "./Images/IncomeMap.png";
+import Footer from "./Footer";
 
 const About = () => {
   return (
@@ -96,11 +97,13 @@ const About = () => {
           </div>
         </div>
 
-        <div >
-          <h1 className="headers" style={{paddingTop: 50}}>What's next?</h1>
+        <div>
+          <h1 className="headers" style={{ paddingTop: 50 }}>
+            What's next?
+          </h1>
         </div>
 
-        <div style={{paddingTop: 50}}>
+        <div style={{ paddingTop: 50 }}>
           <h1 className="feature-text-bottom">
             We see opportunities to incorporate AI to help residents more
             accurately identify their lead pipes via submitted photos
@@ -109,6 +112,7 @@ const About = () => {
 
         <br />
       </div>
+      <Footer />
     </div>
   );
 };

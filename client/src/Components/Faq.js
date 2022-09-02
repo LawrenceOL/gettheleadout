@@ -9,7 +9,8 @@ import Arrows from "./Images/arrows.png";
 import UploadIcon from "./Images/uploadicon.png";
 import PipeIcon from "./Images/pipeicon.png";
 import EPA from "./Images/epabrochure.png";
-import './Spacing.css'
+import "./Spacing.css";
+import Footer from "./Footer";
 
 const Faq = () => {
   return (
@@ -20,13 +21,13 @@ const Faq = () => {
         </div>
 
         <div>
-          <h1 className="supporting-text" >
+          <h1 className="supporting-text">
             {" "}
             Lead can be a scary thing to tackle. Let's help you tackle it.
           </h1>
         </div>
 
-        <div className="numbered-sections-small" style={{paddingTop: 30}} >
+        <div className="numbered-sections-small" style={{ paddingTop: 30 }}>
           <div className="item-1">
             <img
               alt="Question mark"
@@ -92,7 +93,7 @@ const Faq = () => {
               discover lead pipes?
             </h1>
             <h1 className="feature-text-bottom" style={{ marginTop: 60 }}>
-             Click <a href="">here ></a> for tips from the EPA
+              Click <a href="">here ></a> for tips from the EPA
             </h1>
           </div>
         </div>
@@ -169,6 +170,7 @@ const Faq = () => {
           </div>
         </div> */}
       </div>
+      <Footer />
     </div>
   );
 };

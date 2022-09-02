@@ -5,6 +5,7 @@ import Two from "./Images/two.png";
 import YoungPeople from "./Images/youngpeople.png";
 import DataPic from "./Images/datapic.png";
 import ShareButton from "./LandingPage/ShareButton";
+import Footer from "./Footer";
 
 const GetChecked = () => {
   const URL = "https://form.jotform.com/222348879637169"; //embed URL
@@ -123,6 +124,7 @@ const GetChecked = () => {
           </h1>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
