@@ -324,6 +324,7 @@ h2.smaller-title {
 }
 
 .footerblue {
+  height: 470px;
   background-color: #eff8ff;
   display: flex;
   flex-direction: column;

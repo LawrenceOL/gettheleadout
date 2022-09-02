@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div style={{ marginTop: 102 }}>
       <div className="footerblue">
-        <div style={{ marginTop: 40, marginLeft: 25, marginRight: 25 }}>
+        <div style={{ marginTop: 60, marginLeft: 25, marginRight: 30 }}>
           <h1 className="headers">
             Let's get your water pipes checked with a photo upload.
           </h1>
@@ -18,7 +18,7 @@ const Footer = () => {
 
         <br />
 
-        <div style={{ marginTop: 20, marginLeft: 25, marginRight: 25 }}>
+        <div style={{ marginTop: 20, marginLeft: 25, marginRight: 25, marginBottom:20}}>
           <h1 className="supporting-text">
             By adding your photo, we can help you confirm your pipe material and
             you can help your communitylocate & remove lead pipes.
@@ -30,19 +30,20 @@ const Footer = () => {
           style={{ marginTop: 78, marginLeft: 15, marginRight: 15 }}
         >
           <Button
-            variant="light"
+            variant="primary"
             size="lg"
             className="addborder"
             onClick={() => navigate("/howtocheckpipes")}
           >
-            How to check your pipes
+            Check your pipes for lead
           </Button>
+
           <Button
-            varient="primary"
+            variant="outline-dark"
             size="lg"
             onClick={() => navigate("/getpipeschecked")}
           >
-            Get your pipes checked
+            Upload your findings 
           </Button>
         </div>
 
@@ -55,15 +56,15 @@ const Footer = () => {
 
       <div
         className="footer-links"
-        style={{ marginTop: 30, marginLeft: 20, marginBottom: 10 }}
-      >
+        style={{ marginTop: 30, marginLeft: 20, marginBottom: 20 }}
+        >
         <div>
           <Link to="/" className="link-dark text-decoration-none">
             {" "}
             Map
           </Link>
-        </div>
-        <div>
+          </div>
+        <div style={{ marginTop: 15 }}>
           <Link
             to="/howtocheckpipes"
             className="link-dark text-decoration-none"
@@ -71,8 +72,8 @@ const Footer = () => {
             {" "}
             How to check your pipes
           </Link>
-        </div>
-        <div>
+          </div>
+        <div style={{ marginTop: 15 }}v>
           <Link
             to="/getpipeschecked"
             className="link-dark text-decoration-none"
@@ -80,21 +81,22 @@ const Footer = () => {
             {" "}
             Get your pipes checked
           </Link>
-        </div>
-        <div>
+          </div>
+        <div style={{ marginTop: 15 }}>
           <Link to="/about" className="link-dark text-decoration-none">
             About
           </Link>
-        </div>
-        <div>
+          </div>
+        <div style={{ marginTop: 15 }}>
           <Link to="/faq" className="link-dark text-decoration-none">
             FAQ
           </Link>
-        </div>
-
-        <Link to="/getourdataset" className="link-dark text-decoration-none">
-          Get our data set
-        </Link>
+          </div>
+        <div style={{ marginTop: 15 }}>
+          <Link to="/getourdataset" className="link-dark text-decoration-none">
+            Get our data set
+          </Link>
+          </div>
       </div>
     </div>
   );
