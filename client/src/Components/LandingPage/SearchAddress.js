@@ -10,12 +10,12 @@ const SearchAddress = (props) => {
     console.log("yay");
   };
 
-//   const searchedAddress = leadData.filter((house) => {
-//     if (/^{address}/.test(house.property_address)) {
-//       console.log("true");
-//     }
-//   }
-// )
+  const searchedAddress = leadData.filter((house) => {
+    if (/^{address}/.test(house.property_address)) {
+      console.log("true");
+    }
+  }
+)
   const filterLeadData = () => {
     leadData.filter((house) => {
 
