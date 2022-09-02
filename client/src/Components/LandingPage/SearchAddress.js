@@ -18,6 +18,7 @@ const SearchAddress = ({
   const handleSubmit = (event) => {
     console.log("yay");
   };
+
   //   const searchedAddress = leadData.filter((house) => {
   //     if (/^{address}/.test(house.property_address)) {
   //       console.log("true");
@@ -25,6 +26,7 @@ const SearchAddress = ({
   //   }
   // )
   let newData
+
   const filterLeadData = () => {
     if (address === "") {
       newData = null

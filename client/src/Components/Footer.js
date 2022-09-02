@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
-import { Link, Router } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+import './Spacing.css'
+
 
 const Footer = () => {
 
@@ -9,7 +12,7 @@ const Footer = () => {
 
     return (
 
-    <div style={{ marginTop:300}}>
+    <div style={{ marginTop:102, position:'fixed'}}>
         <div className="footerblue">
 
             <div style={{ marginTop:40, marginLeft:25, marginRight:25}}>

@@ -1,5 +1,7 @@
 import React from "react";
-import LaptopGirl from "./Images/laptopgirl.png";
+import LaptopGirl from './Images/laptopgirl.png'
+import './Spacing.css'
+
 
 const Confirmation = () => {
   return (

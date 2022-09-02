@@ -35,11 +35,15 @@ import ScrollToTop from "./Components/ScrollToTop";
 //   );
 // }
 function App() {
+
   return (
     <div className="App">
       {/* <header className="App-header"> */}
+
+
       <Navigation />
       <ScrollToTop>
+
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/about" element={<About />} />
@@ -57,8 +61,10 @@ function App() {
       {/* <Map/>
         <About/>
         <Check/> */}
+
       <Footer />
       {/* </header> */}
+
     </div>
   );
 }
