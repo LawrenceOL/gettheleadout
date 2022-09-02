@@ -22,7 +22,7 @@ const NavBar = () => {
       <Navbar collapseOnSelect expand="md" className="mb-3" fixed="top">
         <Container fluid>
           <Navbar.Brand className="navtitles" href="#">
-            Get the Lead Out
+            <img src="https://res.cloudinary.com/adelaney923/image/upload/v1662134080/Frame_291_ssx69b.png" alt="get the lead out logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
           <Navbar.Offcanvas
