@@ -40,9 +40,9 @@ h1.title {
     justify-content: center;
     align-items: center;
     /* margin: auto; */
-    margin-top: 70;
+    margin-top: 50px;
     width: 100%;
-    padding-top: 70;
+    padding-top: 100;
   }
   
 .numbered-sections {
@@ -59,7 +59,7 @@ h1.title {
     grid-row-end: 2;
   }
 
-  img.size{
+  .image-size{
       height: 20;
       width: 20;
   }
@@ -108,7 +108,7 @@ h1.title {
   h1.step2-title {
     width: 279px;
     height: 50px;
-    padding-top: 15;
+    padding-top: 15px;
   
     font-family: "Inter";
     font-style: normal;
@@ -154,8 +154,78 @@ h1.title {
     flex-direction: row;
     align-items: flex-start;
     padding: 10px;
+    padding-top: 15px;
     gap: 10px;
   
     width: 332px;
     height: 140px;
+  }
+
+  h1.picture-caption-title {
+    width: 279px;
+    height: 20px;
+    line-height: 50px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  
+    /* primary black */
+  
+    color: #101828;
+  }
+
+  .picture-caption{
+    width: 333px;
+    height: 46px;
+    line-height: 20px;
+
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 162%;
+    /* or 23px */
+  
+  
+    /* Gray/500 */
+  
+    color: #667085;
+  }
+  
+
+  h1.picture-caption-title2 {
+    width: 290px;
+    height: 20px;
+    line-height: 50px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  
+    /* primary black */
+  
+    color: #101828;
+  }
+
+  .header-visualtest {
+    width: 340px;
+    height: 29px;
+    padding-top: 40px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #101828;
+  }
+
+  #checkboxes-image{
+      padding-top: 20px
   }

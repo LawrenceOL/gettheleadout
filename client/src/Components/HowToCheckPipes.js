@@ -18,19 +18,34 @@ const Check = () => {
   return (
     <div className="topmargin">
       <div className="page-template">
-        <div topmargin="20px">
+
+        <div>
           <h1 className="title">How to check for lead pipes </h1>
         </div>
+
         <br/>
 
         <div className="centered-image">
-          <img alt="camera" src={Camera} height={220} width={250} />
+          <img 
+            alt="camera"
+            src={Camera}
+            height={220}
+            width={250} 
+            />
         </div>
 
         <div className="numbered-sections" style={{ paddingTop: 40 }}>
+
           <div className="number-icon">
-            <img className="size" alt="Number one" src={One} height={50} width={50}/>
-          </div>
+
+            <img className="image-size" // class name image-size is not working
+            alt="Number one"
+            src={One}
+            height={50}
+            width={50}
+            />
+
+            </div>
 
           <div className="information">
             <h1 className="step1-title">
@@ -42,37 +57,53 @@ const Check = () => {
               lead -- it only takes a few minutes and requires no special
               equipment!
             </h1>
+            </div>
+
           </div>
-        </div>
 
         <div className="numbered-sections">
+          
           <div className="number-icon">
-            <img  className="image-size" alt="Number two" src={Two} height={50} width={50}/>
-          </div>
+
+            <img  className="image-size" // class name image-size is not working
+              alt="Number two" 
+              src={Two} 
+              height={50}
+              width={50}
+              />
+            </div>
+
           <div className="information">
+
             <h1 className="step2-title">
               Upload a photo of your pipe
             </h1>
             <h1 className="step2-description">
               Adding to the map helps everyone in your community get a better picture of the problem.
             </h1>
+            </div>
+
           </div>
-        </div>
 
         <div>
+
           <div>
             <h1 className="headers">Example Images</h1>
           </div>
 
-          <div classname="lead-pipe-image" style={{ paddingTop: 15 }}>
-            <img alt="lead pipe" src={LeadPipe} height={140} width={332} />
+          <div classname="lead-pipe-image">
+            <img 
+              alt="lead pipe"
+              src={LeadPipe}
+              height={140}
+              width={332} />
           </div>
 
           <div>
-            <h1 className="feature-text-top" style={{ lineHeight: "70px" }}>
+            <h1 className="picture-caption-title">
               How a lead pipe could look
             </h1>
-            <h1 className="picture-caption" style={{ lineHeight: "20px" }}>
+            <h1 className="picture-caption">
               {" "}
               A shiny, silver scratch can mean the pipe is either lead or
               galvanized steel.
@@ -82,14 +113,18 @@ const Check = () => {
           <br />
 
           <div>
-            <img alt="copper pipe" src={CopperPipe} height={140} width={332} />
+            <img 
+              alt="copper pipe" 
+              src={CopperPipe} 
+              height={140}
+              width={332} />
           </div>
 
           <div>
-            <h1 className="feature-text-top" style={{ paddingTop: 15 }}>
+            <h1 className="picture-caption-title2">
               How a copper pipe could look
             </h1>
-            <h1 className="picture-caption" style={{ paddingTop: 15 }}>
+            <h1 className="picture-caption">
               {" "}
               After scratching, a copper pipe will look copper. Note that copper
               pipes can have lead solder.
@@ -100,7 +135,7 @@ const Check = () => {
         <br />
 
         <div>
-          <h1 className="headers" style={{ paddingTop: 50 }}>
+          <h1 className="header-visualtest">
             {" "}
             Steps to complete a visual test
           </h1>
@@ -108,7 +143,7 @@ const Check = () => {
 
         <br />
 
-        <div style={{ paddingTop: 20 }}>
+        <div id="checkboxes-image">
           <img
             alt="Checkboxes"
             src={Checkboxes}
