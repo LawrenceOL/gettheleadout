@@ -6,6 +6,7 @@ import YoungPeople from "./Images/youngpeople.png";
 import DataPic from "./Images/datapic.png";
 import ShareButton from "./LandingPage/ShareButton";
 import Footer from "./Footer";
+import './Spacing.css'
 
 const GetChecked = () => {
   const URL = "https://form.jotform.com/222348879637169"; //embed URL

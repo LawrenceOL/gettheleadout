@@ -10,6 +10,7 @@ import CopperPipe from "./Images/copperpipe2.png";
 import Checkboxes from "./Images/checkboxes.png";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import './HowToCheckPipes.css'
 
 const Check = () => {
   let navigate = useNavigate();
@@ -20,22 +21,23 @@ const Check = () => {
         <div topmargin="20px">
           <h1 className="title">How to check for lead pipes </h1>
         </div>
+        <br/>
 
-        <div className="center" style={{ paddingTop: 50 }}>
+        <div className="centered-image">
           <img alt="camera" src={Camera} height={220} width={250} />
         </div>
 
         <div className="numbered-sections" style={{ paddingTop: 40 }}>
-          <div className="item-1">
-            <img alt="Number one" src={One} height={50} width={50} />
+          <div className="number-icon">
+            <img className="size" alt="Number one" src={One} height={50} width={50}/>
           </div>
 
-          <div className="item-2">
-            <h1 className="feature-text-top">
+          <div className="information">
+            <h1 className="step1-title">
               {" "}
               Follow our guided visual test below
             </h1>
-            <h1 className="feature-text-bottom">
+            <h1 className="step1-description">
               A visual test is the most accurate way to know if your pipes are
               lead -- it only takes a few minutes and requires no special
               equipment!
@@ -44,16 +46,15 @@ const Check = () => {
         </div>
 
         <div className="numbered-sections">
-          <div className="item-1">
-            <img alt="Number two" src={Two} height={50} width={50} />
+          <div className="number-icon">
+            <img  className="image-size" alt="Number two" src={Two} height={50} width={50}/>
           </div>
-          <div className="item-2">
-            <h1 className="feature-text-top" style={{ paddingTop: 15 }}>
+          <div className="information">
+            <h1 className="step2-title">
               Upload a photo of your pipe
             </h1>
-            <h1 className="feature-text-bottom">
-              Sample text where instructions on how to upload a picture of your
-              pipe will be displayed.
+            <h1 className="step2-description">
+              Adding to the map helps everyone in your community get a better picture of the problem.
             </h1>
           </div>
         </div>
@@ -63,7 +64,7 @@ const Check = () => {
             <h1 className="headers">Example Images</h1>
           </div>
 
-          <div classname="image" style={{ paddingTop: 15 }}>
+          <div classname="lead-pipe-image" style={{ paddingTop: 15 }}>
             <img alt="lead pipe" src={LeadPipe} height={140} width={332} />
           </div>
 
