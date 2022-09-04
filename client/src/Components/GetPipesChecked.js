@@ -8,13 +8,15 @@ import ShareButton from "./LandingPage/ShareButton";
 import Footer from "./Footer";
 import './Spacing.css'
 
+
 const GetChecked = () => {
   const URL = "https://form.jotform.com/222348879637169"; //embed URL
 
   return (
     <div className="topmargin">
       <div className="page-template">
-        <div topmargin="20px">
+
+        <div>
           <h1 className="title">Let's get your pipes checked </h1>
         </div>
 
