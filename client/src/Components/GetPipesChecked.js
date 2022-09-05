@@ -4,10 +4,10 @@ import One from "./Images/one.png";
 import Two from "./Images/two.png";
 import YoungPeople from "./Images/youngpeople.png";
 import DataPic from "./Images/datapic.png";
+import UploadImage from './Images/upload-laptop.png'
 import ShareButton from "./LandingPage/ShareButton";
 import Footer from "./Footer";
-import './Spacing.css'
-
+import './GetPipesChecked.css'
 
 const GetChecked = () => {
   const URL = "https://form.jotform.com/222348879637169"; //embed URL
@@ -17,72 +17,88 @@ const GetChecked = () => {
       <div className="page-template">
 
         <div>
-          <h1 className="title">Let's get your pipes checked </h1>
+          <h1 className="title">Input your information </h1>
         </div>
 
-        <div style={{ paddingTop: 20 }}>
-          <h1 className="supporting-text">
+        <div>
+          <h1 className="supporting-text1">
             {" "}
-            Get involved to help your community progress towards a lead-free
-            future.
+            Adding your findings about your lead pipes can help your neighbors see the likelihood of lead in the neighborhood.
           </h1>
         </div>
 
         <br />
 
-        <div style={{ paddingTop: 10 }}>
-          <h1 className="supporting-text" style={{ paddingTop: 35 }}>
+        <div>
+          <h1 className="supporting-text2">
             {" "}
-            Need help finding them?
+            Need help checking your pipes?
+            <br/>
+            <Link to="/howtocheckpipes">How to check my pipes</Link>
           </h1>
-          <Link to="/howtocheckpipes">How to check my pipes</Link>
-        </div>
+          </div>
 
-        <div style={{ marginTop: 70 }}>
+        <div>
           <h1 className="headers">
-            Giving us more information about your water pipes will:{" "}
+            How This Helps:{" "}
           </h1>
-        </div>
+          </div>
 
         <br />
 
-        <div className="numbered-sections" style={{ paddingTop: 10 }}>
-          <div className="item-1">
-            <img alt="Number one" src={One} height={50} width={50} />
+        <div className="numbered-sections-picture-first-version">
+          <div className="number-icon">
+            <img 
+              alt="Number one"
+              src={One} 
+              height={50}
+              width={50} />
           </div>
 
-          <div className="item-2-pic">
-            <img alt="People" src={YoungPeople} height={200} width={300} />
+          <div className="group-picture">
+            <img 
+              alt="People"
+              src={YoungPeople}
+              height={200}
+              width={300} />
           </div>
 
-          <div className="item-3">
-            <div style={{ paddingLeft: 50 }}>
-              <h1 className="feature-text-top">Increase community awareness</h1>
-              <h1 className="feature-text-bottom">
+          <div className="information-section">
+          
+              <h1 className="point-title">Increase community awareness</h1>
+              <h1 className="point-description">
                 Locations of lead lines have never been weel-documented. Your
                 involvement can maintain clean water for your entire community.
               </h1>
             </div>
-          </div>
         </div>
 
-        <br />
+        <br/>
+        <br/>
 
-        <div className="numbered-sections" style={{ paddingTop: 10 }}>
-          <div className="item-1">
-            <img alt="Number two" src={Two} height={50} width={50} />
+        <div className="numbered-sections-picture-first-version">
+          <div className="number-icon">
+            <img 
+              alt="Number two"
+              src={Two}
+              height={50}
+              width={50} />
           </div>
 
-          <div className="item-2-pic">
-            <img alt="Data" src={DataPic} height={200} width={300} />
-          </div>
+        <div className="uploadinfo-picture">
+            <img 
+              alt="Upload" 
+              src={UploadImage}
+              height={200}
+              width={300} />
+            </div>
 
-          <div className="item-3">
-            <div style={{ paddingLeft: 50 }}>
-              <h1 className="feature-text-top">
+          <div className="information-section">
+            <div>
+              <h1 className="point-title">
                 Allow your local government to apply for funding
               </h1>
-              <h1 className="feature-text-bottom">
+              <h1 className="point-description">
                 Your local water system needs your help in knowing for certain
                 how many lead pipes there are. This is a required step to apply
                 for funding to replace each one.
@@ -91,18 +107,21 @@ const GetChecked = () => {
           </div>
         </div>
 
-        <div style={{ marginTop: 150 }}>
-          <h1 className="headers">Update us about your water pipes </h1>
-        </div>
-        <br />
         <div>
-          <h1 className="feature-text-bottom-2">
+          <h1 className="headers">Update us about your water pipes </h1>
+          </div>
+
+        <br />
+
+        <div>
+          <h1 className="update-us-bottom-text">
             This will spread awareness in your community and allow your local
             government to better apply for federal funding.
           </h1>
-        </div>
+          </div>
 
         <br />
+
         <div>
           <iframe
             className="jotform-iframe"

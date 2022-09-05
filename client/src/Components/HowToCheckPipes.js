@@ -34,7 +34,7 @@ const Check = () => {
             />
         </div>
 
-        <div className="numbered-sections" style={{ paddingTop: 40 }}>
+        <div className="numbered-sections-howToCheck" style={{ paddingTop: 40 }}>
 
           <div className="number-icon">
 
@@ -61,7 +61,7 @@ const Check = () => {
 
           </div>
 
-        <div className="numbered-sections">
+        <div className="numbered-sections-howToCheck">
           
           <div className="number-icon">
 
@@ -88,7 +88,7 @@ const Check = () => {
         <div>
 
           <div>
-            <h1 className="headers">Example Images</h1>
+            <h1 className="headers-howToCheck">Example Images</h1>
           </div>
 
           <div classname="lead-pipe-image">
@@ -193,7 +193,7 @@ const Check = () => {
         <br />
 
         <div>
-          <h1 className="headers">Still need help?</h1>
+          <h1 className="headers-howToCheck">Still need help?</h1>
           <h1 className="feature-text-bottom">
             <ol>
               <li>

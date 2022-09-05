@@ -8,6 +8,7 @@ import One from './Images/one.png'
 import Two from './Images/two.png'
 import Three from './Images/three.png'
 import './GetInvolved.css'
+import Footer from './Footer'
 
 const GetInvolved = () => {
   let navigate = useNavigate();
@@ -152,6 +153,7 @@ const GetInvolved = () => {
 
         <br />
       </div>
+      <Footer />
     </div>
   );
 };

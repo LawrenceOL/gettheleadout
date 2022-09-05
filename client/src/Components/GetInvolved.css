@@ -57,7 +57,7 @@ div.topmargin {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
-    margin-top: 60px;
+    margin-top: 80px;
   }
 
   .number-icon {

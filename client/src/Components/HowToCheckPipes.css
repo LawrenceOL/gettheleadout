@@ -34,7 +34,7 @@ h1.title {
       font-weight: 700; */
   }
 
-  .centered-image {
+.centered-image {
     text-align: center;
     display: block;
     justify-content: center;
@@ -45,7 +45,7 @@ h1.title {
     padding-top: 100;
   }
   
-.numbered-sections {
+.numbered-sections-howToCheck {
     width: 320px;
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -59,13 +59,13 @@ h1.title {
     grid-row-end: 2;
   }
 
-  .image-size{
+.image-size{
       height: 20;
       width: 20;
   }
 
 
-  .information {
+.information {
     grid-column-start: 2;
     grid-column-end: span col4-end;
     grid-row-start: 1;
@@ -73,7 +73,7 @@ h1.title {
   }
   
 
-  h1.step1-title {
+h1.step1-title {
     width: 279px;
     height: 50px;
   
@@ -88,7 +88,7 @@ h1.title {
     color: #101828;
   }
 
-  h1.step1-description {
+h1.step1-description {
     width: 279px;
     height: 60px;
   
@@ -105,7 +105,7 @@ h1.title {
   }
 
 
-  h1.step2-title {
+h1.step2-title {
     width: 279px;
     height: 50px;
     padding-top: 15px;
@@ -121,7 +121,7 @@ h1.title {
     color: #101828;
   }
 
-  h1.step2-description {
+h1.step2-description {
     width: 279px;
     height: 78px;
   
@@ -137,7 +137,7 @@ h1.title {
     color: #475467;
   }
 
-  .headers {
+.headers-howToCheck {
     width: 340px;
     height: 29px;
   
@@ -149,7 +149,7 @@ h1.title {
     color: #101828;
   }
 
-  .lead-pipe-image {
+.lead-pipe-image {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -161,7 +161,7 @@ h1.title {
     height: 140px;
   }
 
-  h1.picture-caption-title {
+h1.picture-caption-title {
     width: 279px;
     height: 20px;
     line-height: 50px;
@@ -177,7 +177,7 @@ h1.title {
     color: #101828;
   }
 
-  .picture-caption{
+.picture-caption{
     width: 333px;
     height: 46px;
     line-height: 20px;
@@ -197,7 +197,7 @@ h1.title {
   }
   
 
-  h1.picture-caption-title2 {
+h1.picture-caption-title2 {
     width: 290px;
     height: 20px;
     line-height: 50px;
@@ -213,7 +213,7 @@ h1.title {
     color: #101828;
   }
 
-  .header-visualtest {
+.header-visualtest {
     width: 340px;
     height: 29px;
     padding-top: 40px;
@@ -226,6 +226,6 @@ h1.title {
     color: #101828;
   }
 
-  #checkboxes-image{
+#checkboxes-image{
       padding-top: 20px
   }
