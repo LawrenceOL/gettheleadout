@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import "./Spacing.css";
+import './Footer.css'
+
 
 const Footer = () => {
   let navigate = useNavigate();
@@ -10,52 +11,51 @@ const Footer = () => {
   return (
     <div style={{ marginTop: 102 }}>
       <div className="footerblue">
-        <div style={{ marginTop: 60, marginLeft: 25, marginRight: 30 }}>
-          <h1 className="headers">
+
+        <div>
+          <h1 className="header-in-footer">
             Let's get your water pipes checked with a photo upload.
           </h1>
         </div>
 
         <br />
 
-        <div style={{ marginTop: 20, marginLeft: 25, marginRight: 25, marginBottom:20}}>
+        <div>
           <h1 className="supporting-text">
             By adding your photo, we can help you confirm your pipe material and
             you can help your communitylocate & remove lead pipes.
           </h1>
         </div>
 
-        <div
-          className="d-grid gap-2"
-          style={{ marginTop: 78, marginLeft: 15, marginRight: 15 }}
-        >
-          <Button
-            variant="primary"
-            size="lg"
-            className="addborder"
+        <br/>
+
+        <div className="footerbuttons">
+          <button
+            className="bluebutton"
             onClick={() => navigate("/howtocheckpipes")}
           >
             Check your pipes for lead
-          </Button>
-          <Button
-            variant="outline-dark"
-            size="lg"
+          </button>
+
+          <button
+            className="whitebutton"
             onClick={() => navigate("/getpipeschecked")}
           >
             Upload your findings 
-          </Button>
+          </button>
         </div>
 
         <br />
       </div>
 
       <div>
-        <h1 className="headers" style={{ marginTop: 50, marginLeft: 20 }}>Get the Lead Out</h1>
-      </div>
+        <h1 className="getLeadOut-header">
+          Get the Lead Out
+          </h1>
+        </div>
 
       <div
         className="footer-links"
-        style={{ marginTop: 30, marginLeft: 20, marginBottom: 20 }}
         >
         <div>
           <Link to="/" className="link-dark text-decoration-none">
@@ -63,7 +63,7 @@ const Footer = () => {
             Map
           </Link>
           </div>
-        <div style={{ marginTop: 15 }}>
+        <div className="individual-footerlink">
           <Link
             to="/howtocheckpipes"
             className="link-dark text-decoration-none"
@@ -72,7 +72,7 @@ const Footer = () => {
             How to check your pipes
           </Link>
           </div>
-        <div style={{ marginTop: 15 }}v>
+        <div className="individual-footerlink">
           <Link
             to="/getpipeschecked"
             className="link-dark text-decoration-none"
@@ -81,17 +81,17 @@ const Footer = () => {
             Get your pipes checked
           </Link>
           </div>
-        <div style={{ marginTop: 15 }}>
+        <div className="individual-footerlink">
           <Link to="/about" className="link-dark text-decoration-none">
             About
           </Link>
           </div>
-        <div style={{ marginTop: 15 }}>
+        <div className="individual-footerlink">
           <Link to="/faq" className="link-dark text-decoration-none">
             FAQ
           </Link>
           </div>
-        <div style={{ marginTop: 15 }}>
+        <div className="individual-footerlink">
           <Link to="/getourdataset" className="link-dark text-decoration-none">
             Get our data set
           </Link>
