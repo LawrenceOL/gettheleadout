@@ -3,21 +3,15 @@ import "./LandingPage.css";
 
 const SearchAddress = ({
   leadData,
-  searchedData,
-  setSearchedData,
   updateData,
   address,
   setAddress,
 }) => {
   const [submit, setSubmit] = useState(true);
   let apiData = leadData;
-  const handleSubmit = (event) => {
-    console.log("yay");
-  };
-
-  let newData
 
   const filterLeadData = () => {
+    let newData
     if (address === "") {
       newData = null
     }
@@ -31,7 +25,6 @@ const SearchAddress = ({
     }
   };
 
-
   const handleChange = (event) => {
     event.preventDefault();
     if (event.target.type === "text") {
@@ -39,18 +32,16 @@ const SearchAddress = ({
     }
   };
 
-  const changeSubmit = () => {
-    setSubmit(!submit);
-  };
   useEffect(() => {
     filterLeadData();
   }, [address]);
+
   return (
     <div id="searchaddress">
       <input
         onChange={handleChange}
         value={address}
-        autoCompete="off"
+        autoComplete="off"
         type="text"
         className="form-control"
         name="address"

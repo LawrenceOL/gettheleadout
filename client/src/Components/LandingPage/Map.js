@@ -148,6 +148,10 @@ const Map = () => {
         setLoading(false);
       });
   }, []);
+
+  /**
+   * goes to searched address by re-rendering on selectedAddress changes
+   */
   useEffect(() => {
     const panToAddress = () => {
       if (!mapRef.current) return;
@@ -156,7 +160,6 @@ const Map = () => {
     };
     panToAddress()
 
-    console.log(leadData[selectedAddress])
   },[selectedAddress])
 
   return (
