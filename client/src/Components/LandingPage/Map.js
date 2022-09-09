@@ -46,7 +46,6 @@ const Map = () => {
 
   const updateData = (childData) => {
     setSearchedData(childData);
-    console.log(searchedData)
   };
 
   const updateSharing = () => {
@@ -156,7 +155,7 @@ const Map = () => {
     const panToAddress = () => {
       if (!mapRef.current) return;
       mapRef.current.setView(new L.LatLng(leadData[selectedAddress].latitude,
-        leadData[selectedAddress].longitude), 18);
+        leadData[selectedAddress].longitude), 19);
     };
     panToAddress()
 
