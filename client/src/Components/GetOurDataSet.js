@@ -34,7 +34,7 @@ const GetOurDataSet = () => {
     return (
       <div id="getourdata">
         <section className="getourdata">
-          <h2>Get our data set.</h2>
+          <h2>Get our Data Set.</h2>
           <p>
             Community leaders can view an up-to-date version of their city’s
             data.{" "}
@@ -55,22 +55,27 @@ const GetOurDataSet = () => {
           <h3>Our Platform:</h3>
 
           <img src={One} alt="numberone" />
-          <img src={DataPaperImg} alt="datapaperimage" />
-          <h5>Encourages open source data.</h5>
-          <p>
-            By crowd sourcing data through our survey we can accurately target
-            lead pipes for replacement.
-          </p>
+          <img src={DataPaperImg} alt="datapaperimage" className="platformimages" />
+          <div className="platformtext">
+            <h5>Encourages open source data.</h5>
+            <p>
+              By crowd sourcing data through our survey we can accurately target
+              lead pipes for replacement.
+            </p>
+          </div>
 
           <img src={Two} alt="numbertwo" />
-          <img src={Graph} alt="graphimage" />
-          <h5>
-            Examines high-impact variables to determine the probability of lead
-          </h5>
-          <p>
-            We built a model that included all of the variables that had high
-            correlations to lead pipes in one’s home.
-          </p>
+          <img src={Graph} alt="graphimage" className="platformimages"/>
+          <div className="platformtext">
+            <h5>
+              Examines high-impact variables to determine the probability of
+              lead
+            </h5>
+            <p>
+              We built a model that included all of the variables that had high
+              correlations to lead pipes in one’s home.
+            </p>
+          </div>
         </section>
 
         <Footer />
