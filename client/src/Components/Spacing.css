@@ -336,13 +336,13 @@ h2.smaller-title {
   border: 5px solid black;
 }
 
-div .rounded-border {
-  border: "1px solid grey";
-  border-radius: "15px";
-  padding-bottom: "20px";
-  padding-left: "20px";
-  padding-top: "20px";
-  padding-right: "20px";
+div.rounded-border {
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 .footer-links {

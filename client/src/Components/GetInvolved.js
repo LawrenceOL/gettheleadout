@@ -7,6 +7,8 @@ import TwoPeople from './Images/twopeople_cartoon.png'
 import One from './Images/one.png'
 import Two from './Images/two.png'
 import Three from './Images/three.png'
+import './GetInvolved.css'
+import Footer from './Footer'
 
 const GetInvolved = () => {
   let navigate = useNavigate();
@@ -15,14 +17,14 @@ const GetInvolved = () => {
     <div className="topmargin">
       <div className="page-template">
 
-          <div topmargin="20px">
+          <div>
               <h1 className="title">
                 How can you get involved? {" "}
                 </h1>
               </div>
 
 
-          <div style={{paddingTop: 60}}>
+          <div>
             <h1 className="supporting-text" >
               {" "}
               Get involved to help your community progress towards a lead-free
@@ -32,9 +34,9 @@ const GetInvolved = () => {
 
            <br />
 
-            <div className="numbered-sections" style={{paddingTop: 20}}>
+          <div className="numbered-sections">
 
-                <div className="item-1">
+              <div className="number-icon">
                   <img
                     alt="Number one"
                     src={One}
@@ -43,12 +45,12 @@ const GetInvolved = () => {
                   />
                   </div>
 
-                <div className="item-2">
-                    <h1 className="feature-text-top">
+                <div className="information">
+                    <h1 className="step1-title">
                       {" "}
                       Stay up-to-date on the impactlead pipes have in your community.
                       </h1>
-                    <h1 className="feature-text-bottom" style={{paddingTop: 20}}>
+                    <h1 className="step1-description">
                       Contact your local water utilities or local officials and find out about on-going or up-coming initiatives.
                       </h1>
                     </div>
@@ -56,22 +58,26 @@ const GetInvolved = () => {
               </div>
            
             <div className="center">
-              <img  alt="Working man" src={WorkingMan} height={239} width={300}/>
-            </div>
+              <img 
+                alt="Working man"
+                src={WorkingMan}
+                height={239}
+                width={300}/>
+              </div>
 
             <div className="center">
-              <Button variant="primary" size="lg" onClick={() => navigate("/howtocheckpipes")}>
+              <button className="bluebutton" onClick={() => navigate("/howtocheckpipes")}>
                 How to check my pipes
-              </Button>
+              </button>
             </div>
          
 
         <br />
 
         
-          <div className="numbered-sections" style={{paddingTop: 30}}> 
+          <div className="numbered-sections2"> 
 
-              <div className="item-1">
+              <div className="number-icon">
                 <img
                   alt="Number two"
                   src={Two}
@@ -80,12 +86,12 @@ const GetInvolved = () => {
                   />
                 </div>
 
-              <div className="item-2">
-                <h1 className="feature-text-top">
+              <div className="information">
+                <h1 className="step2-title">
                   {" "}
                   Upload pictures of your water pipes to our platform.
                 </h1>
-                <h1 className="feature-text-bottom">
+                <h1 className="step2-description">
                   This allows us to update the map on the latest data, which in turn
                   enables your local government to more easily receive funding.{" "}
                 </h1>
@@ -103,18 +109,18 @@ const GetInvolved = () => {
               </div>
 
             <div className="center">
-              <Button variant="primary" size="lg" onClick={() => navigate("/getpipeschecked")} block>
+              <button className="bluebutton" onClick={() => navigate("/getpipeschecked")} block>
                 Put your pipes on the map
-              </Button>
+              </button>
             </div>
        
 
         <br />
 
         <div>
-          <div className="numbered-sections-small" style={{paddingTop: 30}} >
+          <div className="numbered-sections-small">
 
-              <div className="item-1">
+              <div className="number-icon">
                 <img
                     alt="Number three"
                     src={Three}
@@ -123,12 +129,12 @@ const GetInvolved = () => {
                     />
                 </div>
 
-              <div className="item-2">
-                <h1 className="feature-text-top">
+              <div className="information">
+                <h1 className="step3-title">
                 {" "}
                   Share our interactive map to people in your community!
                  </h1>
-                  <h1 className="feature-text-bottom">
+                  <h1 className="step3-description">
                   We can only have a farther reach and impact with your help.
                   </h1>
                 </div>
@@ -147,6 +153,7 @@ const GetInvolved = () => {
 
         <br />
       </div>
+      <Footer />
     </div>
   );
 };

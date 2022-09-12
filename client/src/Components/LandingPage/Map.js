@@ -27,25 +27,14 @@ const Map = () => {
   const [address, setAddress] = useState("");
   const [isSearched, setIsSearched] = useState(false);
   const [searchedData, setSearchedData] = useState([]);
-  const [displaySearch, setDisplaySearch] = useState("")
+  // const [displaySearch, setDisplaySearch] = useState("")
   const [selectedAddress, setSelectedAddress] = useState([]);
   const [mapCenter, setMapCenter] = useState([41.571701, -87.69449150000003]);
   const [sharingIsClicked, setSharingIsClicked] = useState(false);
 
-  const [searchedLatLon, setSearchedLatLon] = useState([]);
-  // function handleOnFlyTo() {
-  //   const { current = {} } = mapRef;
-  //   const { leafletElement: map } = current;
-
-  //   map.flyTo(searchedLatLon, 14, {
-  //     duration: 2,
-  //   });
-  // }
+  // const [searchedLatLon, setSearchedLatLon] = useState([]);
 
   const mapRef = useRef(null);
-
-  // const animateRef = useRef(false)
-
   /**
    * Closes all popups open in the MapContainer component
    * @returns {null} Null if no reference to map
@@ -57,7 +46,6 @@ const Map = () => {
 
   const updateData = (childData) => {
     setSearchedData(childData);
-    console.log(searchedData)
   };
 
   const updateSharing = () => {
@@ -67,12 +55,6 @@ const Map = () => {
   let displayedAddresses = searchedData && searchedData.slice(0, 5);
 
 
-  const panToAddress = () => {
-    if (!mapRef.current) return;
-    mapRef.current.setView(new L.LatLng([leadData[selectedAddress].latitude,
-      leadData[selectedAddress].longitude]));
-  };
-
   const onAddressClick = (id) => {
     setIsSearched(true);
     setSelectedAddress(id);
@@ -80,23 +62,6 @@ const Map = () => {
     setSearchedData()
     
   };
-
-//   if (selectedAddress) {
-//     console.log([
-//       leadData[selectedAddress].latitude,
-//       leadData[selectedAddress].longitude,
-//     ]);
-
-//     setSearchedLatLon([
-//     leadData[selectedAddress].latitude,
-//     leadData[selectedAddress].longitude,
-//   ])
-// };
-
-// const panToAddress = () => {
-//   if (!mapRef.current) return;
-//   mapRef.current.setView(new L.LatLng(searchedLatLon));
-// };
 
   const displayed =
     displayedAddresses &&
@@ -183,6 +148,19 @@ const Map = () => {
       });
   }, []);
 
+  /**
+   * goes to searched address by re-rendering on selectedAddress changes
+   */
+  useEffect(() => {
+    const panToAddress = () => {
+      if (!mapRef.current) return;
+      mapRef.current.setView(new L.LatLng(leadData[selectedAddress].latitude,
+        leadData[selectedAddress].longitude), 19);
+    };
+    panToAddress()
+
+  },[selectedAddress])
+
   return (
     <>
       <div className="searchform">
@@ -203,6 +181,7 @@ const Map = () => {
         <MapContainer
           center={mapCenter}
           zoom={15}
+          maxZoom={19}
           scrollWheelZoom={false}
           ref={mapRef}
         >
@@ -212,7 +191,7 @@ const Map = () => {
           />
           {isLoading ? (
             <div>Loading...</div>
-          ) : !isSearched ? (
+          ) : (
             <MarkerClusterGroup
               chunkedLoading
               iconCreateFunction={createClusterCustomIcon} >
@@ -255,21 +234,6 @@ const Map = () => {
                 </Marker>
               ))}
             </MarkerClusterGroup>
-          ) : (
-            <Marker
-              icon={customIcon(leadData[selectedAddress].our_pred)}
-              key={leadData[selectedAddress].id}
-              position={[
-                leadData[selectedAddress].latitude,
-                leadData[selectedAddress].longitude,
-              ]}
-              title={leadData[selectedAddress].est_year}
-            >
-              <Popup>
-                <p>Year Built: {leadData[selectedAddress].est_year}</p>
-                <p>Lead Info: {leadData[selectedAddress].our_pred}</p>
-              </Popup>
-            </Marker>
           )}
 
           <button
