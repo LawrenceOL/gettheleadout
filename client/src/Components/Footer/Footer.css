@@ -93,32 +93,15 @@
     color: #101828;
   }
 
-.mainfooter {
-  background-color: #005EA2;
-  height: 400px
-}
-.whitelogo {
-  margin-top: 20px;
-  margin-left: 16px;
-}
 .footer-links {
-  margin-left: 20px;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
-.footerlink {
     text-decoration: none;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-}
-.linebreak {
-  width: 344px;
-  height: 56px;
-  border-top: 1px solid #FFFFFF;
-  margin: 0px auto;
-}
-.socialbuttons {
-  margin-right: 110px;
-  margin-bottom: 20px;
-}
+    color: black;
+
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .individual-footerlink {
+      margin-top: 15px;
+  }

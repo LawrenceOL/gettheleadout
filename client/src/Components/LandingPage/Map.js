@@ -155,7 +155,7 @@ const Map = () => {
     const panToAddress = () => {
       if (!mapRef.current) return;
       mapRef.current.setView(new L.LatLng(leadData[selectedAddress].latitude,
-        leadData[selectedAddress].longitude), 19);
+        leadData[selectedAddress].longitude), 18);
     };
     panToAddress()
 

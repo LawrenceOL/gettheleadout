@@ -1,0 +1,50 @@
+#getourdata {
+    margin-top: 65px;
+    width: 95vw;
+}
+
+.getourdata {
+    margin-left: 16px
+}
+.getourdata h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+.getourdata p {
+    font-size: 18px;
+    color: #667085
+}
+.getdatabutton {
+    width: 200px;
+    height: 44px;
+    background-color: #005ea2;
+    border-radius: 8px;
+    border-width: 1px;
+    font-size: 16px;
+    margin-left: 20%
+}
+
+.buttonlink {
+    text-decoration: none;
+    color: #ffffff;
+}
+.buttonlink:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ourplatform {
+    margin-left: 16px;
+    margin-top: 90px;
+}
+
+.ourplatform h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.platformimages {
+    margin: auto;
+}
+.platformtext {
+    margin-left: 55px;
+}
