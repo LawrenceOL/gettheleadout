@@ -2,7 +2,9 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import whitelogo from "./Images/whitelogo.png"
 import './Footer.css'
+import ShareButton from "./LandingPage/ShareButton";
 
 
 const Footer = () => {
@@ -11,10 +13,9 @@ const Footer = () => {
   return (
     <div style={{ marginTop: 102 }}>
       <div className="footerblue">
-
         <div>
           <h1 className="header-in-footer">
-            Let's get your water pipes checked with a photo upload.
+            Let us help you confirm your lead pipe status.
           </h1>
         </div>
 
@@ -23,11 +24,11 @@ const Footer = () => {
         <div>
           <h1 className="supporting-text">
             By adding your photo, we can help you confirm your pipe material and
-            you can help your communitylocate & remove lead pipes.
+            you can help your community locate & remove lead pipes.
           </h1>
         </div>
 
-        <br/>
+        <br />
 
         <div className="footerbuttons">
           <button
@@ -41,61 +42,54 @@ const Footer = () => {
             className="whitebutton"
             onClick={() => navigate("/getpipeschecked")}
           >
-            Upload your findings 
+            Upload your findings
           </button>
         </div>
 
         <br />
       </div>
 
-      <div>
-        <h1 className="getLeadOut-header">
-          Get the Lead Out
-          </h1>
-        </div>
+      <div className="mainfooter">
+        <img
+          src={whitelogo}
+          alt="get the lead out logo"
+          className="whitelogo"
+        />
 
-      <div
-        className="footer-links"
-        >
-        <div>
-          <Link to="/" className="link-dark text-decoration-none">
+        <div className="footer-links">
+          <Link to="/" className="footerlink">
             {" "}
             Map
           </Link>
-          </div>
-        <div className="individual-footerlink">
-          <Link
-            to="/howtocheckpipes"
-            className="link-dark text-decoration-none"
-          >
+
+          <Link to="/howtocheckpipes" className="footerlink">
             {" "}
-            How to check your pipes
+            How to Check Your Pipes
           </Link>
-          </div>
-        <div className="individual-footerlink">
-          <Link
-            to="/getpipeschecked"
-            className="link-dark text-decoration-none"
-          >
+
+          <Link to="/getpipeschecked" className="footerlink">
             {" "}
-            Get your pipes checked
+            Upload Your Findings
           </Link>
-          </div>
-        <div className="individual-footerlink">
-          <Link to="/about" className="link-dark text-decoration-none">
+
+          <Link to="/about" className="footerlink">
             About
           </Link>
-          </div>
-        <div className="individual-footerlink">
-          <Link to="/faq" className="link-dark text-decoration-none">
+
+          <Link to="/faq" className="footerlink">
             FAQ
           </Link>
-          </div>
-        <div className="individual-footerlink">
-          <Link to="/getourdataset" className="link-dark text-decoration-none">
-            Get our data set
+
+          <Link to="/getourdataset" className="footerlink">
+            Get the Data
           </Link>
+        </div>
+
+        <div className="linebreak">
+          <div className="socialbuttons">
+            <ShareButton />
           </div>
+        </div>
       </div>
     </div>
   );

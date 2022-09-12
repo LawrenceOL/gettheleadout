@@ -6,7 +6,7 @@ const ShareButton = ({updateSharing}) => {
     return (
       <div className="sharingButtons" onClick={updateSharing}>
         <div className="sharetext">
-          <p>Share our map to your communities.</p>
+          
         </div>
         <InlineShareButtons
           config={{
