@@ -205,6 +205,6 @@ h1.step3-description {
 }
 
 .footerblue {
-  width: 375px;
+  width: 100vw;
   overflow: hidden;
 }
