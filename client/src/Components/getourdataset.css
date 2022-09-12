@@ -1,0 +1,22 @@
+#getourdata {
+    margin-top: 65px;
+}
+
+.getdatabutton {
+    width: 200px;
+    height: 44px;
+    background-color: #005ea2;
+    border-radius: 8px;
+    border-width: 1px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.buttonlink {
+    text-decoration: none;
+    color: #ffffff;
+}
+.buttonlink:visited {
+    text-decoration: none;
+    color: #ffffff;
+}

@@ -1,0 +1,107 @@
+.footerblue {
+    height: 470px;
+    background-color: #eff8ff;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.header-in-footer {
+    width: 340px;
+    height: 29px;
+
+    margin-top: 60px;
+    margin-left: 30px;
+    margin-right: 20px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #101828;
+  }
+
+
+.supporting-text {
+    /* position: absolute; */
+    width: 340px;
+    height: 57px;
+    left: 16px;
+    top: 245px;
+
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  
+    color: #667085;
+  }
+
+.bluebutton {
+    width: 297px;
+    height: 44px;
+    background-color: #005ea2;
+    border-radius: 8px;
+    color: #ffffff;
+    border-width: 1px;
+    font-size: 12px;
+    margin: 2px 12px;
+  }
+
+
+.whitebutton {
+    width: 297px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #344054;
+    border-color: #d0d5dd;
+    border-width: 1px;
+    font-size: 12px;
+    margin: 12px;
+  }
+ 
+.footerbuttons{
+    margin-top: 90px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.getLeadOut-header {
+    width: 340px;
+    height: 29px;
+
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #101828;
+  }
+
+.footer-links {
+    text-decoration: none;
+    color: black;
+
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .individual-footerlink {
+      margin-top: 15px;
+  }
