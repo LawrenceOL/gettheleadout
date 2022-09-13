@@ -55,8 +55,9 @@ const LandingPage = () => {
                   Do you know if you have lead pipes in your home?
                 </h1>
                 <h2 className="overlaytext">
-                  Our map predicts the chances of lead pipes, but we have step
-                  by step instructions so you can find out for sure.
+                  Our map uses available data to show how likely a place is to
+                  have lead pipes. You can add to this data to make our map
+                  better!
                 </h2>
                 <PageChangeButtons
                   showFirstOverlay={showFirstOverlay}
@@ -103,9 +104,9 @@ const LandingPage = () => {
                   What if you do have lead pipes?
                 </h1>
                 <h2 className="overlaytext">
-                  There is funding available specifically for lead pipe
-                  replacement. In order for your local water system to secure
-                  this funding, they need to know where lead pipes are.
+                  Lead pipe replacement is a big priority. To get funding for
+                  lead pipe replacement your community needs to know where these
+                  pipes are.
                 </h2>
                 <PageChangeButtons
                   showFirstOverlay={showFirstOverlay}
@@ -150,8 +151,8 @@ const LandingPage = () => {
                 />
                 <h1 className="overlayheader">What can you do right now?</h1>
                 <h2 className="overlaytext">
-                  Share our map to spread awareness of this problem and the
-                  solution!
+                  Check the status of your water pipes and share our app to
+                  spread awareness to encourage others to do the same!
                 </h2>
                 <PageChangeButtons
                   showFirstOverlay={showFirstOverlay}

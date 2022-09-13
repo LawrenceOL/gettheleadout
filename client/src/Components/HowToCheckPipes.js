@@ -10,7 +10,7 @@ import CopperPipe from "./Images/copperpipe2.png";
 import Checkboxes from "./Images/checkboxes.png";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import './HowToCheckPipes.css'
+import "./HowToCheckPipes.css";
 
 const Check = () => {
   let navigate = useNavigate();
@@ -18,34 +18,29 @@ const Check = () => {
   return (
     <div className="topmargin">
       <div className="page-template">
-
         <div>
           <h1 className="title">How to check for lead pipes </h1>
         </div>
 
-        <br/>
+        <br />
 
         <div className="centered-image">
-          <img 
-            alt="camera"
-            src={Camera}
-            height={220}
-            width={250} 
-            />
+          <img alt="camera" src={Camera} height={220} width={250} />
         </div>
 
-        <div className="numbered-sections-howToCheck" style={{ paddingTop: 40 }}>
-
+        <div
+          className="numbered-sections-howToCheck"
+          style={{ paddingTop: 40 }}
+        >
           <div className="number-icon">
-
-            <img className="image-size" // class name image-size is not working
-            alt="Number one"
-            src={One}
-            height={50}
-            width={50}
+            <img
+              className="image-size" // class name image-size is not working
+              alt="Number one"
+              src={One}
+              height={50}
+              width={50}
             />
-
-            </div>
+          </div>
 
           <div className="information">
             <h1 className="step1-title">
@@ -57,46 +52,36 @@ const Check = () => {
               lead -- it only takes a few minutes and requires no special
               equipment!
             </h1>
-            </div>
-
           </div>
+        </div>
 
         <div className="numbered-sections-howToCheck">
-          
           <div className="number-icon">
-
-            <img  className="image-size" // class name image-size is not working
-              alt="Number two" 
-              src={Two} 
+            <img
+              className="image-size" // class name image-size is not working
+              alt="Number two"
+              src={Two}
               height={50}
               width={50}
-              />
-            </div>
-
-          <div className="information">
-
-            <h1 className="step2-title">
-              Upload a photo of your pipe
-            </h1>
-            <h1 className="step2-description">
-              Adding to the map helps everyone in your community get a better picture of the problem.
-            </h1>
-            </div>
-
+            />
           </div>
 
-        <div>
+          <div className="information">
+            <h1 className="step2-title">Upload a photo of your pipe</h1>
+            <h1 className="step2-description">
+              Adding to the map helps everyone in your community get a better
+              picture of the problem.
+            </h1>
+          </div>
+        </div>
 
+        <div>
           <div>
             <h1 className="headers-howToCheck">Example Images</h1>
           </div>
 
           <div classname="lead-pipe-image">
-            <img 
-              alt="lead pipe"
-              src={LeadPipe}
-              height={140}
-              width={332} />
+            <img alt="lead pipe" src={LeadPipe} height={140} width={332} />
           </div>
 
           <div>
@@ -113,11 +98,7 @@ const Check = () => {
           <br />
 
           <div>
-            <img 
-              alt="copper pipe" 
-              src={CopperPipe} 
-              height={140}
-              width={332} />
+            <img alt="copper pipe" src={CopperPipe} height={140} width={332} />
           </div>
 
           <div>
@@ -156,7 +137,10 @@ const Check = () => {
 
         <div>
           <ol>
-            <li>Grab a magnet or a coin or a key for your test.</li>
+            <li>
+              Grab a magnet and a coin. A key or screwdriver can work in place
+              of a coin.
+            </li>
             <br />
             <li>
               Locate your water meter. From the meter, look where the service
@@ -171,22 +155,24 @@ const Check = () => {
             <li>
               Begin with the magnet test. Magnets will not stick to the lead or
               copper. Magnets will stick to steel. However, galvanized steel may
-              contain lead inside. Further investigation is needed.
+              contain lead inside. Replacement or further investigation is
+              needed.
             </li>
             <br />
             <li>
               If the magnet does not stick, try using a key or coin to scratch
-              the pipe. A copper-colored scratch, means the pipe is copper. Note
-              copper pipes can have lead solder.
+              the pipe. A copper-colored scratch, means the pipe is copper.
+              *Note copper pipes can have lead solder.
             </li>
             <br />
             <li>
               A shiny, silver scratch, indicates the pipe could be lead or
               galvanized steel. Replacement or further investigation is needed.
-              Request a water testing kit to check for lead in your water.
             </li>
             <br />
             <li>Wash your hands thoroughly with soap and water.</li>
+            <br />
+            <li>Share your findings with us!</li>
           </ol>
         </div>
 
