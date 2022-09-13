@@ -33,13 +33,12 @@ h1.title {
       font-weight: 700; */
 }
 
-.supporting-text {
+.subtitle {
   /* position: absolute; */
   width: 340px;
   height: 57px;
-  left: 16px;
-  top: 245px;
-  padding-top: 60px;
+  
+  margin-top: 80px;
 
   font-family: "Inter";
   font-style: normal;

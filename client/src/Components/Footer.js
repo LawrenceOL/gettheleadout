@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footerblue">
         <div>
           <h1 className="header-in-footer">
-            Let us help you confirm your lead pipe status.
+            Let Us Help You Confirm Your Lead Pipe Status.
           </h1>
         </div>
 
