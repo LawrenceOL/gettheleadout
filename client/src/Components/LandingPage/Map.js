@@ -77,8 +77,8 @@ const Map = () => {
 
   const leadPrediction = {
     1: "Assumed Non-Lead",
-    2: "Unlikely Lead",
-    3: "Maybe Lead",
+    2: "Likely Non-Lead",
+    3: "Unknown Lead Status",
     4: "Likely Lead",
     5: "Assumed Lead",
   };
@@ -221,12 +221,12 @@ const Map = () => {
                     <div className="popup-buttons">
                       <Link to="/howtocheckpipes">
                         <button className="bluebutton-m">
-                          How to check your pipes
+                          Check Your Pipes for Lead
                         </button>
                       </Link>
                       <Link to="/getpipeschecked">
                         <button className="whitebutton-m">
-                          Lead pipe exist? Click here
+                          Upload Your Findings
                         </button>
                       </Link>
                     </div>
