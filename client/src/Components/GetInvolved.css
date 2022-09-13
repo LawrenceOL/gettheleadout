@@ -11,13 +11,15 @@ div.topmargin {
   padding-left: 0;
   margin-right: 5%;
 }
-
+.title {
+  margin-left: 8px;
+}
 h1.title {
   /* margin-left: 2%; */
   /* position: absolute; */
   width: 335px;
   height: 40px;
-  left: 17px;
+  left: 16px;
   top: 0px;
   margin-top: 10px;
 
