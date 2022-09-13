@@ -7,18 +7,17 @@
 
 
 .header-in-footer {
-    width: 340px;
-    height: 29px;
+    width: 307px;
+    height: 114px;
 
     margin-top: 60px;
-    margin-left: 30px;
+    margin-left: 34px;
     margin-right: 20px;
-  
-    font-family: "Inter";
-    font-style: normal;
+
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 29px;
+    line-break: 24px;
     color: #101828;
   }
 
@@ -30,10 +29,8 @@
     left: 16px;
     top: 245px;
 
-    margin-top: 20px;
     margin-left: 25px;
     margin-right: 30px;
-    margin-bottom: 20px;
 
   
     font-family: "Inter";
@@ -70,7 +67,7 @@
   }
  
 .footerbuttons{
-    margin-top: 90px;
+    margin-top: 40px;
     margin-left: 25px;
     display: flex;
     flex-direction: column;

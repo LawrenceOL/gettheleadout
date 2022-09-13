@@ -1,0 +1,83 @@
+#aboutsection {
+    margin-top: 65px;
+}
+
+.abouttitle {
+    font-size: 36px;
+    font-weight: 700px;
+    margin-left: 16px;
+}
+
+.aboutsubtitle {
+    font-size: 18px;
+    font-weight: 400px;
+    color: #667085;
+    margin-left: 16px;
+}
+
+.abouttext {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #667085;
+    margin-left: 16px;
+    margin-top: 69px;
+    width: 343px;
+    height: 336px;
+}
+
+.factoryimage {
+    width: 323px;
+    height: 207px;
+    margin-left: 16px;
+}
+.phoneimage {
+    height: 234px;
+    margin-left: 25%;
+}
+
+.ourorigins, .datasection, .whatsnext {
+    margin-left: 16px;
+    width: 91vw;
+    margin-top: 54px;
+}
+
+.sectiontitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #101828;
+}
+
+.originstext {
+    width: 343px;
+    height: 690px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #667085;
+    margin-top: 40px;
+}
+
+.datatext {
+    width: 343px;
+    height: 586px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #667085;
+    margin-top: 40px;
+}
+.whatsnexttext {
+    width: 343px;
+    height: 112px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #667085;
+    margin-top: 40px;
+}
+.aboutlinks {
+    text-decoration: underline;
+    color: #667085
+}

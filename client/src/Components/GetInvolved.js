@@ -25,7 +25,7 @@ const GetInvolved = () => {
 
 
           <div>
-            <h1 className="supporting-text" >
+            <h1 className="subtitle" >
               {" "}
               Get involved to help your community progress towards a lead-free
               future.
