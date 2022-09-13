@@ -138,41 +138,58 @@ const Check = () => {
         <div>
           <ol>
             <li>
-              Grab a magnet and a coin. A key or screwdriver can work in place
-              of a coin.
+              <span className="bolbinstructions">
+                Grab a magnet and a coin.
+              </span>{" "}
+              A key or screwdriver can work in place of a coin.
             </li>
             <br />
             <li>
-              Locate your water meter. From the meter, look where the service
-              line enters the building, either in the wall or through the floor.
+              <span className="bolbinstructions">Locate your water meter.</span>{" "}
+              From the meter, look where the service line enters the building,
+              either in the wall or through the floor.
             </li>
             <br />
             <li>
-              Find the shut-off valve. Test the area between the shut-off valve
-              and the wall or floor.
+              <span className="bolbinstructions">Find the shut-off valve.</span>{" "}
+              Test the area between the shut-off valve and the wall or floor.
             </li>
             <br />
             <li>
-              Begin with the magnet test. Magnets will not stick to the lead or
-              copper. Magnets will stick to steel. However, galvanized steel may
-              contain lead inside. Replacement or further investigation is
+              Begin with the magnet test.{" "}
+              <span className="bolbinstructions">
+                Magnets will not stick to the lead{" "}
+              </span>
+              or copper. Magnets will stick to steel. However, galvanized steel
+              may contain lead inside. Replacement or further investigation is
               needed.
             </li>
             <br />
             <li>
-              If the magnet does not stick, try using a key or coin to scratch
-              the pipe. A copper-colored scratch, means the pipe is copper.
-              *Note copper pipes can have lead solder.
+              If the magnet does not stick,{" "}
+              <span className="bolbinstructions">
+                use the coin to scratch the pipe.
+              </span>{" "}
+              A copper-colored scratch, means the pipe is copper. *Note copper
+              pipes can have lead solder.
             </li>
             <br />
             <li>
-              A shiny, silver scratch, indicates the pipe could be lead or
-              galvanized steel. Replacement or further investigation is needed.
+              <span className="bolbinstructions">
+                A shiny, silver scratch, indicates the pipe could be lead.
+              </span>{" "}
+              Replacement or further investigation is needed.
             </li>
             <br />
-            <li>Wash your hands thoroughly with soap and water.</li>
+            <li>
+              <span className="bolbinstructions">Wash your hands</span>{" "}
+              thoroughly with soap and water.
+            </li>
             <br />
-            <li>Share your findings with</li>
+            <li>
+              <span className="bolbinstructions">Share your findings</span> with
+              us!
+            </li>
           </ol>
         </div>
 
@@ -181,20 +198,30 @@ const Check = () => {
         <div>
           <h1 className="headers-howToCheck">Still need help?</h1>
           <h1 className="feature-text-bottom">
-            <ol>
+            <ul>
               <li>
                 Check out{" "}
-                <a href="https://apps.npr.org/find-lead-pipes-in-your-home/en/#intro">
+                <a
+                  style={{ textDecoration: "none", color: "#005ea2" }}
+                  href="https://apps.npr.org/find-lead-pipes-in-your-home/en/#intro"
+                >
                   {" "}
                   NPR's step by step guide{" "}
                 </a>
               </li>
               <li>Contact your local water utility directly</li>
               <li>
-                Check out our <Link to="/faq"> FAQ page > </Link> for commonly
-                asked questions and answers.
+                Check out our{" "}
+                <Link
+                  to="/faq"
+                  style={{ textDecoration: "none", color: "#005ea2" }}
+                >
+                  {" "}
+                  FAQ page >{" "}
+                </Link>{" "}
+                for commonly asked questions and answers.
               </li>
-            </ol>
+            </ul>
           </h1>
         </div>
       </div>
