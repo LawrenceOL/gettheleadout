@@ -42,6 +42,10 @@
     color: #667085;
   }
 
+  .footerbuttons {
+    margin-left: 18px;
+    margin-top: 60px;
+  }
 .bluebutton {
     width: 297px;
     height: 44px;
@@ -50,11 +54,11 @@
     color: #ffffff;
     border-width: 1px;
     font-size: 12px;
-    margin: 2px 12px;
+    margin: 6px 18px;
   }
 
 
-.whitebutton {
+/* .whitebutton {
     width: 297px;
     height: 44px;
     background-color: #ffffff;
@@ -64,15 +68,15 @@
     border-width: 1px;
     font-size: 12px;
     margin: 12px;
-  }
+  } */
  
-.footerbuttons{
+/* .footerbuttons{
     margin-top: 40px;
     margin-left: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
+} */
 
 .getLeadOut-header {
     width: 340px;

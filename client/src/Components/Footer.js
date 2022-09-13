@@ -22,10 +22,11 @@ const Footer = () => {
         <br />
 
         <div>
-          <h1 className="supporting-text">
-            By adding your photo, we can help you confirm your pipe material and
-            you can help your community locate & remove lead pipes.
-          </h1>
+          <p className="supporting-text">
+            By answering some simple questions and adding a photo of your pipe,
+            we can help you confirm your pipe material This will help your
+            neighborhood replace lead pipes for good!
+          </p>
         </div>
 
         <br />
@@ -33,16 +34,9 @@ const Footer = () => {
         <div className="footerbuttons">
           <button
             className="bluebutton"
-            onClick={() => navigate("/howtocheckpipes")}
-          >
-            Check your pipes for lead
-          </button>
-
-          <button
-            className="whitebutton"
             onClick={() => navigate("/getpipeschecked")}
           >
-            Upload your findings
+            Upload Your Findings
           </button>
         </div>
 
