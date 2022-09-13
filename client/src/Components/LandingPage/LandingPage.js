@@ -189,11 +189,11 @@ const LandingPage = () => {
                 <div className="containerleft">
                   <div className="legenditem">
                     <div className="darkbluedot"></div>
-                    <p>Assumed non-lead</p>
+                    <p>Assumed Non-Lead</p>
                   </div>
                   <div className="legenditem">
                     <div className="lightbluedot"></div>
-                    <p>Likely non-lead</p>
+                    <p>Likely Non-Lead</p>
                   </div>
                   <div className="legenditem">
                     <div className="yellowdot"></div>
@@ -204,12 +204,12 @@ const LandingPage = () => {
                 <div className="containerright">
                   <div className="legenditem">
                     <div className="reddot"></div>
-                    <p>Assumed lead</p>
+                    <p>Assumed Lead</p>
                   </div>
 
                   <div className="legenditem">
                     <div className="orangedot"></div>
-                    <p>Likely lead</p>
+                    <p>Likely Lead</p>
                   </div>
                 </div>
               </div>
