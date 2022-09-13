@@ -180,7 +180,7 @@ const Map = () => {
       <div className="mapholder">
         <MapContainer
           center={mapCenter}
-          zoom={15}
+          zoom={14}
           maxZoom={19}
           scrollWheelZoom={false}
           ref={mapRef}
