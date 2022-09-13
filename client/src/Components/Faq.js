@@ -43,7 +43,14 @@ const Faq = () => {
               Still have questions about checking for lead pipes?
             </h1>
             <h1 className="feature-text-bottom">
-              Refer to NPR's complete step by step guide with photos.
+              Refer to{" "}
+              <a
+                href="https://apps.npr.org/find-lead-pipes-in-your-home/en/#intro"
+                style={{ color: "gray" }}
+              >
+                NPR's complete step by step guide{" "}
+              </a>{" "}
+              with photos.
             </h1>
           </div>
         </div>
@@ -76,7 +83,13 @@ const Faq = () => {
               lead line replacement projects?
             </h1>
             <h1 className="feature-text-bottom" style={{ marginTop: 50 }}>
-              Upload a photo of your lead pipe here
+              Upload a photo of your lead pipe{" "}
+              <a
+                href="/#/getpipeschecked"
+                style={{ textDecoration: "none", color: "darkblue" }}
+              >
+                here >{" "}
+              </a>
             </h1>
           </div>
         </div>
@@ -93,7 +106,11 @@ const Faq = () => {
               discover lead pipes?
             </h1>
             <h1 className="feature-text-bottom" style={{ marginTop: 60 }}>
-              Click <a href="">here ></a> for tips from the EPA
+              Click{" "}
+              <a href="" style={{ textDecoration: "none", color: "darkblue" }}>
+                here >
+              </a>{" "}
+              for tips from the EPA
             </h1>
           </div>
         </div>
