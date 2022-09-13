@@ -2,8 +2,8 @@ import React from "react";
 import Factory from "../Images/factory.png";
 import Phone from "../Images/phone.png";
 import IncomeMap from "../Images/IncomeMap.png";
-import "./about.css"
-import Footer from "../Footer";
+import "./about.css";
+import MainFooter from "../MainFooter";
 
 const About = () => {
   return (
@@ -15,9 +15,9 @@ const About = () => {
         <p>
           Since Flint, Michigan's water crisis hit headlines in 2015, we woke up
           to the serious health risk lead pipes pose. Through reseach we found
-          that every state in the nation has lead problems. However, folks
-          rarely know their exposure risk as inventory of locations of lead
-          service lines (LSL) have never been mandated, until recently, and
+          that every state in the nation has lead problems. &nbsp; However,
+          folks rarely know their exposure risk as inventory of locations of
+          lead service lines (LSL) have never been mandated, until recently, and
           records have not been well-kept initiatives across the U.S.
         </p>
       </div>
@@ -31,19 +31,19 @@ const About = () => {
           <p>
             With the passing of the Bipartisan Infrastructure Law, states now
             have the opportunity to access funding for lead pipe replacement.
-            But often communities with the greatest need, have the fewest
+            &nbsp; But often communities with the greatest need, have the fewest
             resources to conduct inventories which are critical to applying for
-            funding. Mapping lines requires the cooperation of both public
-            utilities and residents.
+            funding. &nbsp; Mapping lines requires the cooperation of both
+            public utilities and residents.
           </p>
           <p>
             To help small communities, with limited resources create
             inventories, we envisioned a map that utilized crowd-sources data
             and open-source data to engage communities in collective
-            participation in the LSL mapping. We hope it educates and empowers
-            residents, provides information that cities can use for funding, and
-            provides open-source data for academics and researchers to utilize
-            in tackling clean water initiatives across the U.S.
+            participation in the LSL mapping. &nbsp; We hope it educates and
+            empowers residents, provides information that cities can use for
+            funding, and provides open-source data for academics and researchers
+            to utilize in tackling clean water initiatives across the U.S.
           </p>
         </div>
 
@@ -63,8 +63,9 @@ const About = () => {
           <p>
             The variables with the strongest negative correlations were the
             estimated year of construction, median household income, size of the
-            home (square feet), and the market value of the home. That means as
-            each of these variables decreases the probability of lead increases.
+            home (square feet), and the market value of the home. &nbsp; That
+            means as each of these variables decreases the probability of lead
+            increases.
           </p>
           <p>
             Our goal is to encourage open source data reporting through our
@@ -81,15 +82,17 @@ const About = () => {
             >
               here
             </a>{" "}
+          </p>
+          <p>
             Read the full case study{" "}
             <a href="" className="aboutlinks">
               here
             </a>
           </p>
         </div>
-
-        <img alt="Income Map" src={IncomeMap} height={200} width={350} />
       </div>
+      <br />
+      <img alt="Income Map" src={IncomeMap} height={200} width={350} />
 
       <div className="whatsnext">
         <h1 className="sectiontitle" style={{ paddingTop: 50 }}>
@@ -104,7 +107,7 @@ const About = () => {
         </div>
       </div>
 
-      <Footer />
+      <MainFooter />
     </div>
   );
 };
