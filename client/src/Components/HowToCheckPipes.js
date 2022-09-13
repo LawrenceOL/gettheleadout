@@ -172,7 +172,7 @@ const Check = () => {
             <br />
             <li>Wash your hands thoroughly with soap and water.</li>
             <br />
-            <li>Share your findings with us!</li>
+            <li>Share your findings with</li>
           </ol>
         </div>
 
@@ -183,7 +183,11 @@ const Check = () => {
           <h1 className="feature-text-bottom">
             <ol>
               <li>
-                Check out <a href="apps.npr.org"> NPR's step by step guide </a>
+                Check out{" "}
+                <a href="https://apps.npr.org/find-lead-pipes-in-your-home/en/#intro">
+                  {" "}
+                  NPR's step by step guide{" "}
+                </a>
               </li>
               <li>Contact your local water utility directly</li>
               <li>
