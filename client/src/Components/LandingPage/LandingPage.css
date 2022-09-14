@@ -40,7 +40,7 @@
 }
 .overlayimg {
   display: block;
-  margin-left: auto;
+  margin-left: 5%;
   margin-right: auto;
 }
 .overlayheader {
@@ -48,19 +48,19 @@
   font-weight: bold;
   line-height: 28px;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 25px;
   width: 291px;
 }
 .overlaytext {
   font-size: 14px;
   line-height: 20px;
-  margin: 0px 20px;
+  margin: 0px 25px;
   width: 291px;
 }
 .dotbuttonscontainer {
   display: flex;
   justify-content: center;
-  margin-top: 8%;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 .changeoverlaybutton {
@@ -78,7 +78,7 @@
   color: #ffffff;
   border-width: 1px;
   font-size: 12px;
-  margin: 2px 12px;
+  margin: 2px 20px;
 }
 .whitebutton {
   width: 297px;
@@ -89,7 +89,7 @@
   border-color: #d0d5dd;
   border-width: 1px;
   font-size: 12px;
-  margin: 12px;
+  margin: 3px 20px;
 }
 .leadmap {
   position: absolute;

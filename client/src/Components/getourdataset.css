@@ -1,10 +1,10 @@
 #getourdata {
     margin-top: 65px;
-    width: 95vw;
+
 }
 
 .getourdata {
-    margin-left: 16px
+    margin: 0px 16px;
 }
 .getourdata h2 {
     font-size: 36px;
@@ -47,4 +47,6 @@
 }
 .platformtext {
     margin-left: 55px;
+    margin-right: 16px;
+    width: 280px;
 }

@@ -8,6 +8,7 @@ import Two from "./Images/two.png";
 import LeadPipe from "./Images/leadpipe.png";
 import CopperPipe from "./Images/copperpipe2.png";
 import Checkboxes from "./Images/checkboxes.png";
+import KidLooking from "./Images/kidlooking.png"
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import "./HowToCheckPipes.css";
@@ -126,10 +127,9 @@ const Check = () => {
 
         <div id="checkboxes-image">
           <img
-            alt="Checkboxes"
-            src={Checkboxes}
-            // height={210}
-            // width={250}
+            alt="kid looking"
+            src={KidLooking}
+            className="visualimg"
           />
         </div>
 

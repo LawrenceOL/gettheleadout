@@ -11,7 +11,7 @@ const Footer = () => {
   let navigate = useNavigate();
 
   return (
-    <div style={{ marginTop: 102 }}>
+    <div style={{ marginTop: 102 }} id="footer">
       <div className="footerblue">
         <div>
           <h1 className="header-in-footer">
