@@ -94,12 +94,14 @@
 }
 .marker-cluster-small div {
   background-color: #cdeaff;
+  color: #ffffff
 }
 .marker-cluster-medium {
   background-color: #50b5ff;
 }
 .marker-cluster-medium div {
   background-color: #50b5ff;
+  color: #ffffff
 }
 
 .marker-cluster-large {
@@ -107,4 +109,5 @@
 }
 .marker-cluster-large div {
   background-color: #105089;
+  color: #ffffff
 }
