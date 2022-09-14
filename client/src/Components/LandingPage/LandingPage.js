@@ -97,6 +97,7 @@ const LandingPage = () => {
               />
               <div className="overlayelements">
                 <img
+                  className="overlayimg"
                   src="https://res.cloudinary.com/adelaney923/image/upload/v1661372255/Online_consultation_jpaa4s.png"
                   alt="persononcomputer"
                 />
@@ -146,6 +147,7 @@ const LandingPage = () => {
               />
               <div className="overlayelements">
                 <img
+                  className="overlayimg"
                   src="https://res.cloudinary.com/adelaney923/image/upload/v1661372310/African_Mothers_with_kids_together_s4ydrd.png"
                   alt="familygathering"
                 />

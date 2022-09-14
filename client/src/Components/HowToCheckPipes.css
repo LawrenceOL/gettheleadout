@@ -233,3 +233,9 @@ h1.picture-caption-title2 {
   .bolbinstructions {
     font-weight: 700;
   }
+
+  .visualimg {
+    width: 231px;
+    height: 200px;
+    margin-left: 40px;
+  }

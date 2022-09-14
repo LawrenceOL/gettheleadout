@@ -39,7 +39,7 @@ const GetOurDataSet = () => {
             Community leaders can view an up-to-date version of their city’s
             data.{" "}
           </p>
-          <button className="getdatabutton">
+          <button className="bluebutton">
             <a
               href="https://drive.google.com/file/d/19Pqmp5JDlU-xoPGSzhRFBghNUybP97Du/view?usp=sharing"
               target="_blank"
@@ -55,7 +55,11 @@ const GetOurDataSet = () => {
           <h3>Our Platform:</h3>
 
           <img src={One} alt="numberone" />
-          <img src={DataPaperImg} alt="datapaperimage" className="platformimages" />
+          <img
+            src={DataPaperImg}
+            alt="datapaperimage"
+            className="platformimages"
+          />
           <div className="platformtext">
             <h5>Encourages open source data.</h5>
             <p>
@@ -65,17 +69,16 @@ const GetOurDataSet = () => {
           </div>
 
           <img src={Two} alt="numbertwo" />
-          <img src={Graph} alt="graphimage" className="platformimages"/>
+          <img src={Graph} alt="graphimage" className="platformimages" />
           <div className="platformtext">
-            <h5>
-              Examines high-impact variables to determine the probability of
-              lead
-            </h5>
+            <h5>Grant Applications Need Estimated Budgets</h5>
             <p>
-              We built a model that included all of the variables that had high
-              correlations to lead pipes in one’s home.
+              There are many types of grants available to assist or fully fund
+              lead-pipe replacement, but all of them need for you to have an
+              accurate inventory of lead-pipes in your location.
             </p>
           </div>
+          <button className="bluebutton">Grants for Lead Pipe Replacement</button>
         </section>
 
         <Footer />
