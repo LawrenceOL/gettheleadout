@@ -8,7 +8,7 @@
 ## Date: 9/15/2022
 
 
-### [Deployed Site](https://gettheleadout.netlify.app/)
+### [Deployed Site](https://gettheleadout.netlify.app/) (Optimized for Chrome on iPhone or Android)
 ---
 
 ### ***Description***
