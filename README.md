@@ -46,7 +46,7 @@
 
 
 ### ***Want to Install Locally?***
-#### To install locally, download the files. Make sure you have the latest versions of NPM installed. CD into the client folder and use the command "npm i --force". Next, make sure you have PostgreSQL running and create a database named "product_club_api" by using the command createdb product_club_api. Finally, cd into the server folder and execute the following "pipenv shell && pipenv install && python3 manage.py migrate && python3 manage.py runserver".
+#### To install locally, download the files. Make sure you have the latest versions of NPM installed. CD into the client folder and use the command `npm i --force`. Next, make sure you have PostgreSQL running and create a database named "product_club_api" by using the command `createdb product_club_api`. Finally, cd into the server folder and execute the following `pipenv shell && pipenv install && python3 manage.py migrate && python3 manage.py runserver`.
 
 ### ***Credits***
 #### We would like to thank the following people for their support on our project:
